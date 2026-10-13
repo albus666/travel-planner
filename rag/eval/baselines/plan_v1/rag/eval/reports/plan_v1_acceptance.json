@@ -1,0 +1,84 @@
+{
+  "source": "user_supplied_agent_level_review",
+  "independent_human_review": false,
+  "date": "2026-10-13",
+  "decision": "accepted_for_scoped_baseline",
+  "pass": 38,
+  "fail": 0,
+  "na": 16,
+  "scores": {
+    "01_missing": {
+      "输入完整性": "pass",
+      "证据引用": "na",
+      "景点隔离": "na",
+      "约束遵守": "na",
+      "未承诺项": "na",
+      "覆盖": "pass"
+    },
+    "02_history": {
+      "输入完整性": "pass",
+      "证据引用": "pass",
+      "景点隔离": "pass",
+      "约束遵守": "pass",
+      "未承诺项": "pass",
+      "覆盖": "pass"
+    },
+    "03_natural": {
+      "输入完整性": "pass",
+      "证据引用": "pass",
+      "景点隔离": "pass",
+      "约束遵守": "pass",
+      "未承诺项": "pass",
+      "覆盖": "pass"
+    },
+    "04_required_avoid": {
+      "输入完整性": "pass",
+      "证据引用": "pass",
+      "景点隔离": "pass",
+      "约束遵守": "pass",
+      "未承诺项": "pass",
+      "覆盖": "pass"
+    },
+    "05_walking": {
+      "输入完整性": "pass",
+      "证据引用": "pass",
+      "景点隔离": "pass",
+      "约束遵守": "pass",
+      "未承诺项": "pass",
+      "覆盖": "pass"
+    },
+    "06_unknown": {
+      "输入完整性": "pass",
+      "证据引用": "na",
+      "景点隔离": "na",
+      "约束遵守": "pass",
+      "未承诺项": "na",
+      "覆盖": "pass"
+    },
+    "07_conflict": {
+      "输入完整性": "pass",
+      "证据引用": "na",
+      "景点隔离": "na",
+      "约束遵守": "pass",
+      "未承诺项": "na",
+      "覆盖": "pass"
+    },
+    "08_scope": {
+      "输入完整性": "pass",
+      "证据引用": "na",
+      "景点隔离": "na",
+      "约束遵守": "pass",
+      "未承诺项": "na",
+      "覆盖": "pass"
+    },
+    "09_avoid_alias": {
+      "输入完整性": "pass",
+      "证据引用": "na",
+      "景点隔离": "na",
+      "约束遵守": "pass",
+      "未承诺项": "na",
+      "覆盖": "pass"
+    }
+  },
+  "scope": "9 synthetic cases under locked six dimensions; not real-user blind evaluation"
+}

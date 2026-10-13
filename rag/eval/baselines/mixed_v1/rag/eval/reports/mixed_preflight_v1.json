@@ -1,0 +1,222 @@
+[
+  {
+    "id": "challenge-v1-01",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-02",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-03",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-04",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-05",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-06",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-07",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-08",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-09",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-10",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-11",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-12",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-13",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-14",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-15",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-16",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-17",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-18",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-19",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-20",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-21",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-22",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-23",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-24",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-25",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-26",
+    "mixed_plan": false
+  },
+  {
+    "id": "challenge-v1-27",
+    "mixed_plan": true
+  },
+  {
+    "id": "challenge-v1-28",
+    "mixed_plan": true
+  },
+  {
+    "id": "challenge-v1-29",
+    "mixed_plan": true
+  },
+  {
+    "id": "challenge-v1-30",
+    "mixed_plan": true
+  },
+  {
+    "id": "answer-holdout-v1-01",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-02",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-03",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-04",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-05",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-06",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-07",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-08",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-09",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-10",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-11",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-12",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-13",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-14",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-15",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-16",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-17",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-18",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-19",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-20",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-21",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-22",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-23",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-24",
+    "mixed_plan": false
+  },
+  {
+    "id": "answer-holdout-v1-25",
+    "mixed_plan": false
+  }
+]

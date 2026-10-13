@@ -1,0 +1,696 @@
+{
+  "dataset_origin": "seeded_synthetic_session_with_real_local_rag",
+  "unit_tests_passed": 167,
+  "guide_live_status": "guide_draft",
+  "new_baidu_calls": 0,
+  "new_llm_calls": 0,
+  "human_review": null,
+  "response": {
+    "session_id": "36b45eb8580b4446a711424281f5096c",
+    "status": "guide_draft",
+    "answer": "## 洛阳逐日攻略\n\n> 未指定出发点；这是景点安排建议，不计算交通、到达时间或整日可行性。\n\n### 第1天 · 2026-10-14\n- **龙门石窟**\n- **隋唐洛阳城应天门遗址**\n\n### 第2天 · 2026-10-15\n- **天子驾六博物馆**\n- **隋唐城遗址植物园**\n\n### 第3天 · 2026-10-16\n- **王城公园**\n- **洛阳博物馆**",
+    "result": {
+      "workflow": "multi_day_guide_v1",
+      "status": "guide_draft",
+      "days": [
+        {
+          "day": 1,
+          "date": "2026-10-14",
+          "result": {
+            "status": "draft",
+            "slots": {
+              "trip_date": "2026-10-14",
+              "departure": "洛阳市内（未指定出发点）",
+              "companions": "老人",
+              "preferences": [
+                "不限"
+              ],
+              "pace": "轻松",
+              "transport": "公共交通"
+            },
+            "questions": [],
+            "stops": [
+              {
+                "order": 1,
+                "poi_id": 77498,
+                "name": "龙门石窟",
+                "selection_basis": "采集资料记载：去龙门石窟的N个理由 [P77498-S1：龙门石窟／visit_tips]",
+                "citations": [
+                  {
+                    "source_id": "P77498-S1",
+                    "chunk_id": "poi-77498-visit_tips",
+                    "poi_id": 77498,
+                    "name": "龙门石窟",
+                    "theme": "visit_tips",
+                    "theme_label": "游览路线与建议",
+                    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                    "collected_at": "2026-10-11T12:36:44+00:00",
+                    "verify_status": "unverified",
+                    "quotes": [
+                      "去龙门石窟的N个理由"
+                    ]
+                  }
+                ],
+                "sequence_status": "draft_unverified",
+                "arrival_time": null,
+                "visit_duration_minutes": null
+              },
+              {
+                "order": 2,
+                "poi_id": 61114449,
+                "name": "隋唐洛阳城应天门遗址",
+                "selection_basis": "采集资料记载：隋唐洛阳城应天门遗址是隋唐洛阳城宫城的正南门，始建于隋大业元年，也就是公元605年，先后历经隋、唐、五代、北宋四个时期，在南宋建炎二年1128年，被金兵烧毁，沿用523年之久。 [P61114449-S1：隋唐洛阳城应天门遗址／history_culture]",
+                "citations": [
+                  {
+                    "source_id": "P61114449-S1",
+                    "chunk_id": "poi-61114449-history_culture",
+                    "poi_id": 61114449,
+                    "name": "隋唐洛阳城应天门遗址",
+                    "theme": "history_culture",
+                    "theme_label": "历史文化",
+                    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=61114449&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                    "collected_at": "2026-10-11T12:36:45+00:00",
+                    "verify_status": "unverified",
+                    "quotes": [
+                      "隋唐洛阳城应天门遗址是隋唐洛阳城宫城的正南门，始建于隋大业元年，也就是公元605年，先后历经隋、唐、五代、北宋四个时期，在南宋建炎二年1128年，被金兵烧毁，沿用523年之久。"
+                    ]
+                  }
+                ],
+                "sequence_status": "draft_unverified",
+                "arrival_time": null,
+                "visit_duration_minutes": null
+              }
+            ],
+            "constraints": {
+              "city": "洛阳",
+              "days": 1,
+              "max_stops": 2,
+              "must_visit": [],
+              "avoid": [
+                "天子驾六博物馆",
+                "洛阳博物馆",
+                "隋唐城遗址植物园",
+                "王城公园",
+                "从政坊游园"
+              ]
+            },
+            "legs": [],
+            "limitations": [],
+            "warnings": [
+              "这是候选景点草案，不保证一天内可完成；顺序按必去、字面出发点名称与偏好组织，不是最优地理路线。",
+              "跨景点路线、车程、实时交通与精确时间表均未核实。",
+              "尚未确认指定日期的开放、预约、票价或活动状态；引用为采集资料，请核对采集时间及官方渠道。",
+              "出发地已记录，未核实其位置及到景点的路程。",
+              "同行老人：步行量、台阶和无障碍设施尚未核实，不能保证适合老人。"
+            ],
+            "tasks": [
+              {
+                "tool": "catalog",
+                "state": "queried_with_evidence"
+              },
+              {
+                "tool": "retrieve_chunks",
+                "poi_id": 77498,
+                "name": "龙门石窟",
+                "state": "queried_with_evidence",
+                "evidence_ids": [
+                  "P77498-S1"
+                ],
+                "retrieved_count": 1
+              },
+              {
+                "tool": "retrieve_chunks",
+                "poi_id": 61114449,
+                "name": "隋唐洛阳城应天门遗址",
+                "state": "queried_with_evidence",
+                "evidence_ids": [
+                  "P61114449-S1"
+                ],
+                "retrieved_count": 1
+              }
+            ],
+            "citations": [
+              {
+                "source_id": "P77498-S1",
+                "chunk_id": "poi-77498-visit_tips",
+                "poi_id": 77498,
+                "name": "龙门石窟",
+                "theme": "visit_tips",
+                "theme_label": "游览路线与建议",
+                "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                "collected_at": "2026-10-11T12:36:44+00:00",
+                "verify_status": "unverified",
+                "quotes": [
+                  "去龙门石窟的N个理由"
+                ]
+              },
+              {
+                "source_id": "P61114449-S1",
+                "chunk_id": "poi-61114449-history_culture",
+                "poi_id": 61114449,
+                "name": "隋唐洛阳城应天门遗址",
+                "theme": "history_culture",
+                "theme_label": "历史文化",
+                "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=61114449&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                "collected_at": "2026-10-11T12:36:45+00:00",
+                "verify_status": "unverified",
+                "quotes": [
+                  "隋唐洛阳城应天门遗址是隋唐洛阳城宫城的正南门，始建于隋大业元年，也就是公元605年，先后历经隋、唐、五代、北宋四个时期，在南宋建炎二年1128年，被金兵烧毁，沿用523年之久。"
+                ]
+              }
+            ],
+            "workflow": "luoyang_one_day_v1",
+            "node_trace": [
+              "collect",
+              "select_candidates",
+              "retrieve_evidence",
+              "draft_validate",
+              "finish"
+            ],
+            "time_check": "not_checked",
+            "estimated_finish_time": null,
+            "schedule": [
+              {
+                "order": 1,
+                "poi_id": 77498,
+                "name": "龙门石窟",
+                "selection_basis": "采集资料记载：去龙门石窟的N个理由 [P77498-S1：龙门石窟／visit_tips]",
+                "citations": [
+                  {
+                    "source_id": "P77498-S1",
+                    "chunk_id": "poi-77498-visit_tips",
+                    "poi_id": 77498,
+                    "name": "龙门石窟",
+                    "theme": "visit_tips",
+                    "theme_label": "游览路线与建议",
+                    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                    "collected_at": "2026-10-11T12:36:44+00:00",
+                    "verify_status": "unverified",
+                    "quotes": [
+                      "去龙门石窟的N个理由"
+                    ]
+                  }
+                ],
+                "sequence_status": "draft_unverified",
+                "arrival_time": null,
+                "visit_duration_minutes": null,
+                "departure_time": null
+              },
+              {
+                "order": 2,
+                "poi_id": 61114449,
+                "name": "隋唐洛阳城应天门遗址",
+                "selection_basis": "采集资料记载：隋唐洛阳城应天门遗址是隋唐洛阳城宫城的正南门，始建于隋大业元年，也就是公元605年，先后历经隋、唐、五代、北宋四个时期，在南宋建炎二年1128年，被金兵烧毁，沿用523年之久。 [P61114449-S1：隋唐洛阳城应天门遗址／history_culture]",
+                "citations": [
+                  {
+                    "source_id": "P61114449-S1",
+                    "chunk_id": "poi-61114449-history_culture",
+                    "poi_id": 61114449,
+                    "name": "隋唐洛阳城应天门遗址",
+                    "theme": "history_culture",
+                    "theme_label": "历史文化",
+                    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=61114449&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                    "collected_at": "2026-10-11T12:36:45+00:00",
+                    "verify_status": "unverified",
+                    "quotes": [
+                      "隋唐洛阳城应天门遗址是隋唐洛阳城宫城的正南门，始建于隋大业元年，也就是公元605年，先后历经隋、唐、五代、北宋四个时期，在南宋建炎二年1128年，被金兵烧毁，沿用523年之久。"
+                    ]
+                  }
+                ],
+                "sequence_status": "draft_unverified",
+                "arrival_time": null,
+                "visit_duration_minutes": null,
+                "departure_time": null
+              }
+            ]
+          }
+        },
+        {
+          "day": 2,
+          "date": "2026-10-15",
+          "result": {
+            "status": "draft",
+            "slots": {
+              "trip_date": "2026-10-15",
+              "departure": "洛阳市内（未指定出发点）",
+              "companions": "老人",
+              "preferences": [
+                "不限"
+              ],
+              "pace": "轻松",
+              "transport": "公共交通"
+            },
+            "questions": [],
+            "stops": [
+              {
+                "order": 1,
+                "poi_id": 82477,
+                "name": "天子驾六博物馆",
+                "selection_basis": "采集资料记载：天子驾六博物馆，位于洛阳市中心，是当年修建东周王城广场时发现的东周时期大型的墓葬和车马坑，其中在五号车马坑中，出土了一辆六匹马拉的车，这就是知名的“天子驾六”。 [P82477-S1：天子驾六博物馆／overview]",
+                "citations": [
+                  {
+                    "source_id": "P82477-S1",
+                    "chunk_id": "poi-82477-overview",
+                    "poi_id": 82477,
+                    "name": "天子驾六博物馆",
+                    "theme": "overview",
+                    "theme_label": "景点概况",
+                    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=82477&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                    "collected_at": "2026-10-11T12:37:29+00:00",
+                    "verify_status": "unverified",
+                    "quotes": [
+                      "天子驾六博物馆，位于洛阳市中心，是当年修建东周王城广场时发现的东周时期大型的墓葬和车马坑，其中在五号车马坑中，出土了一辆六匹马拉的车，这就是知名的“天子驾六”。"
+                    ]
+                  }
+                ],
+                "sequence_status": "draft_unverified",
+                "arrival_time": null,
+                "visit_duration_minutes": null
+              },
+              {
+                "order": 2,
+                "poi_id": 11078925,
+                "name": "隋唐城遗址植物园",
+                "selection_basis": "采集资料记载：隋唐城遗址植物园始建于2005年12月，位于隋唐洛阳城定鼎门遗址。 [P11078925-S1：隋唐城遗址植物园／history_culture]",
+                "citations": [
+                  {
+                    "source_id": "P11078925-S1",
+                    "chunk_id": "poi-11078925-history_culture",
+                    "poi_id": 11078925,
+                    "name": "隋唐城遗址植物园",
+                    "theme": "history_culture",
+                    "theme_label": "历史文化",
+                    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=11078925&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                    "collected_at": "2026-10-11T12:36:59+00:00",
+                    "verify_status": "unverified",
+                    "quotes": [
+                      "隋唐城遗址植物园始建于2005年12月，位于隋唐洛阳城定鼎门遗址。"
+                    ]
+                  }
+                ],
+                "sequence_status": "draft_unverified",
+                "arrival_time": null,
+                "visit_duration_minutes": null
+              }
+            ],
+            "constraints": {
+              "city": "洛阳",
+              "days": 1,
+              "max_stops": 2,
+              "must_visit": [],
+              "avoid": [
+                "龙门石窟",
+                "洛阳博物馆",
+                "隋唐洛阳城应天门遗址",
+                "王城公园",
+                "从政坊游园"
+              ]
+            },
+            "legs": [],
+            "limitations": [],
+            "warnings": [
+              "这是候选景点草案，不保证一天内可完成；顺序按必去、字面出发点名称与偏好组织，不是最优地理路线。",
+              "跨景点路线、车程、实时交通与精确时间表均未核实。",
+              "尚未确认指定日期的开放、预约、票价或活动状态；引用为采集资料，请核对采集时间及官方渠道。",
+              "出发地已记录，未核实其位置及到景点的路程。",
+              "同行老人：步行量、台阶和无障碍设施尚未核实，不能保证适合老人。"
+            ],
+            "tasks": [
+              {
+                "tool": "catalog",
+                "state": "queried_with_evidence"
+              },
+              {
+                "tool": "retrieve_chunks",
+                "poi_id": 82477,
+                "name": "天子驾六博物馆",
+                "state": "queried_with_evidence",
+                "evidence_ids": [
+                  "P82477-S1"
+                ],
+                "retrieved_count": 1
+              },
+              {
+                "tool": "retrieve_chunks",
+                "poi_id": 11078925,
+                "name": "隋唐城遗址植物园",
+                "state": "queried_with_evidence",
+                "evidence_ids": [
+                  "P11078925-S1"
+                ],
+                "retrieved_count": 1
+              }
+            ],
+            "citations": [
+              {
+                "source_id": "P82477-S1",
+                "chunk_id": "poi-82477-overview",
+                "poi_id": 82477,
+                "name": "天子驾六博物馆",
+                "theme": "overview",
+                "theme_label": "景点概况",
+                "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=82477&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                "collected_at": "2026-10-11T12:37:29+00:00",
+                "verify_status": "unverified",
+                "quotes": [
+                  "天子驾六博物馆，位于洛阳市中心，是当年修建东周王城广场时发现的东周时期大型的墓葬和车马坑，其中在五号车马坑中，出土了一辆六匹马拉的车，这就是知名的“天子驾六”。"
+                ]
+              },
+              {
+                "source_id": "P11078925-S1",
+                "chunk_id": "poi-11078925-history_culture",
+                "poi_id": 11078925,
+                "name": "隋唐城遗址植物园",
+                "theme": "history_culture",
+                "theme_label": "历史文化",
+                "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=11078925&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                "collected_at": "2026-10-11T12:36:59+00:00",
+                "verify_status": "unverified",
+                "quotes": [
+                  "隋唐城遗址植物园始建于2005年12月，位于隋唐洛阳城定鼎门遗址。"
+                ]
+              }
+            ],
+            "workflow": "luoyang_one_day_v1",
+            "node_trace": [
+              "collect",
+              "select_candidates",
+              "retrieve_evidence",
+              "draft_validate",
+              "finish"
+            ],
+            "time_check": "not_checked",
+            "estimated_finish_time": null,
+            "schedule": [
+              {
+                "order": 1,
+                "poi_id": 82477,
+                "name": "天子驾六博物馆",
+                "selection_basis": "采集资料记载：天子驾六博物馆，位于洛阳市中心，是当年修建东周王城广场时发现的东周时期大型的墓葬和车马坑，其中在五号车马坑中，出土了一辆六匹马拉的车，这就是知名的“天子驾六”。 [P82477-S1：天子驾六博物馆／overview]",
+                "citations": [
+                  {
+                    "source_id": "P82477-S1",
+                    "chunk_id": "poi-82477-overview",
+                    "poi_id": 82477,
+                    "name": "天子驾六博物馆",
+                    "theme": "overview",
+                    "theme_label": "景点概况",
+                    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=82477&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                    "collected_at": "2026-10-11T12:37:29+00:00",
+                    "verify_status": "unverified",
+                    "quotes": [
+                      "天子驾六博物馆，位于洛阳市中心，是当年修建东周王城广场时发现的东周时期大型的墓葬和车马坑，其中在五号车马坑中，出土了一辆六匹马拉的车，这就是知名的“天子驾六”。"
+                    ]
+                  }
+                ],
+                "sequence_status": "draft_unverified",
+                "arrival_time": null,
+                "visit_duration_minutes": null,
+                "departure_time": null
+              },
+              {
+                "order": 2,
+                "poi_id": 11078925,
+                "name": "隋唐城遗址植物园",
+                "selection_basis": "采集资料记载：隋唐城遗址植物园始建于2005年12月，位于隋唐洛阳城定鼎门遗址。 [P11078925-S1：隋唐城遗址植物园／history_culture]",
+                "citations": [
+                  {
+                    "source_id": "P11078925-S1",
+                    "chunk_id": "poi-11078925-history_culture",
+                    "poi_id": 11078925,
+                    "name": "隋唐城遗址植物园",
+                    "theme": "history_culture",
+                    "theme_label": "历史文化",
+                    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=11078925&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                    "collected_at": "2026-10-11T12:36:59+00:00",
+                    "verify_status": "unverified",
+                    "quotes": [
+                      "隋唐城遗址植物园始建于2005年12月，位于隋唐洛阳城定鼎门遗址。"
+                    ]
+                  }
+                ],
+                "sequence_status": "draft_unverified",
+                "arrival_time": null,
+                "visit_duration_minutes": null,
+                "departure_time": null
+              }
+            ]
+          }
+        },
+        {
+          "day": 3,
+          "date": "2026-10-16",
+          "result": {
+            "status": "draft",
+            "slots": {
+              "trip_date": "2026-10-16",
+              "departure": "洛阳市内（未指定出发点）",
+              "companions": "老人",
+              "preferences": [
+                "不限"
+              ],
+              "pace": "轻松",
+              "transport": "公共交通"
+            },
+            "questions": [],
+            "stops": [
+              {
+                "order": 1,
+                "poi_id": 77813,
+                "name": "王城公园",
+                "selection_basis": "采集资料记载：王城公园建于1955年，因修建在洛阳东周王城遗址上而得名，由古文化区、牡丹花圃、动物馆、游乐场等几个部分组成。 [P77813-S1：王城公园／overview]",
+                "citations": [
+                  {
+                    "source_id": "P77813-S1",
+                    "chunk_id": "poi-77813-overview",
+                    "poi_id": 77813,
+                    "name": "王城公园",
+                    "theme": "overview",
+                    "theme_label": "景点概况",
+                    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77813&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                    "collected_at": "2026-10-11T12:37:14+00:00",
+                    "verify_status": "unverified",
+                    "quotes": [
+                      "王城公园建于1955年，因修建在洛阳东周王城遗址上而得名，由古文化区、牡丹花圃、动物馆、游乐场等几个部分组成。"
+                    ]
+                  }
+                ],
+                "sequence_status": "draft_unverified",
+                "arrival_time": null,
+                "visit_duration_minutes": null
+              },
+              {
+                "order": 2,
+                "poi_id": 89920,
+                "name": "洛阳博物馆",
+                "selection_basis": "采集资料记载：洛阳博物馆创建于1958年，2011年4月16日全面对社会公众开放，是一座集文物收藏、陈列展览、社会教育于一体的综合性博物馆，馆藏文物纵贯洛阳作为十三朝古都的漫长岁月。 [P89920-S1：洛阳博物馆／overview]",
+                "citations": [
+                  {
+                    "source_id": "P89920-S1",
+                    "chunk_id": "poi-89920-overview",
+                    "poi_id": 89920,
+                    "name": "洛阳博物馆",
+                    "theme": "overview",
+                    "theme_label": "景点概况",
+                    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=89920&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                    "collected_at": "2026-10-11T12:36:50+00:00",
+                    "verify_status": "unverified",
+                    "quotes": [
+                      "洛阳博物馆创建于1958年，2011年4月16日全面对社会公众开放，是一座集文物收藏、陈列展览、社会教育于一体的综合性博物馆，馆藏文物纵贯洛阳作为十三朝古都的漫长岁月。"
+                    ]
+                  }
+                ],
+                "sequence_status": "draft_unverified",
+                "arrival_time": null,
+                "visit_duration_minutes": null
+              }
+            ],
+            "constraints": {
+              "city": "洛阳",
+              "days": 1,
+              "max_stops": 2,
+              "must_visit": [],
+              "avoid": [
+                "龙门石窟",
+                "天子驾六博物馆",
+                "隋唐洛阳城应天门遗址",
+                "隋唐城遗址植物园",
+                "从政坊游园"
+              ]
+            },
+            "legs": [],
+            "limitations": [],
+            "warnings": [
+              "这是候选景点草案，不保证一天内可完成；顺序按必去、字面出发点名称与偏好组织，不是最优地理路线。",
+              "跨景点路线、车程、实时交通与精确时间表均未核实。",
+              "尚未确认指定日期的开放、预约、票价或活动状态；引用为采集资料，请核对采集时间及官方渠道。",
+              "出发地已记录，未核实其位置及到景点的路程。",
+              "同行老人：步行量、台阶和无障碍设施尚未核实，不能保证适合老人。"
+            ],
+            "tasks": [
+              {
+                "tool": "catalog",
+                "state": "queried_with_evidence"
+              },
+              {
+                "tool": "retrieve_chunks",
+                "poi_id": 77813,
+                "name": "王城公园",
+                "state": "queried_with_evidence",
+                "evidence_ids": [
+                  "P77813-S1"
+                ],
+                "retrieved_count": 1
+              },
+              {
+                "tool": "retrieve_chunks",
+                "poi_id": 89920,
+                "name": "洛阳博物馆",
+                "state": "queried_with_evidence",
+                "evidence_ids": [
+                  "P89920-S1"
+                ],
+                "retrieved_count": 1
+              }
+            ],
+            "citations": [
+              {
+                "source_id": "P77813-S1",
+                "chunk_id": "poi-77813-overview",
+                "poi_id": 77813,
+                "name": "王城公园",
+                "theme": "overview",
+                "theme_label": "景点概况",
+                "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77813&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                "collected_at": "2026-10-11T12:37:14+00:00",
+                "verify_status": "unverified",
+                "quotes": [
+                  "王城公园建于1955年，因修建在洛阳东周王城遗址上而得名，由古文化区、牡丹花圃、动物馆、游乐场等几个部分组成。"
+                ]
+              },
+              {
+                "source_id": "P89920-S1",
+                "chunk_id": "poi-89920-overview",
+                "poi_id": 89920,
+                "name": "洛阳博物馆",
+                "theme": "overview",
+                "theme_label": "景点概况",
+                "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=89920&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                "collected_at": "2026-10-11T12:36:50+00:00",
+                "verify_status": "unverified",
+                "quotes": [
+                  "洛阳博物馆创建于1958年，2011年4月16日全面对社会公众开放，是一座集文物收藏、陈列展览、社会教育于一体的综合性博物馆，馆藏文物纵贯洛阳作为十三朝古都的漫长岁月。"
+                ]
+              }
+            ],
+            "workflow": "luoyang_one_day_v1",
+            "node_trace": [
+              "collect",
+              "select_candidates",
+              "retrieve_evidence",
+              "draft_validate",
+              "finish"
+            ],
+            "time_check": "not_checked",
+            "estimated_finish_time": null,
+            "schedule": [
+              {
+                "order": 1,
+                "poi_id": 77813,
+                "name": "王城公园",
+                "selection_basis": "采集资料记载：王城公园建于1955年，因修建在洛阳东周王城遗址上而得名，由古文化区、牡丹花圃、动物馆、游乐场等几个部分组成。 [P77813-S1：王城公园／overview]",
+                "citations": [
+                  {
+                    "source_id": "P77813-S1",
+                    "chunk_id": "poi-77813-overview",
+                    "poi_id": 77813,
+                    "name": "王城公园",
+                    "theme": "overview",
+                    "theme_label": "景点概况",
+                    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77813&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                    "collected_at": "2026-10-11T12:37:14+00:00",
+                    "verify_status": "unverified",
+                    "quotes": [
+                      "王城公园建于1955年，因修建在洛阳东周王城遗址上而得名，由古文化区、牡丹花圃、动物馆、游乐场等几个部分组成。"
+                    ]
+                  }
+                ],
+                "sequence_status": "draft_unverified",
+                "arrival_time": null,
+                "visit_duration_minutes": null,
+                "departure_time": null
+              },
+              {
+                "order": 2,
+                "poi_id": 89920,
+                "name": "洛阳博物馆",
+                "selection_basis": "采集资料记载：洛阳博物馆创建于1958年，2011年4月16日全面对社会公众开放，是一座集文物收藏、陈列展览、社会教育于一体的综合性博物馆，馆藏文物纵贯洛阳作为十三朝古都的漫长岁月。 [P89920-S1：洛阳博物馆／overview]",
+                "citations": [
+                  {
+                    "source_id": "P89920-S1",
+                    "chunk_id": "poi-89920-overview",
+                    "poi_id": 89920,
+                    "name": "洛阳博物馆",
+                    "theme": "overview",
+                    "theme_label": "景点概况",
+                    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=89920&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+                    "collected_at": "2026-10-11T12:36:50+00:00",
+                    "verify_status": "unverified",
+                    "quotes": [
+                      "洛阳博物馆创建于1958年，2011年4月16日全面对社会公众开放，是一座集文物收藏、陈列展览、社会教育于一体的综合性博物馆，馆藏文物纵贯洛阳作为十三朝古都的漫长岁月。"
+                    ]
+                  }
+                ],
+                "sequence_status": "draft_unverified",
+                "arrival_time": null,
+                "visit_duration_minutes": null,
+                "departure_time": null
+              }
+            ]
+          }
+        }
+      ],
+      "requested_days": 3,
+      "unplanned_days": [],
+      "warnings": [
+        "景点候选池仅七个；开放、预约、老人适用性和无障碍条件尚未核实。",
+        "未调用地图；日程顺序不是地理最优顺序，不保证一天能完成。"
+      ]
+    },
+    "slots": {
+      "city": "洛阳",
+      "days": 3,
+      "start_date": "2026-10-14",
+      "base_location": null,
+      "companions": "老人",
+      "transport": "公共交通",
+      "pace": "轻松",
+      "preferences": [
+        "不限"
+      ],
+      "must_visit": [],
+      "avoid": [],
+      "start_time": "09:00",
+      "end_time": "18:00",
+      "visit_minutes": 90,
+      "unsupported": []
+    },
+    "assumptions": [
+      "未说明交通方式：按公共交通处理，车程为查询时估算。",
+      "沿用默认安排参数：轻松节奏、偏好不限、每天09:00–18:00、每站90分钟；这些是待确认的安排参数，不是景区建议或开放时间。"
+    ],
+    "planning_mode": "guide"
+  },
+  "browser_checks": [
+    "A/B/C option buttons",
+    "custom input last",
+    "skip proceeds to guide"
+  ],
+  "file_sha256": {
+    "rag/service/plan_chat.py": "441b63b8e6b27967047df0b683406baed711dc9b6112bc917a22a8ef54e45f15",
+    "rag/service/web/app.js": "1ae6cc7feb6cc36a371097de3ba7c667ef417582604e040107b0d2f0eec536c0",
+    "rag/service/web/index.html": "cb655f16f01fbca0ba2f649ff337a45e68b04bc4b60f52d8e87ec9ea142dbfaf",
+    "rag/service/web/style.css": "11417e6d3405b174891642f91cc98675e9b57aaceb32623301800c4216cb2275",
+    "rag/eval/tests/test_plan_chat.py": "92d9b176ddec0edda41fe2bd149d009d4e7630de308bd78d89fbdfae1988dea2"
+  }
+}

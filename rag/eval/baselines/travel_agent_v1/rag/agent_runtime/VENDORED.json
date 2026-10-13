@@ -1,0 +1,24 @@
+{
+  "source": "C:\\Users\\albus\\Desktop\\agent\\projects\\agent-runtime\\src\\agent_runtime",
+  "integration": "unmodified source snapshot; travel tools passed explicitly; no coding tools exposed",
+  "file_sha256": {
+    "agent.py": "85d70d5cb877279db6f5378c17bdad5e8b8ad7177cd96aa0ca2862fa5585c528",
+    "environment.py": "d34fd7163e8ade2beda708aeb3ff31079184cfffb0fbc1c806ea0d9fa587c46b",
+    "errors.py": "b7a369db7f940d6c00699ead00fd03a7d152e061a2f1699c863c8604473ef42e",
+    "event_log.py": "8a07d963b3683aabc589db981e6797e72a20087172b205fb29462574818630c9",
+    "llm.py": "751ea28ae7b93eb9f4a0d8f3fc8f6002c90ec834f200ff2eac38bf07943f3afe",
+    "observation.py": "bd92a214a477bced81a905835576bada316b74cbf8cb9db25d136e40c53d49dd",
+    "paths.py": "c5400dad87b86e98f344e62e8bbcb054531328feb069dad6460262929dc5926f",
+    "permissions.py": "bd8ddf6688388969db69bffe0bad39fc6e37cf8244276f6895288067016bf53f",
+    "protocols.py": "084602bec5cf75bd7225fcb10ee7a5d15f395c686e469a694368465733d475ff",
+    "trajectory.py": "d1e5cda414edfc84fc466b53018d12623cbba0029526ffb5d46875e9a5779a0e",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tools/grep.py": "1d43987eebe0284f9b09c6fd669c30b06eaee9b60c1f19887c1463cb66439256",
+    "tools/rag.py": "68035c296c7df0d6a1fb7609eb873c48724a2b8600dfa25438e9b7e8b43c8313",
+    "tools/read_file.py": "40b9b43aecccd21a41190f32d331cf067d15ad85d7eb79a7745e10b93a8e6fb2",
+    "tools/registry.py": "3bfc6733a22f4b90eb12e4623b52c2e33da485760f5320cdc1a7fcd1d668b04c",
+    "tools/run_tests.py": "eb198fe277504a158478497ce33db51773d560d25128172f50704187c85cbeab",
+    "tools/str_replace.py": "3a09dab5382ebfc841212920dd4f3c26fa6846ddb2bc0a77f58c01393f94abbd",
+    "tools/__init__.py": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+  }
+}

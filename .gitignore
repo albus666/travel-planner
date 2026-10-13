@@ -1,0 +1,9 @@
+.env
+.env.local
+**/__pycache__/
+*.pyc
+.idea/
+key/*.pem
+# 运行时 SQLite（地图预算、会话状态），服务器生成，不入库
+var/
+

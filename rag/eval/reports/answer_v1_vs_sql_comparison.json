@@ -1,0 +1,261 @@
+{
+  "baseline": "answer_v1 user-reviewed run1",
+  "candidate": "run3_sql",
+  "status_changes": 0,
+  "route_changes": 0,
+  "retrieved_id_changes": 0,
+  "answer_text_changes": 19,
+  "human_quality_delta": "pending review; text changes are not pass/fail",
+  "cases": [
+    {
+      "id": "answer-holdout-v1-01",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-02",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-03",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": false,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-04",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": false,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-05",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-06",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-07",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-08",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": false,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-09",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-10",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-11",
+      "old_status": "insufficient_evidence",
+      "new_status": "insufficient_evidence",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-12",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": false,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-13",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-14",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-15",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-16",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-17",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-18",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-19",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-20",
+      "old_status": "answered",
+      "new_status": "answered",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": false,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-21",
+      "old_status": "insufficient_evidence",
+      "new_status": "insufficient_evidence",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": false,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-22",
+      "old_status": "insufficient_evidence",
+      "new_status": "insufficient_evidence",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-23",
+      "old_status": "insufficient_evidence",
+      "new_status": "insufficient_evidence",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-24",
+      "old_status": "insufficient_evidence",
+      "new_status": "insufficient_evidence",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    },
+    {
+      "id": "answer-holdout-v1-25",
+      "old_status": "insufficient_evidence",
+      "new_status": "insufficient_evidence",
+      "status_changed": false,
+      "route_changed": false,
+      "retrieved_ids_changed": false,
+      "answer_text_changed": true,
+      "human_quality_delta": null
+    }
+  ]
+}

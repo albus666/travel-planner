@@ -1,0 +1,2 @@
+# Tested server version; existing RAG runtime dependencies are unchanged.
+langgraph==1.2.14

@@ -1,0 +1,107 @@
+# =============================================================================
+# RAG 检索评测用例（JSONL）— 与 v2.rag_chunks / v2.attractions 对齐
+# =============================================================================
+# 命中规则（run_eval.py）：top-k 中任一条 name==expect_name 且 theme==expect_theme。
+# expect_name 必须与库中景点名完全一致；expect_theme 须为该景点实际拥有的主题。
+#
+# 字段：
+#   id            用例编号（可选，便于对照报告）
+#   question      用户问题
+#   expect_name   预期景点名
+#   expect_theme  预期主题：overview|history_culture|visit_tips|facilities|
+#                 notice|preferential|entry_policy
+#   note          出题意图说明（可选，评测时忽略）
+#
+# 说明：本轮验证语义检索；门票现价/是否开园等易变事实更适合查 poi_details。
+# 当前库主题存量约：overview 186 / preferential 62 / facilities 43 /
+#   history_culture 36 / notice 11 / entry_policy 5 / visit_tips 4
+# =============================================================================
+
+# ---------- A. 龙门石窟（主题全：visit_tips/preferential/facilities/history/notice）----------
+{"id":"A01","question":"龙门石窟的游览路线是什么？","expect_name":"龙门石窟","expect_theme":"visit_tips","note":"明确问路线→visit_tips"}
+{"id":"A02","question":"去龙门石窟怎么玩比较合理？半天够不够？","expect_name":"龙门石窟","expect_theme":"visit_tips","note":"换说法问游玩建议"}
+{"id":"A03","question":"龙门石窟有哪些优待政策？","expect_name":"龙门石窟","expect_theme":"preferential","note":"优待总问"}
+{"id":"A04","question":"老人去龙门石窟可以免费或半价吗？","expect_name":"龙门石窟","expect_theme":"preferential","note":"老人优惠"}
+{"id":"A05","question":"小孩去龙门石窟有门票优惠吗？","expect_name":"龙门石窟","expect_theme":"preferential","note":"儿童优惠"}
+{"id":"A06","question":"龙门石窟可以寄存行李吗？有没有寄存处？","expect_name":"龙门石窟","expect_theme":"facilities","note":"寄存→facilities"}
+{"id":"A07","question":"龙门石窟景区内有没有免费WiFi和语音讲解？","expect_name":"龙门石窟","expect_theme":"facilities","note":"设施细节"}
+{"id":"A08","question":"龙门石窟的历史文化背景是什么？","expect_name":"龙门石窟","expect_theme":"history_culture","note":"历史文化"}
+{"id":"A09","question":"龙门石窟卢舍那大佛有什么典故？","expect_name":"龙门石窟","expect_theme":"history_culture","note":"文化细节"}
+{"id":"A10","question":"龙门石窟购票有哪些须知或公告？","expect_name":"龙门石窟","expect_theme":"notice","note":"公告/须知"}
+{"id":"A11","question":"龙门石窟实名制分时购票怎么规定的？","expect_name":"龙门石窟","expect_theme":"notice","note":"公告细则"}
+
+# ---------- B. 老君山景区（主题全：含 visit_tips/entry_policy/notice）----------
+{"id":"B01","question":"老君山景区概况介绍一下","expect_name":"老君山景区","expect_theme":"overview","note":"概况"}
+{"id":"B02","question":"老君山有哪些寄存或游客服务设施？","expect_name":"老君山景区","expect_theme":"facilities","note":"设施；避免仅写「栾川老君山」易撞周边POI"}
+{"id":"B03","question":"老君山景区的游览路线或游玩建议是什么？","expect_name":"老君山景区","expect_theme":"visit_tips","note":"visit_tips 仅4个景点之一"}
+{"id":"B04","question":"老君山有什么历史文化含义？","expect_name":"老君山景区","expect_theme":"history_culture","note":"历史"}
+{"id":"B05","question":"老君山景区有哪些优待或免票政策？","expect_name":"老君山景区","expect_theme":"preferential","note":"优待"}
+{"id":"B06","question":"老君山入园有什么限制或规定？","expect_name":"老君山景区","expect_theme":"entry_policy","note":"入园限制"}
+{"id":"B07","question":"老君山景区最近有什么公告提醒？","expect_name":"老君山景区","expect_theme":"notice","note":"公告"}
+
+# ---------- C. 白马寺 / 关林 / 汉魏洛阳相关 ----------
+{"id":"C01","question":"白马寺的历史渊源是什么？","expect_name":"白马寺","expect_theme":"history_culture","note":"白马寺无overview，只有history+preferential"}
+{"id":"C02","question":"白马寺有什么优待或优惠政策？","expect_name":"白马寺","expect_theme":"preferential","note":"优待"}
+{"id":"C03","question":"关林庙的历史文化背景介绍","expect_name":"关林庙","expect_theme":"history_culture","note":"关林庙无overview"}
+{"id":"C04","question":"关林庙有哪些设施服务？","expect_name":"关林庙","expect_theme":"facilities","note":"设施"}
+{"id":"C05","question":"关林庙门票优待政策有哪些？","expect_name":"关林庙","expect_theme":"preferential","note":"优待"}
+{"id":"C06","question":"汉光武帝陵是怎样的一处古迹？","expect_name":"汉光武帝陵","expect_theme":"overview","note":"概况"}
+{"id":"C07","question":"汉光武帝陵有什么历史故事？","expect_name":"汉光武帝陵","expect_theme":"history_culture","note":"历史"}
+
+# ---------- D. 鸡冠洞 / 重渡沟 / 白云山（栾川方向）----------
+{"id":"D01","question":"鸡冠洞是什么样的景点？","expect_name":"鸡冠洞","expect_theme":"overview","note":"概况"}
+{"id":"D02","question":"鸡冠洞有哪些设施服务？","expect_name":"鸡冠洞","expect_theme":"facilities","note":"设施"}
+{"id":"D03","question":"鸡冠洞有什么公告或注意事项？","expect_name":"鸡冠洞","expect_theme":"notice","note":"公告"}
+{"id":"D04","question":"鸡冠洞门票有优待吗？","expect_name":"鸡冠洞","expect_theme":"preferential","note":"优待"}
+{"id":"D05","question":"重渡沟风景区是什么样的景点？","expect_name":"重渡沟风景区","expect_theme":"overview","note":"概况"}
+{"id":"D06","question":"重渡沟风景区有哪些设施？","expect_name":"重渡沟风景区","expect_theme":"facilities","note":"设施"}
+{"id":"D07","question":"重渡沟风景区有哪些优待政策？","expect_name":"重渡沟风景区","expect_theme":"preferential","note":"优待"}
+{"id":"D08","question":"洛阳白云山风景区概况","expect_name":"洛阳白云山风景区","expect_theme":"overview","note":"概况"}
+{"id":"D09","question":"白云山风景区寄存或服务设施有哪些？","expect_name":"洛阳白云山风景区","expect_theme":"facilities","note":"设施"}
+{"id":"D10","question":"洛阳白云山有什么购票或游览公告？","expect_name":"洛阳白云山风景区","expect_theme":"notice","note":"公告"}
+
+# ---------- E. 隋唐洛阳城系 ----------
+{"id":"E01","question":"隋唐洛阳城明堂天堂景区介绍","expect_name":"隋唐洛阳城明堂天堂景区","expect_theme":"overview","note":"概况"}
+{"id":"E02","question":"明堂天堂景区有哪些设施？","expect_name":"隋唐洛阳城明堂天堂景区","expect_theme":"facilities","note":"设施"}
+{"id":"E03","question":"隋唐洛阳城明堂天堂有什么入园限制？","expect_name":"隋唐洛阳城明堂天堂景区","expect_theme":"entry_policy","note":"入园"}
+{"id":"E04","question":"明堂天堂景区近期公告说了什么？","expect_name":"隋唐洛阳城明堂天堂景区","expect_theme":"notice","note":"公告"}
+{"id":"E05","question":"应天门遗址有什么历史文化价值？","expect_name":"隋唐洛阳城应天门遗址","expect_theme":"history_culture","note":"历史"}
+{"id":"E06","question":"隋唐洛阳城应天门遗址有哪些优待？","expect_name":"隋唐洛阳城应天门遗址","expect_theme":"preferential","note":"优待"}
+{"id":"E07","question":"应天门遗址有什么参观公告？","expect_name":"隋唐洛阳城应天门遗址","expect_theme":"notice","note":"公告"}
+
+# ---------- F. 博物馆 / 城市文化 ----------
+{"id":"F01","question":"洛阳博物馆适合看什么？","expect_name":"洛阳博物馆","expect_theme":"overview","note":"仅有overview"}
+{"id":"F02","question":"洛阳古墓博物馆是怎样的地方？","expect_name":"洛阳古墓博物馆","expect_theme":"overview","note":"概况"}
+{"id":"F03","question":"洛阳古墓博物馆有什么历史文化看点？","expect_name":"洛阳古墓博物馆","expect_theme":"history_culture","note":"历史"}
+{"id":"F04","question":"天子驾六博物馆概况","expect_name":"天子驾六博物馆","expect_theme":"overview","note":"概况"}
+{"id":"F05","question":"天子驾六博物馆有哪些设施？","expect_name":"天子驾六博物馆","expect_theme":"facilities","note":"设施"}
+{"id":"F06","question":"中国国花园的历史文化特色是什么？","expect_name":"中国国花园","expect_theme":"history_culture","note":"无overview，用history"}
+{"id":"F07","question":"中国国花园有哪些优待政策？","expect_name":"中国国花园","expect_theme":"preferential","note":"优待"}
+{"id":"F08","question":"丽景门景区的历史背景","expect_name":"丽景门景区","expect_theme":"history_culture","note":"历史"}
+{"id":"F09","question":"丽景门景区有什么设施服务？","expect_name":"丽景门景区","expect_theme":"facilities","note":"设施"}
+{"id":"F10","question":"寻迹洛神赋是什么体验项目？","expect_name":"寻迹洛神赋","expect_theme":"overview","note":"概况"}
+{"id":"F11","question":"寻迹洛神赋有哪些优待？","expect_name":"寻迹洛神赋","expect_theme":"preferential","note":"优待"}
+
+# ---------- G. 玩乐：滑雪 / 温泉 / 演出 / 漂流周边 ----------
+{"id":"G01","question":"洛阳伏牛山滑雪场是什么样的滑雪场？","expect_name":"洛阳伏牛山滑雪场","expect_theme":"overview","note":"概况"}
+{"id":"G02","question":"伏牛山滑雪场有哪些设施？","expect_name":"洛阳伏牛山滑雪场","expect_theme":"facilities","note":"设施"}
+{"id":"G03","question":"栾川九龙山温泉概况","expect_name":"栾川九龙山温泉","expect_theme":"overview","note":"温泉概况"}
+{"id":"G04","question":"九龙山温泉有优待政策吗？","expect_name":"栾川九龙山温泉","expect_theme":"preferential","note":"优待"}
+{"id":"G05","question":"洛阳凤舞神都实景演出介绍","expect_name":"洛阳凤舞神都实景演出","expect_theme":"overview","note":"演出概况"}
+{"id":"G06","question":"凤舞神都演出入园或观演有什么限制？","expect_name":"洛阳凤舞神都实景演出","expect_theme":"entry_policy","note":"入园限制"}
+{"id":"G07","question":"木札岭旅游区概况","expect_name":"木札岭旅游区","expect_theme":"overview","note":"概况"}
+{"id":"G08","question":"木札岭旅游区有哪些设施？","expect_name":"木札岭旅游区","expect_theme":"facilities","note":"设施"}
+{"id":"G09","question":"国家牡丹园可以玩什么？","expect_name":"国家牡丹园","expect_theme":"overview","note":"概况"}
+{"id":"G10","question":"国家牡丹园有哪些服务设施？","expect_name":"国家牡丹园","expect_theme":"facilities","note":"设施"}
+{"id":"G11","question":"养子沟景区概况","expect_name":"养子沟","expect_theme":"overview","note":"概况"}
+{"id":"G12","question":"灵山风景区入园有什么规定？","expect_name":"灵山风景区","expect_theme":"entry_policy","note":"入园"}
+{"id":"G13","question":"抱犊古寨的游览建议是什么？","expect_name":"抱犊古寨","expect_theme":"visit_tips","note":"visit_tips 稀缺主题"}
+{"id":"G14","question":"抱犊古寨有什么公告？","expect_name":"抱犊古寨","expect_theme":"notice","note":"公告"}
+{"id":"G15","question":"天河大峡谷是什么地方？","expect_name":"天河大峡谷","expect_theme":"overview","note":"概况"}
+
+# ---------- H. 换说法 / 口语化（仍应对准同一景点主题）----------
+{"id":"H01","question":"带爸妈去龙门，年纪大了有没有免票？","expect_name":"龙门石窟","expect_theme":"preferential","note":"口语优待"}
+{"id":"H02","question":"龙门石窟行李能不能存？背包太大了","expect_name":"龙门石窟","expect_theme":"facilities","note":"口语设施"}
+{"id":"H03","question":"白马寺为什么叫白马寺？历史由来","expect_name":"白马寺","expect_theme":"history_culture","note":"口语历史"}
+{"id":"H04","question":"明堂天堂怎么逛、有什么要注意的公告吗？","expect_name":"隋唐洛阳城明堂天堂景区","expect_theme":"notice","note":"口语公告；若偏overview仍算主题考验"}
+{"id":"H05","question":"老君山能不能带宠物进去？入园规定","expect_name":"老君山景区","expect_theme":"entry_policy","note":"口语入园；文案未必含宠物，主测主题召回"}

@@ -1,0 +1,8 @@
+{
+  "dataset": "routing_store_v1.jsonl",
+  "count": 58,
+  "sha256": "b7ebe6548562691bdd6de94d26a043dca3c0817a65a966671d85d0f1e705357b",
+  "labels": "expected store, entity separately",
+  "split": "category-stratified dev/holdout; prototypes must not include these questions",
+  "origin": "agent-authored synthetic cases, not independently collected production blind test"
+}

@@ -1,0 +1,85 @@
+{
+  "name": "answer_v1",
+  "frozen_at": "2026-10-12",
+  "original_file_hashes": {
+    "rag/eval/reports/answer_holdout_v1_2026-10-12_run1.json": "f995dab07ebde6deb6a670439e57f64fe990f576abe1b51436c585c5e66fc975",
+    "rag/eval/reports/answer_holdout_v1_2026-10-12_run1.md": "6e315b7ee9e1d1dcc10b86991b68d2d7d73ef26f8a0e582ccadbfac15530bd51",
+    "rag/eval/cases/answer_holdout_v1.jsonl": "53616a545484f2aaa0dc11649c6d93dc438485fb218d0a1b97bf30b9462cd33d",
+    "rag/eval/cases/answer_holdout_v1.manifest.json": "21df1afc89ea610506470b85d24ce85084ff92960fa5951833291796508e74ec",
+    "rag/service/answer_service.py": "24947ab23e75cb5950372ed286bf961d9af75cd74f8ee4a83e820751c63e1fbd",
+    "rag/service/retrieval_server.py": "414cb512a982197bce5e4af7f67f108cca53e103d9b2ab05c56ad72c625c57e9",
+    "rag/retrieval/search_chunks.py": "9eee35bb5001850bf2b9dd05bb2e1d4a153c173ee91f14a70b2ab8a3dd2083a0"
+  },
+  "runtime_versions": {
+    "rag/retrieval/search_chunks.py": "9eee35bb5001850bf2b9dd05bb2e1d4a153c173ee91f14a70b2ab8a3dd2083a0",
+    "rag/service/retrieval_server.py": "414cb512a982197bce5e4af7f67f108cca53e103d9b2ab05c56ad72c625c57e9",
+    "rag/service/answer_service.py": "24947ab23e75cb5950372ed286bf961d9af75cd74f8ee4a83e820751c63e1fbd",
+    "prompt_sha256": "1f059a05fbcf3c5bdbfb94a4f0a3a4f1b424a470e1fceaff36827624ca666d29",
+    "dataset_sha256": "53616a545484f2aaa0dc11649c6d93dc438485fb218d0a1b97bf30b9462cd33d"
+  },
+  "llm_configuration": {
+    "model": "deepseek-chat",
+    "base_url": "https://api.deepseek.com/v1"
+  },
+  "source_snapshot": {
+    "count": 347,
+    "content_provenance_embedding_sha256": "cf3a066d0b10ae8e941b5dffdab4652d045d8aba3e62bf5f287b31ecb0379ace"
+  },
+  "review_summary": {
+    "cases": 25,
+    "response_status_counts": {
+      "answered": 19,
+      "insufficient_evidence": 6
+    },
+    "human_reviewed": 25,
+    "answer_accuracy": 1.0,
+    "accepted_cases_on_this_set": 25,
+    "failed_cases_on_this_set": 0,
+    "accuracy_scope": "only this user-reviewed 25-case run; not system-wide accuracy",
+    "dimension_scores": {
+      "factual_support": {
+        "pass": 25,
+        "fail": 0,
+        "na": 0,
+        "scored": 25,
+        "pass_rate_on_scored": 1.0
+      },
+      "citation_support": {
+        "pass": 20,
+        "fail": 0,
+        "na": 5,
+        "scored": 20,
+        "pass_rate_on_scored": 1.0
+      },
+      "poi_isolation": {
+        "pass": 25,
+        "fail": 0,
+        "na": 0,
+        "scored": 25,
+        "pass_rate_on_scored": 1.0
+      },
+      "refusal_correct": {
+        "pass": 25,
+        "fail": 0,
+        "na": 0,
+        "scored": 25,
+        "pass_rate_on_scored": 1.0
+      },
+      "freshness_correct": {
+        "pass": 17,
+        "fail": 0,
+        "na": 8,
+        "scored": 17,
+        "pass_rate_on_scored": 1.0
+      },
+      "point_coverage": {
+        "pass": 25,
+        "fail": 0,
+        "na": 0,
+        "scored": 25,
+        "pass_rate_on_scored": 1.0
+      }
+    }
+  },
+  "secrets_included": false
+}

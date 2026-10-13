@@ -1,0 +1,37 @@
+[Unit]
+Description=Luoyang RAG retrieval service (BGE-M3 + evidence answers, 127.0.0.1:8100)
+Documentation=https://agentfolio.duckdns.org/travel/docs
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/apps/travel-planner
+
+# 与 rag/service/start_retrieval_server.sh 保持同一套环境；.env 已确认无空格/引号，
+# 可以被 systemd EnvironmentFile 直接解析。
+EnvironmentFile=/home/ubuntu/apps/travel-planner/.env
+Environment=HF_HOME=/home/ubuntu/.cache/huggingface
+Environment=TMPDIR=/tmp
+Environment=PYTHONPATH=/home/ubuntu/apps/travel-planner/rag
+Environment=PYTHONIOENCODING=utf-8
+Environment=LANG=C.UTF-8
+
+ExecStart=/home/ubuntu/apps/travel-planner/.venv/bin/python -m uvicorn service.retrieval_server:app \
+    --host 127.0.0.1 --port 8100 --log-level info
+
+Restart=always
+RestartSec=5
+TimeoutStopSec=20
+
+# 只绑定回环，公网入口一律走 nginx（/etc/nginx/snippets/travel-proxy.conf）。
+# 这里刻意不做 ProtectHome/ProtectSystem：HuggingFace 缓存位于 /home/ubuntu/.cache，
+# 只读挂载会让模型加载时的锁文件创建失败，稳定性优先于加固。
+NoNewPrivileges=true
+PrivateDevices=true
+RestrictSUIDSGID=true
+
+[Install]
+WantedBy=multi-user.target

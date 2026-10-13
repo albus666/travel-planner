@@ -1,0 +1,2200 @@
+{
+  "dataset_sha256": "6ed15aba640a6f138e6eefe4b1e29c3fa06cf2807cbc6b3c4a72b2a381c5c3ba",
+  "poi_count": 259,
+  "scope": "offline lexical collision analysis; uniqueness does not establish user intent or safe automatic resolution",
+  "scenarios": {
+    "geographic": {
+      "prefixes": [
+        "河南省洛阳市",
+        "河南省洛阳",
+        "河南洛阳",
+        "洛阳市",
+        "洛阳"
+      ],
+      "changed_count": 45,
+      "unchanged_count": 214,
+      "all_exact_unique_count": 259,
+      "changed_exact_unique_count": 45,
+      "changed_substring_unique_count": 40,
+      "changed_records": [
+        {
+          "poi_id": 89920,
+          "name": "洛阳博物馆",
+          "city": "洛阳",
+          "core": "博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            89920
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 89920,
+              "name": "洛阳博物馆"
+            },
+            {
+              "poi_id": 82477,
+              "name": "天子驾六博物馆"
+            },
+            {
+              "poi_id": 77796,
+              "name": "洛阳古墓博物馆"
+            },
+            {
+              "poi_id": 77445555,
+              "name": "二里头夏都遗址博物馆"
+            },
+            {
+              "poi_id": 10532942,
+              "name": "隋唐大运河文化博物馆"
+            },
+            {
+              "poi_id": 134085591,
+              "name": "牡丹博物馆"
+            },
+            {
+              "poi_id": 77808,
+              "name": "洛阳民俗博物馆"
+            },
+            {
+              "poi_id": 11080330,
+              "name": "定鼎门遗址博物馆"
+            },
+            {
+              "poi_id": 13675923,
+              "name": "洛阳三彩艺术博物馆"
+            },
+            {
+              "poi_id": 10530487,
+              "name": "东方红农耕博物馆"
+            },
+            {
+              "poi_id": 77809,
+              "name": "新安县千唐志斋博物馆"
+            },
+            {
+              "poi_id": 13665194,
+              "name": "洛阳古墓博物馆-景陵"
+            },
+            {
+              "poi_id": 38647846,
+              "name": "洛阳真不同博物馆"
+            },
+            {
+              "poi_id": 56309164,
+              "name": "洛阳龙门博物馆"
+            },
+            {
+              "poi_id": 70029412,
+              "name": "洛阳博物馆-珍宝馆"
+            },
+            {
+              "poi_id": 13665097,
+              "name": "偃师商城博物馆"
+            },
+            {
+              "poi_id": 149687017,
+              "name": "汉魏洛阳故城遗址博物馆"
+            },
+            {
+              "poi_id": 38494135,
+              "name": "唐三彩博物馆"
+            },
+            {
+              "poi_id": 154171418,
+              "name": "洛阳宫宴·沉浸式宫廷餐秀(应天门洛阳博物馆店)"
+            },
+            {
+              "poi_id": 39071829,
+              "name": "洛阳万里茶道博物馆"
+            },
+            {
+              "poi_id": 149646032,
+              "name": "周王城天子驾六博物馆(分馆)"
+            },
+            {
+              "poi_id": 140972289,
+              "name": "洛阳博物馆-临时展厅"
+            },
+            {
+              "poi_id": 153990577,
+              "name": "洛阳逛博物馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 77784,
+          "name": "洛阳白云山风景区",
+          "city": "洛阳",
+          "core": "白云山风景区",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            77784
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 77784,
+              "name": "洛阳白云山风景区"
+            }
+          ]
+        },
+        {
+          "poi_id": 77796,
+          "name": "洛阳古墓博物馆",
+          "city": "洛阳",
+          "core": "古墓博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            77796
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 77796,
+              "name": "洛阳古墓博物馆"
+            },
+            {
+              "poi_id": 13665194,
+              "name": "洛阳古墓博物馆-景陵"
+            }
+          ]
+        },
+        {
+          "poi_id": 10542494,
+          "name": "洛阳老街",
+          "city": "洛阳",
+          "core": "老街",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            10542494
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 10542494,
+              "name": "洛阳老街"
+            }
+          ]
+        },
+        {
+          "poi_id": 151080819,
+          "name": "洛阳凤舞神都实景演出",
+          "city": "洛阳",
+          "core": "凤舞神都实景演出",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            151080819
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 151080819,
+              "name": "洛阳凤舞神都实景演出"
+            }
+          ]
+        },
+        {
+          "poi_id": 91728,
+          "name": "洛阳伏牛山滑雪场",
+          "city": "洛阳",
+          "core": "伏牛山滑雪场",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            91728
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 91728,
+              "name": "洛阳伏牛山滑雪场"
+            }
+          ]
+        },
+        {
+          "poi_id": 13703352,
+          "name": "洛阳薰衣草庄园",
+          "city": "洛阳",
+          "core": "薰衣草庄园",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            13703352
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 13703352,
+              "name": "洛阳薰衣草庄园"
+            }
+          ]
+        },
+        {
+          "poi_id": 18560586,
+          "name": "洛阳牡丹园",
+          "city": "洛阳",
+          "core": "牡丹园",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            18560586
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 82371,
+              "name": "国家牡丹园"
+            },
+            {
+              "poi_id": 10542726,
+              "name": "国际牡丹园"
+            },
+            {
+              "poi_id": 82374,
+              "name": "神州牡丹园"
+            },
+            {
+              "poi_id": 18560586,
+              "name": "洛阳牡丹园"
+            },
+            {
+              "poi_id": 13085147,
+              "name": "洛阳郁金香牡丹园"
+            },
+            {
+              "poi_id": 31077309,
+              "name": "龙门牡丹园"
+            }
+          ]
+        },
+        {
+          "poi_id": 142202007,
+          "name": "洛阳大河荟",
+          "city": "洛阳",
+          "core": "大河荟",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            142202007
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 142202007,
+              "name": "洛阳大河荟"
+            }
+          ]
+        },
+        {
+          "poi_id": 77808,
+          "name": "洛阳民俗博物馆",
+          "city": "洛阳",
+          "core": "民俗博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            77808
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 77808,
+              "name": "洛阳民俗博物馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 77803,
+          "name": "洛阳花果山景区",
+          "city": "洛阳",
+          "core": "花果山景区",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            77803
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 77803,
+              "name": "洛阳花果山景区"
+            }
+          ]
+        },
+        {
+          "poi_id": 13675923,
+          "name": "洛阳三彩艺术博物馆",
+          "city": "洛阳",
+          "core": "三彩艺术博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            13675923
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 13675923,
+              "name": "洛阳三彩艺术博物馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 13085147,
+          "name": "洛阳郁金香牡丹园",
+          "city": "洛阳",
+          "core": "郁金香牡丹园",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            13085147
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 13085147,
+              "name": "洛阳郁金香牡丹园"
+            }
+          ]
+        },
+        {
+          "poi_id": 25344201,
+          "name": "洛阳国花园",
+          "city": "洛阳",
+          "core": "国花园",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            25344201
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 82475,
+              "name": "中国国花园"
+            },
+            {
+              "poi_id": 25344201,
+              "name": "洛阳国花园"
+            }
+          ]
+        },
+        {
+          "poi_id": 10770507,
+          "name": "洛阳海底世界",
+          "city": "洛阳",
+          "core": "海底世界",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            10770507
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 10770507,
+              "name": "洛阳海底世界"
+            }
+          ]
+        },
+        {
+          "poi_id": 13665194,
+          "name": "洛阳古墓博物馆-景陵",
+          "city": "洛阳",
+          "core": "古墓博物馆-景陵",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            13665194
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 13665194,
+              "name": "洛阳古墓博物馆-景陵"
+            }
+          ]
+        },
+        {
+          "poi_id": 38647846,
+          "name": "洛阳真不同博物馆",
+          "city": "洛阳",
+          "core": "真不同博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            38647846
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 38647846,
+              "name": "洛阳真不同博物馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 56309164,
+          "name": "洛阳龙门博物馆",
+          "city": "洛阳",
+          "core": "龙门博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            56309164
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 56309164,
+              "name": "洛阳龙门博物馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 10763286,
+          "name": "洛阳木札岭滑雪场",
+          "city": "洛阳",
+          "core": "木札岭滑雪场",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            10763286
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 10763286,
+              "name": "洛阳木札岭滑雪场"
+            }
+          ]
+        },
+        {
+          "poi_id": 70029412,
+          "name": "洛阳博物馆-珍宝馆",
+          "city": "洛阳",
+          "core": "博物馆-珍宝馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            70029412
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 70029412,
+              "name": "洛阳博物馆-珍宝馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 83671813,
+          "name": "洛阳红山欢乐谷国际旅游度假区",
+          "city": "洛阳",
+          "core": "红山欢乐谷国际旅游度假区",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            83671813
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 83671813,
+              "name": "洛阳红山欢乐谷国际旅游度假区"
+            }
+          ]
+        },
+        {
+          "poi_id": 24651531,
+          "name": "洛阳美术馆",
+          "city": "洛阳",
+          "core": "美术馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            24651531
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 24651531,
+              "name": "洛阳美术馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 124252335,
+          "name": "洛阳龙凤山景区",
+          "city": "洛阳",
+          "core": "龙凤山景区",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            124252335
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 124252335,
+              "name": "洛阳龙凤山景区"
+            }
+          ]
+        },
+        {
+          "poi_id": 52009149,
+          "name": "洛阳文峰塔",
+          "city": "洛阳",
+          "core": "文峰塔",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            52009149
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 52009149,
+              "name": "洛阳文峰塔"
+            }
+          ]
+        },
+        {
+          "poi_id": 154171418,
+          "name": "洛阳宫宴·沉浸式宫廷餐秀(应天门洛阳博物馆店)",
+          "city": "洛阳",
+          "core": "宫宴·沉浸式宫廷餐秀(应天门洛阳博物馆店)",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            154171418
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 154171418,
+              "name": "洛阳宫宴·沉浸式宫廷餐秀(应天门洛阳博物馆店)"
+            }
+          ]
+        },
+        {
+          "poi_id": 39071829,
+          "name": "洛阳万里茶道博物馆",
+          "city": "洛阳",
+          "core": "万里茶道博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            39071829
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 39071829,
+              "name": "洛阳万里茶道博物馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 38560939,
+          "name": "洛阳老子纪念馆",
+          "city": "洛阳",
+          "core": "老子纪念馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            38560939
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 38560939,
+              "name": "洛阳老子纪念馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 33196661,
+          "name": "洛阳大宋名相园",
+          "city": "洛阳",
+          "core": "大宋名相园",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            33196661
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 33196661,
+              "name": "洛阳大宋名相园"
+            }
+          ]
+        },
+        {
+          "poi_id": 148421340,
+          "name": "洛阳山陕会馆",
+          "city": "洛阳",
+          "core": "山陕会馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            148421340
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 148421340,
+              "name": "洛阳山陕会馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 148466705,
+          "name": "洛阳伏牛山四季旅游度假区",
+          "city": "洛阳",
+          "core": "伏牛山四季旅游度假区",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            148466705
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 148466705,
+              "name": "洛阳伏牛山四季旅游度假区"
+            }
+          ]
+        },
+        {
+          "poi_id": 149574300,
+          "name": "洛阳翔龙大峡谷景区",
+          "city": "洛阳",
+          "core": "翔龙大峡谷景区",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            149574300
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 149574300,
+              "name": "洛阳翔龙大峡谷景区"
+            }
+          ]
+        },
+        {
+          "poi_id": 150297597,
+          "name": "洛阳汉服·旅拍基地",
+          "city": "洛阳",
+          "core": "汉服·旅拍基地",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            150297597
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 150297597,
+              "name": "洛阳汉服·旅拍基地"
+            }
+          ]
+        },
+        {
+          "poi_id": 152972111,
+          "name": "洛阳 · 【笑场喜剧】洛阳必打卡丨脱口秀开放麦丨喜剧盲盒【爆笑解压】",
+          "city": "洛阳",
+          "core": " · 【笑场喜剧】洛阳必打卡丨脱口秀开放麦丨喜剧盲盒【爆笑解压】",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            152972111
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 152972111,
+              "name": "洛阳 · 【笑场喜剧】洛阳必打卡丨脱口秀开放麦丨喜剧盲盒【爆笑解压】"
+            }
+          ]
+        },
+        {
+          "poi_id": 152937048,
+          "name": "洛阳 · ［笑场喜剧］洛阳必打卡｜喜剧综艺节目卡司空降｜脱口秀精品秀+即兴喜剧+魔术脱口秀",
+          "city": "洛阳",
+          "core": " · ［笑场喜剧］洛阳必打卡｜喜剧综艺节目卡司空降｜脱口秀精品秀+即兴喜剧+魔术脱口秀",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            152937048
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 152937048,
+              "name": "洛阳 · ［笑场喜剧］洛阳必打卡｜喜剧综艺节目卡司空降｜脱口秀精品秀+即兴喜剧+魔术脱口秀"
+            }
+          ]
+        },
+        {
+          "poi_id": 145143370,
+          "name": "洛阳东周王城遗址",
+          "city": "洛阳",
+          "core": "东周王城遗址",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            145143370
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 145143370,
+              "name": "洛阳东周王城遗址"
+            }
+          ]
+        },
+        {
+          "poi_id": 140972289,
+          "name": "洛阳博物馆-临时展厅",
+          "city": "洛阳",
+          "core": "博物馆-临时展厅",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            140972289
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 140972289,
+              "name": "洛阳博物馆-临时展厅"
+            }
+          ]
+        },
+        {
+          "poi_id": 52022593,
+          "name": "洛阳市上清宫森林公园-翠云峰",
+          "city": "洛阳",
+          "core": "上清宫森林公园-翠云峰",
+          "removed": [
+            "洛阳市"
+          ],
+          "same_core_ids": [
+            52022593
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 52022593,
+              "name": "洛阳市上清宫森林公园-翠云峰"
+            }
+          ]
+        },
+        {
+          "poi_id": 135316406,
+          "name": "洛阳市奥林匹克中心",
+          "city": "洛阳",
+          "core": "奥林匹克中心",
+          "removed": [
+            "洛阳市"
+          ],
+          "same_core_ids": [
+            135316406
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 135316406,
+              "name": "洛阳市奥林匹克中心"
+            },
+            {
+              "poi_id": 152901366,
+              "name": "洛阳市奥林匹克中心-体育场"
+            }
+          ]
+        },
+        {
+          "poi_id": 152901366,
+          "name": "洛阳市奥林匹克中心-体育场",
+          "city": "洛阳",
+          "core": "奥林匹克中心-体育场",
+          "removed": [
+            "洛阳市"
+          ],
+          "same_core_ids": [
+            152901366
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 152901366,
+              "name": "洛阳市奥林匹克中心-体育场"
+            }
+          ]
+        },
+        {
+          "poi_id": 145748267,
+          "name": "洛阳汉服体验",
+          "city": "洛阳",
+          "core": "汉服体验",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            145748267
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 145748267,
+              "name": "洛阳汉服体验"
+            }
+          ]
+        },
+        {
+          "poi_id": 145327866,
+          "name": "洛阳白云山雪云间滑雪场",
+          "city": "洛阳",
+          "core": "白云山雪云间滑雪场",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            145327866
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 145327866,
+              "name": "洛阳白云山雪云间滑雪场"
+            }
+          ]
+        },
+        {
+          "poi_id": 148892985,
+          "name": "洛阳看云海",
+          "city": "洛阳",
+          "core": "看云海",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            148892985
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 148892985,
+              "name": "洛阳看云海"
+            }
+          ]
+        },
+        {
+          "poi_id": 148480106,
+          "name": "洛阳赏牡丹花",
+          "city": "洛阳",
+          "core": "赏牡丹花",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            148480106
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 148480106,
+              "name": "洛阳赏牡丹花"
+            }
+          ]
+        },
+        {
+          "poi_id": 153990577,
+          "name": "洛阳逛博物馆",
+          "city": "洛阳",
+          "core": "逛博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            153990577
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 153990577,
+              "name": "洛阳逛博物馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 51975678,
+          "name": "洛阳鸡冠洞风景名胜区-观音庙",
+          "city": "洛阳",
+          "core": "鸡冠洞风景名胜区-观音庙",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            51975678
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 51975678,
+              "name": "洛阳鸡冠洞风景名胜区-观音庙"
+            }
+          ]
+        }
+      ],
+      "collisions": {}
+    },
+    "geographic_and_dynasty_experiment": {
+      "prefixes": [
+        "河南省洛阳市",
+        "河南省洛阳",
+        "河南洛阳",
+        "隋唐洛阳城",
+        "洛阳市",
+        "洛阳",
+        "隋唐",
+        "北魏",
+        "东汉",
+        "西汉"
+      ],
+      "changed_count": 53,
+      "unchanged_count": 206,
+      "all_exact_unique_count": 259,
+      "changed_exact_unique_count": 53,
+      "changed_substring_unique_count": 46,
+      "changed_records": [
+        {
+          "poi_id": 10542669,
+          "name": "隋唐洛阳城明堂天堂景区",
+          "city": "洛阳",
+          "core": "明堂天堂景区",
+          "removed": [
+            "隋唐洛阳城"
+          ],
+          "same_core_ids": [
+            10542669
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 10542669,
+              "name": "隋唐洛阳城明堂天堂景区"
+            }
+          ]
+        },
+        {
+          "poi_id": 11078925,
+          "name": "隋唐城遗址植物园",
+          "city": "洛阳",
+          "core": "城遗址植物园",
+          "removed": [
+            "隋唐"
+          ],
+          "same_core_ids": [
+            11078925
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 11078925,
+              "name": "隋唐城遗址植物园"
+            }
+          ]
+        },
+        {
+          "poi_id": 61114449,
+          "name": "隋唐洛阳城应天门遗址",
+          "city": "洛阳",
+          "core": "应天门遗址",
+          "removed": [
+            "隋唐洛阳城"
+          ],
+          "same_core_ids": [
+            61114449
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 61114449,
+              "name": "隋唐洛阳城应天门遗址"
+            }
+          ]
+        },
+        {
+          "poi_id": 89920,
+          "name": "洛阳博物馆",
+          "city": "洛阳",
+          "core": "博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            89920
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 89920,
+              "name": "洛阳博物馆"
+            },
+            {
+              "poi_id": 82477,
+              "name": "天子驾六博物馆"
+            },
+            {
+              "poi_id": 77796,
+              "name": "洛阳古墓博物馆"
+            },
+            {
+              "poi_id": 77445555,
+              "name": "二里头夏都遗址博物馆"
+            },
+            {
+              "poi_id": 10532942,
+              "name": "隋唐大运河文化博物馆"
+            },
+            {
+              "poi_id": 134085591,
+              "name": "牡丹博物馆"
+            },
+            {
+              "poi_id": 77808,
+              "name": "洛阳民俗博物馆"
+            },
+            {
+              "poi_id": 11080330,
+              "name": "定鼎门遗址博物馆"
+            },
+            {
+              "poi_id": 13675923,
+              "name": "洛阳三彩艺术博物馆"
+            },
+            {
+              "poi_id": 10530487,
+              "name": "东方红农耕博物馆"
+            },
+            {
+              "poi_id": 77809,
+              "name": "新安县千唐志斋博物馆"
+            },
+            {
+              "poi_id": 13665194,
+              "name": "洛阳古墓博物馆-景陵"
+            },
+            {
+              "poi_id": 38647846,
+              "name": "洛阳真不同博物馆"
+            },
+            {
+              "poi_id": 56309164,
+              "name": "洛阳龙门博物馆"
+            },
+            {
+              "poi_id": 70029412,
+              "name": "洛阳博物馆-珍宝馆"
+            },
+            {
+              "poi_id": 13665097,
+              "name": "偃师商城博物馆"
+            },
+            {
+              "poi_id": 149687017,
+              "name": "汉魏洛阳故城遗址博物馆"
+            },
+            {
+              "poi_id": 38494135,
+              "name": "唐三彩博物馆"
+            },
+            {
+              "poi_id": 154171418,
+              "name": "洛阳宫宴·沉浸式宫廷餐秀(应天门洛阳博物馆店)"
+            },
+            {
+              "poi_id": 39071829,
+              "name": "洛阳万里茶道博物馆"
+            },
+            {
+              "poi_id": 149646032,
+              "name": "周王城天子驾六博物馆(分馆)"
+            },
+            {
+              "poi_id": 140972289,
+              "name": "洛阳博物馆-临时展厅"
+            },
+            {
+              "poi_id": 153990577,
+              "name": "洛阳逛博物馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 71496012,
+          "name": "隋唐洛阳城九洲池",
+          "city": "洛阳",
+          "core": "九洲池",
+          "removed": [
+            "隋唐洛阳城"
+          ],
+          "same_core_ids": [
+            71496012
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 71496012,
+              "name": "隋唐洛阳城九洲池"
+            },
+            {
+              "poi_id": 145361367,
+              "name": "九洲池-瑶光殿"
+            },
+            {
+              "poi_id": 145666727,
+              "name": "隋唐洛阳城九洲池遗址景区-观景台"
+            }
+          ]
+        },
+        {
+          "poi_id": 77784,
+          "name": "洛阳白云山风景区",
+          "city": "洛阳",
+          "core": "白云山风景区",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            77784
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 77784,
+              "name": "洛阳白云山风景区"
+            }
+          ]
+        },
+        {
+          "poi_id": 77796,
+          "name": "洛阳古墓博物馆",
+          "city": "洛阳",
+          "core": "古墓博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            77796
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 77796,
+              "name": "洛阳古墓博物馆"
+            },
+            {
+              "poi_id": 13665194,
+              "name": "洛阳古墓博物馆-景陵"
+            }
+          ]
+        },
+        {
+          "poi_id": 10542494,
+          "name": "洛阳老街",
+          "city": "洛阳",
+          "core": "老街",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            10542494
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 10542494,
+              "name": "洛阳老街"
+            }
+          ]
+        },
+        {
+          "poi_id": 151080819,
+          "name": "洛阳凤舞神都实景演出",
+          "city": "洛阳",
+          "core": "凤舞神都实景演出",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            151080819
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 151080819,
+              "name": "洛阳凤舞神都实景演出"
+            }
+          ]
+        },
+        {
+          "poi_id": 91728,
+          "name": "洛阳伏牛山滑雪场",
+          "city": "洛阳",
+          "core": "伏牛山滑雪场",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            91728
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 91728,
+              "name": "洛阳伏牛山滑雪场"
+            }
+          ]
+        },
+        {
+          "poi_id": 10532942,
+          "name": "隋唐大运河文化博物馆",
+          "city": "洛阳",
+          "core": "大运河文化博物馆",
+          "removed": [
+            "隋唐"
+          ],
+          "same_core_ids": [
+            10532942
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 10532942,
+              "name": "隋唐大运河文化博物馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 13703352,
+          "name": "洛阳薰衣草庄园",
+          "city": "洛阳",
+          "core": "薰衣草庄园",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            13703352
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 13703352,
+              "name": "洛阳薰衣草庄园"
+            }
+          ]
+        },
+        {
+          "poi_id": 18560586,
+          "name": "洛阳牡丹园",
+          "city": "洛阳",
+          "core": "牡丹园",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            18560586
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 82371,
+              "name": "国家牡丹园"
+            },
+            {
+              "poi_id": 10542726,
+              "name": "国际牡丹园"
+            },
+            {
+              "poi_id": 82374,
+              "name": "神州牡丹园"
+            },
+            {
+              "poi_id": 18560586,
+              "name": "洛阳牡丹园"
+            },
+            {
+              "poi_id": 13085147,
+              "name": "洛阳郁金香牡丹园"
+            },
+            {
+              "poi_id": 31077309,
+              "name": "龙门牡丹园"
+            }
+          ]
+        },
+        {
+          "poi_id": 142202007,
+          "name": "洛阳大河荟",
+          "city": "洛阳",
+          "core": "大河荟",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            142202007
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 142202007,
+              "name": "洛阳大河荟"
+            }
+          ]
+        },
+        {
+          "poi_id": 148509879,
+          "name": "隋唐洛阳城国家遗址公园",
+          "city": "洛阳",
+          "core": "国家遗址公园",
+          "removed": [
+            "隋唐洛阳城"
+          ],
+          "same_core_ids": [
+            148509879
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 148509879,
+              "name": "隋唐洛阳城国家遗址公园"
+            }
+          ]
+        },
+        {
+          "poi_id": 77808,
+          "name": "洛阳民俗博物馆",
+          "city": "洛阳",
+          "core": "民俗博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            77808
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 77808,
+              "name": "洛阳民俗博物馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 77803,
+          "name": "洛阳花果山景区",
+          "city": "洛阳",
+          "core": "花果山景区",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            77803
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 77803,
+              "name": "洛阳花果山景区"
+            }
+          ]
+        },
+        {
+          "poi_id": 13675923,
+          "name": "洛阳三彩艺术博物馆",
+          "city": "洛阳",
+          "core": "三彩艺术博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            13675923
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 13675923,
+              "name": "洛阳三彩艺术博物馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 13085147,
+          "name": "洛阳郁金香牡丹园",
+          "city": "洛阳",
+          "core": "郁金香牡丹园",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            13085147
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 13085147,
+              "name": "洛阳郁金香牡丹园"
+            }
+          ]
+        },
+        {
+          "poi_id": 25344201,
+          "name": "洛阳国花园",
+          "city": "洛阳",
+          "core": "国花园",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            25344201
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 82475,
+              "name": "中国国花园"
+            },
+            {
+              "poi_id": 25344201,
+              "name": "洛阳国花园"
+            }
+          ]
+        },
+        {
+          "poi_id": 10770507,
+          "name": "洛阳海底世界",
+          "city": "洛阳",
+          "core": "海底世界",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            10770507
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 10770507,
+              "name": "洛阳海底世界"
+            }
+          ]
+        },
+        {
+          "poi_id": 13665194,
+          "name": "洛阳古墓博物馆-景陵",
+          "city": "洛阳",
+          "core": "古墓博物馆-景陵",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            13665194
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 13665194,
+              "name": "洛阳古墓博物馆-景陵"
+            }
+          ]
+        },
+        {
+          "poi_id": 38647846,
+          "name": "洛阳真不同博物馆",
+          "city": "洛阳",
+          "core": "真不同博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            38647846
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 38647846,
+              "name": "洛阳真不同博物馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 56309164,
+          "name": "洛阳龙门博物馆",
+          "city": "洛阳",
+          "core": "龙门博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            56309164
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 56309164,
+              "name": "洛阳龙门博物馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 10763286,
+          "name": "洛阳木札岭滑雪场",
+          "city": "洛阳",
+          "core": "木札岭滑雪场",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            10763286
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 10763286,
+              "name": "洛阳木札岭滑雪场"
+            }
+          ]
+        },
+        {
+          "poi_id": 70029412,
+          "name": "洛阳博物馆-珍宝馆",
+          "city": "洛阳",
+          "core": "博物馆-珍宝馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            70029412
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 70029412,
+              "name": "洛阳博物馆-珍宝馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 83671813,
+          "name": "洛阳红山欢乐谷国际旅游度假区",
+          "city": "洛阳",
+          "core": "红山欢乐谷国际旅游度假区",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            83671813
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 83671813,
+              "name": "洛阳红山欢乐谷国际旅游度假区"
+            }
+          ]
+        },
+        {
+          "poi_id": 24651531,
+          "name": "洛阳美术馆",
+          "city": "洛阳",
+          "core": "美术馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            24651531
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 24651531,
+              "name": "洛阳美术馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 124252335,
+          "name": "洛阳龙凤山景区",
+          "city": "洛阳",
+          "core": "龙凤山景区",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            124252335
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 124252335,
+              "name": "洛阳龙凤山景区"
+            }
+          ]
+        },
+        {
+          "poi_id": 52009149,
+          "name": "洛阳文峰塔",
+          "city": "洛阳",
+          "core": "文峰塔",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            52009149
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 52009149,
+              "name": "洛阳文峰塔"
+            }
+          ]
+        },
+        {
+          "poi_id": 154171418,
+          "name": "洛阳宫宴·沉浸式宫廷餐秀(应天门洛阳博物馆店)",
+          "city": "洛阳",
+          "core": "宫宴·沉浸式宫廷餐秀(应天门洛阳博物馆店)",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            154171418
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 154171418,
+              "name": "洛阳宫宴·沉浸式宫廷餐秀(应天门洛阳博物馆店)"
+            }
+          ]
+        },
+        {
+          "poi_id": 39071829,
+          "name": "洛阳万里茶道博物馆",
+          "city": "洛阳",
+          "core": "万里茶道博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            39071829
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 39071829,
+              "name": "洛阳万里茶道博物馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 38560939,
+          "name": "洛阳老子纪念馆",
+          "city": "洛阳",
+          "core": "老子纪念馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            38560939
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 38560939,
+              "name": "洛阳老子纪念馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 33196661,
+          "name": "洛阳大宋名相园",
+          "city": "洛阳",
+          "core": "大宋名相园",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            33196661
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 33196661,
+              "name": "洛阳大宋名相园"
+            }
+          ]
+        },
+        {
+          "poi_id": 148421340,
+          "name": "洛阳山陕会馆",
+          "city": "洛阳",
+          "core": "山陕会馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            148421340
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 148421340,
+              "name": "洛阳山陕会馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 148466705,
+          "name": "洛阳伏牛山四季旅游度假区",
+          "city": "洛阳",
+          "core": "伏牛山四季旅游度假区",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            148466705
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 148466705,
+              "name": "洛阳伏牛山四季旅游度假区"
+            }
+          ]
+        },
+        {
+          "poi_id": 149574300,
+          "name": "洛阳翔龙大峡谷景区",
+          "city": "洛阳",
+          "core": "翔龙大峡谷景区",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            149574300
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 149574300,
+              "name": "洛阳翔龙大峡谷景区"
+            }
+          ]
+        },
+        {
+          "poi_id": 150297597,
+          "name": "洛阳汉服·旅拍基地",
+          "city": "洛阳",
+          "core": "汉服·旅拍基地",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            150297597
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 150297597,
+              "name": "洛阳汉服·旅拍基地"
+            }
+          ]
+        },
+        {
+          "poi_id": 145666727,
+          "name": "隋唐洛阳城九洲池遗址景区-观景台",
+          "city": "洛阳",
+          "core": "九洲池遗址景区-观景台",
+          "removed": [
+            "隋唐洛阳城"
+          ],
+          "same_core_ids": [
+            145666727
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 145666727,
+              "name": "隋唐洛阳城九洲池遗址景区-观景台"
+            }
+          ]
+        },
+        {
+          "poi_id": 152972111,
+          "name": "洛阳 · 【笑场喜剧】洛阳必打卡丨脱口秀开放麦丨喜剧盲盒【爆笑解压】",
+          "city": "洛阳",
+          "core": " · 【笑场喜剧】洛阳必打卡丨脱口秀开放麦丨喜剧盲盒【爆笑解压】",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            152972111
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 152972111,
+              "name": "洛阳 · 【笑场喜剧】洛阳必打卡丨脱口秀开放麦丨喜剧盲盒【爆笑解压】"
+            }
+          ]
+        },
+        {
+          "poi_id": 152937048,
+          "name": "洛阳 · ［笑场喜剧］洛阳必打卡｜喜剧综艺节目卡司空降｜脱口秀精品秀+即兴喜剧+魔术脱口秀",
+          "city": "洛阳",
+          "core": " · ［笑场喜剧］洛阳必打卡｜喜剧综艺节目卡司空降｜脱口秀精品秀+即兴喜剧+魔术脱口秀",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            152937048
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 152937048,
+              "name": "洛阳 · ［笑场喜剧］洛阳必打卡｜喜剧综艺节目卡司空降｜脱口秀精品秀+即兴喜剧+魔术脱口秀"
+            }
+          ]
+        },
+        {
+          "poi_id": 145143370,
+          "name": "洛阳东周王城遗址",
+          "city": "洛阳",
+          "core": "东周王城遗址",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            145143370
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 145143370,
+              "name": "洛阳东周王城遗址"
+            }
+          ]
+        },
+        {
+          "poi_id": 140972289,
+          "name": "洛阳博物馆-临时展厅",
+          "city": "洛阳",
+          "core": "博物馆-临时展厅",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            140972289
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 140972289,
+              "name": "洛阳博物馆-临时展厅"
+            }
+          ]
+        },
+        {
+          "poi_id": 52022593,
+          "name": "洛阳市上清宫森林公园-翠云峰",
+          "city": "洛阳",
+          "core": "上清宫森林公园-翠云峰",
+          "removed": [
+            "洛阳市"
+          ],
+          "same_core_ids": [
+            52022593
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 52022593,
+              "name": "洛阳市上清宫森林公园-翠云峰"
+            }
+          ]
+        },
+        {
+          "poi_id": 135316406,
+          "name": "洛阳市奥林匹克中心",
+          "city": "洛阳",
+          "core": "奥林匹克中心",
+          "removed": [
+            "洛阳市"
+          ],
+          "same_core_ids": [
+            135316406
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 135316406,
+              "name": "洛阳市奥林匹克中心"
+            },
+            {
+              "poi_id": 152901366,
+              "name": "洛阳市奥林匹克中心-体育场"
+            }
+          ]
+        },
+        {
+          "poi_id": 152901366,
+          "name": "洛阳市奥林匹克中心-体育场",
+          "city": "洛阳",
+          "core": "奥林匹克中心-体育场",
+          "removed": [
+            "洛阳市"
+          ],
+          "same_core_ids": [
+            152901366
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 152901366,
+              "name": "洛阳市奥林匹克中心-体育场"
+            }
+          ]
+        },
+        {
+          "poi_id": 145748267,
+          "name": "洛阳汉服体验",
+          "city": "洛阳",
+          "core": "汉服体验",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            145748267
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 145748267,
+              "name": "洛阳汉服体验"
+            }
+          ]
+        },
+        {
+          "poi_id": 145327866,
+          "name": "洛阳白云山雪云间滑雪场",
+          "city": "洛阳",
+          "core": "白云山雪云间滑雪场",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            145327866
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 145327866,
+              "name": "洛阳白云山雪云间滑雪场"
+            }
+          ]
+        },
+        {
+          "poi_id": 148892985,
+          "name": "洛阳看云海",
+          "city": "洛阳",
+          "core": "看云海",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            148892985
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 148892985,
+              "name": "洛阳看云海"
+            }
+          ]
+        },
+        {
+          "poi_id": 148480106,
+          "name": "洛阳赏牡丹花",
+          "city": "洛阳",
+          "core": "赏牡丹花",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            148480106
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 148480106,
+              "name": "洛阳赏牡丹花"
+            }
+          ]
+        },
+        {
+          "poi_id": 153990577,
+          "name": "洛阳逛博物馆",
+          "city": "洛阳",
+          "core": "逛博物馆",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            153990577
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 153990577,
+              "name": "洛阳逛博物馆"
+            }
+          ]
+        },
+        {
+          "poi_id": 51975678,
+          "name": "洛阳鸡冠洞风景名胜区-观音庙",
+          "city": "洛阳",
+          "core": "鸡冠洞风景名胜区-观音庙",
+          "removed": [
+            "洛阳"
+          ],
+          "same_core_ids": [
+            51975678
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 51975678,
+              "name": "洛阳鸡冠洞风景名胜区-观音庙"
+            }
+          ]
+        },
+        {
+          "poi_id": 145590570,
+          "name": "隋唐洛阳城定鼎门遗址",
+          "city": "洛阳",
+          "core": "定鼎门遗址",
+          "removed": [
+            "隋唐洛阳城"
+          ],
+          "same_core_ids": [
+            145590570
+          ],
+          "substring_candidates": [
+            {
+              "poi_id": 11080330,
+              "name": "定鼎门遗址博物馆"
+            },
+            {
+              "poi_id": 145590570,
+              "name": "隋唐洛阳城定鼎门遗址"
+            }
+          ]
+        }
+      ],
+      "collisions": {}
+    }
+  },
+  "probes": {
+    "龙门": {
+      "substring_candidates": [
+        {
+          "poi_id": 77498,
+          "name": "龙门石窟",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 10559567,
+          "name": "龙门海洋馆",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 119534023,
+          "name": "无上龙门沉浸体验馆",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 13659438,
+          "name": "龙门桥",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 13644461,
+          "name": "龙门西山石窟-莲花洞",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 151718083,
+          "name": "龙门花香温泉度假区",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 56309164,
+          "name": "洛阳龙门博物馆",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 31077309,
+          "name": "龙门牡丹园",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 133545855,
+          "name": "龙门南山牡丹文化园",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 145686488,
+          "name": "龙门古街",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 148805107,
+          "name": "风起洛阳VR全感剧场(龙门古街店)",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 148860236,
+          "name": "龙门宫宴·沉浸式宫廷餐秀",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 148589090,
+          "name": "龙门石窟旅游年票专用通道",
+          "city": "洛阳"
+        }
+      ],
+      "current_resolve_poi": null
+    },
+    "应天门": {
+      "substring_candidates": [
+        {
+          "poi_id": 61114449,
+          "name": "隋唐洛阳城应天门遗址",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 131905320,
+          "name": "应天门南广场",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 154171418,
+          "name": "洛阳宫宴·沉浸式宫廷餐秀(应天门洛阳博物馆店)",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 145333917,
+          "name": "应天门北广场",
+          "city": "洛阳"
+        }
+      ],
+      "current_resolve_poi": null
+    },
+    "应天门遗址": {
+      "substring_candidates": [
+        {
+          "poi_id": 61114449,
+          "name": "隋唐洛阳城应天门遗址",
+          "city": "洛阳"
+        }
+      ],
+      "current_resolve_poi": null
+    },
+    "龙门海洋馆": {
+      "substring_candidates": [
+        {
+          "poi_id": 10559567,
+          "name": "龙门海洋馆",
+          "city": "洛阳"
+        }
+      ],
+      "current_resolve_poi": [
+        10559567,
+        "龙门海洋馆"
+      ]
+    },
+    "龙门石窟": {
+      "substring_candidates": [
+        {
+          "poi_id": 77498,
+          "name": "龙门石窟",
+          "city": "洛阳"
+        },
+        {
+          "poi_id": 148589090,
+          "name": "龙门石窟旅游年票专用通道",
+          "city": "洛阳"
+        }
+      ],
+      "current_resolve_poi": [
+        77498,
+        "龙门石窟"
+      ]
+    }
+  }
+}

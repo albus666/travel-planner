@@ -1,0 +1,37 @@
+{
+  "version": "test_web_v1",
+  "status": "deployed_test_mvp",
+  "server_tests_passed": 153,
+  "frontend_syntax_check": "passed",
+  "browser_mock_checks": [
+    "chat session and candidates",
+    "RAG answer and citations",
+    "script text displayed literally",
+    "retrieval hit and similarity",
+    "multi-day form JSON and submission",
+    "Agent submission and trace",
+    "map search and shared endpoint selection",
+    "usage query",
+    "no console errors"
+  ],
+  "live_browser_checks": [
+    "private SSH connection and health",
+    "natural-language three-day extraction and departure clarification"
+  ],
+  "export_download_verification": "not_completed_browser_tool_tab_session_expired",
+  "new_baidu_calls": 0,
+  "full_73_25_30_rerun": false,
+  "human_review": null,
+  "access": "http://localhost:18100/ui/ via SSH tunnel",
+  "open_source_reuse": "existing FastAPI Swagger UI at /docs",
+  "file_sha256": {
+    "rag/service/retrieval_server.py": "3b3c10085ef3660cbdb6fc19f87cc8005974b1f9916882e66966eae223b1d323",
+    "rag/service/web/index.html": "3ea317b3c4c2d2e926c315ae5b947b4ce111ebe2a7074a6ee5678b58af674afa",
+    "rag/service/web/style.css": "4456183a8845eff611075a91e9994d190bb11ada2454fdf9a3dbd954e8e2f949",
+    "rag/service/web/app.js": "587eef0e845cd9f6b5ec6bb72bfd9bf7cf03df080a5cc79d5d6873e0b1a1878c",
+    "rag/eval/tests/test_web_ui.py": "14e71cecbef32db3e4d3c6175ef3332c4a8d935f642aafcdca15c50a93bd1ec5",
+    "rag/client/open_test_web.ps1": "5f47a9bf02b58d2ed8b7146df4680463cfa6b2ec8512d23b79a385c93fda0dc6",
+    "rag/client/run_on_server.ps1": "0fc0e3208f3566b3dd4b40704c58395af9bc085cc18d0b5eb6b0c458dbdf720d",
+    "docs/WEB_TEST_MVP.md": "7eb99a64fd6bbb9bc76a0a9b29168547c89b91a7719b84d42e84e75e390c3f5a"
+  }
+}

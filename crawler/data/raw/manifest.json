@@ -1,0 +1,15 @@
+{
+  "city": "洛阳",
+  "district_id": 198,
+  "collected_at": "2026-10-11T20:36:43+08:00",
+  "outputs": [
+    "C:\\Users\\albus\\Desktop\\travel_planner\\crawler\\data\\raw\\list_pages.jsonl",
+    "C:\\Users\\albus\\Desktop\\travel_planner\\crawler\\data\\raw\\details.jsonl"
+  ],
+  "list_cards_unique": 300,
+  "list_stopped_on_duplicate_page": 1,
+  "detail_ok": 300,
+  "detail_skip": 0,
+  "detail_fail": 0,
+  "unique_pois": 300
+}

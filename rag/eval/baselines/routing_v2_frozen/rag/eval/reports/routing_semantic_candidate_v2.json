@@ -1,0 +1,2417 @@
+{
+  "metrics": {
+    "dev": {
+      "count": 30,
+      "correct": 30,
+      "ticket_tp": 14,
+      "ticket_fp": 0,
+      "ticket_fn": 0,
+      "ticket_precision": 1.0,
+      "ticket_recall": 1.0,
+      "entity_errors": 0
+    },
+    "holdout": {
+      "count": 28,
+      "correct": 28,
+      "ticket_tp": 12,
+      "ticket_fp": 0,
+      "ticket_fn": 0,
+      "ticket_precision": 1.0,
+      "ticket_recall": 1.0,
+      "entity_errors": 0
+    },
+    "all": {
+      "count": 58,
+      "correct": 58,
+      "ticket_tp": 26,
+      "ticket_fp": 0,
+      "ticket_fn": 0,
+      "ticket_precision": 1.0,
+      "ticket_recall": 1.0,
+      "entity_errors": 0
+    },
+    "paraphrase": {
+      "count": 12,
+      "correct": 12,
+      "ticket_tp": 12,
+      "ticket_fp": 0,
+      "ticket_fn": 0,
+      "ticket_precision": 1.0,
+      "ticket_recall": 1.0,
+      "entity_errors": 0
+    }
+  },
+  "cases": [
+    {
+      "id": "route-v1-01",
+      "category": "ticket_raw",
+      "question": "龙门石窟门票资料原文是什么？",
+      "split": "dev",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 77498,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "legacy_rule",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 77498
+    },
+    {
+      "id": "route-v1-02",
+      "category": "ticket_raw",
+      "question": "凤翔温泉票价资料怎么写的？",
+      "split": "holdout",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 10615019,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "legacy_rule",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 10615019
+    },
+    {
+      "id": "route-v1-03",
+      "category": "ticket_raw",
+      "question": "老君山景区门票价格记载多少？",
+      "split": "dev",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 77806,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "legacy_rule",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 77806
+    },
+    {
+      "id": "route-v1-04",
+      "category": "ticket_raw",
+      "question": "天子驾六博物馆票价原文有记录吗？",
+      "split": "holdout",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 82477,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "legacy_rule",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 82477
+    },
+    {
+      "id": "route-v1-05",
+      "category": "realtime_price",
+      "question": "龙门石窟现在门票价格是多少？",
+      "split": "dev",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 77498,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "legacy_rule",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 77498
+    },
+    {
+      "id": "route-v1-06",
+      "category": "realtime_price",
+      "question": "凤翔温泉今天票价多少钱？",
+      "split": "holdout",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 10615019,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "legacy_rule",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 10615019
+    },
+    {
+      "id": "route-v1-07",
+      "category": "specific_ticket",
+      "question": "龙门石窟儿童门票售价是多少？",
+      "split": "dev",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 77498,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "legacy_rule",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 77498
+    },
+    {
+      "id": "route-v1-08",
+      "category": "specific_ticket",
+      "question": "老君山景区成人门票价格是什么？",
+      "split": "holdout",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 77806,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "legacy_rule",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 77806
+    },
+    {
+      "id": "route-v1-09",
+      "category": "paraphrase",
+      "question": "龙门石窟进去要花多少钱？",
+      "split": "dev",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 77498,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "semantic_knn",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 77498
+    },
+    {
+      "id": "route-v1-10",
+      "category": "paraphrase",
+      "question": "凤翔温泉入场要付多少？",
+      "split": "holdout",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 10615019,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "semantic_knn",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 10615019
+    },
+    {
+      "id": "route-v1-11",
+      "category": "paraphrase",
+      "question": "老君山景区入园收费标准是什么？",
+      "split": "dev",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 77806,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "semantic_knn",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 77806
+    },
+    {
+      "id": "route-v1-12",
+      "category": "paraphrase",
+      "question": "栾川竹海野生动物园买一张票要多少人民币？",
+      "split": "holdout",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 30611571,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "semantic_knn",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 30611571
+    },
+    {
+      "id": "route-v1-13",
+      "category": "paraphrase",
+      "question": "天子驾六博物馆参观一趟要付多少钱？",
+      "split": "dev",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 82477,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "semantic_knn",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 82477
+    },
+    {
+      "id": "route-v1-14",
+      "category": "paraphrase",
+      "question": "洛阳龙门博物馆进馆的入场费是多少？",
+      "split": "holdout",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 56309164,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "semantic_knn",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 56309164
+    },
+    {
+      "id": "route-v1-15",
+      "category": "paraphrase",
+      "question": "龙门石窟一张入场券多少钱？",
+      "split": "dev",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 77498,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "semantic_knn",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 77498
+    },
+    {
+      "id": "route-v1-16",
+      "category": "paraphrase",
+      "question": "凤翔温泉买票需要掏多少钱？",
+      "split": "holdout",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 10615019,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "semantic_knn",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 10615019
+    },
+    {
+      "id": "route-v1-17",
+      "category": "paraphrase",
+      "question": "老君山景区票钱大概多少？",
+      "split": "dev",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 77806,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "semantic_knn",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 77806
+    },
+    {
+      "id": "route-v1-18",
+      "category": "paraphrase",
+      "question": "隋唐城遗址植物园参观收费吗？",
+      "split": "holdout",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 11078925,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "semantic_knn",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 11078925
+    },
+    {
+      "id": "route-v1-19",
+      "category": "paraphrase",
+      "question": "陆浑旅游风景区进入景区的费用有记载吗？",
+      "split": "dev",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 13665171,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "semantic_knn",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 13665171
+    },
+    {
+      "id": "route-v1-20",
+      "category": "paraphrase",
+      "question": "龙门石窟单人入场花费是多少？",
+      "split": "holdout",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "resolved",
+      "expected_poi_id": 77498,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "semantic_knn",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": 77498
+    },
+    {
+      "id": "route-v1-21",
+      "category": "unknown",
+      "question": "洛阳银河天梯公园门票资料价格？",
+      "split": "dev",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "unresolved",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "legacy_rule",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-22",
+      "category": "unknown",
+      "question": "洛阳星河漫游馆进去花多少钱？",
+      "split": "holdout",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "unresolved",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "semantic_knn",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-23",
+      "category": "unknown",
+      "question": "洛阳未收录幻境乐园票价资料？",
+      "split": "dev",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "unresolved",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "legacy_rule",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-24",
+      "category": "ambiguous",
+      "question": "龙门门票资料多少钱？",
+      "split": "dev",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "unresolved",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "legacy_rule",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-25",
+      "category": "ambiguous",
+      "question": "龙门进去要花多少钱？",
+      "split": "holdout",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "unresolved",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "semantic_knn",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-26",
+      "category": "ambiguous",
+      "question": "龙门石窟和凤翔温泉票价资料分别是什么？",
+      "split": "dev",
+      "expected_store": "v2.poi_details.ticket_raw",
+      "expected_resolution": "unresolved",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.poi_details.ticket_raw",
+      "method": "legacy_rule",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-27",
+      "category": "preferential",
+      "question": "龙门石窟60岁老人免票要什么证件？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-28",
+      "category": "preferential",
+      "question": "凤翔温泉儿童优惠票有什么条件？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-29",
+      "category": "preferential",
+      "question": "老君山景区学生有半价门票吗？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-30",
+      "category": "preferential",
+      "question": "栾川竹海野生动物园门票优待政策资料有哪些？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-31",
+      "category": "preferential",
+      "question": "隋唐城遗址植物园军人门票减免资料是什么？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-32",
+      "category": "preferential",
+      "question": "龙门石窟门票免费入园条件资料是什么？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-33",
+      "category": "preferential",
+      "question": "从政坊游园12岁儿童申请免费需要陪同吗？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "semantic_fallback",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-34",
+      "category": "preferential",
+      "question": "洛阳龙门博物馆凭学生证买票有折扣吗？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-35",
+      "category": "notice",
+      "question": "抱犊古寨夜场门票退款公告资料是什么？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-36",
+      "category": "notice",
+      "question": "龙门石窟门票预约须知资料怎么写？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-37",
+      "category": "notice",
+      "question": "应天门门票退票通知资料有哪些？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-38",
+      "category": "notice",
+      "question": "栾川大峡谷漂流结束运营公告是什么？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-39",
+      "category": "notice",
+      "question": "龙门石窟门票退票公告原文是什么？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-40",
+      "category": "notice",
+      "question": "洛阳龙凤山景区闭园改造通知是什么？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-41",
+      "category": "history",
+      "question": "龙马负图寺的名字有什么历史由来？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-42",
+      "category": "history",
+      "question": "汉魏故城灵台曾用于什么？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "semantic_fallback",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-43",
+      "category": "overview",
+      "question": "陆浑旅游风景区有什么景观？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-44",
+      "category": "overview",
+      "question": "凤翔温泉的景点介绍是什么？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-45",
+      "category": "route",
+      "question": "龙门石窟从西山到东山怎么走？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-46",
+      "category": "route",
+      "question": "抱犊古寨少爬坡的游览建议是什么？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-47",
+      "category": "route",
+      "question": "万安山七彩大峡谷游览路线有哪几条？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-48",
+      "category": "route",
+      "question": "老君山景区有哪些游玩建议？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-49",
+      "category": "facilities",
+      "question": "木札岭旅游区园内交通费用含在门票里吗？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-50",
+      "category": "facilities",
+      "question": "天子驾六博物馆停车一次多少钱？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-51",
+      "category": "facilities",
+      "question": "龙门石窟存包收费标准有记录吗？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-52",
+      "category": "facilities",
+      "question": "龙门花香温泉度假区淋浴设施在哪里？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-53",
+      "category": "facilities",
+      "question": "老君山景区索道买票要花多少钱？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-54",
+      "category": "facilities",
+      "question": "抱犊古寨缆车门票价格资料是什么？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-55",
+      "category": "facilities",
+      "question": "凤翔温泉餐饮一顿要花多少钱？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-56",
+      "category": "facilities",
+      "question": "龙门石窟WiFi和语音讲解是否免费？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-57",
+      "category": "realtime_other",
+      "question": "凤翔温泉现在剩余房态有哪些？",
+      "split": "dev",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    },
+    {
+      "id": "route-v1-58",
+      "category": "realtime_other",
+      "question": "隋唐城遗址植物园今天夜间开放吗？",
+      "split": "holdout",
+      "expected_store": "v2.rag_chunks",
+      "expected_resolution": "not_applicable",
+      "expected_poi_id": null,
+      "label_basis": "docs/ROUTING_STORE_CONTRACT.md",
+      "review_status": "agent_authored_pending_user_review",
+      "predicted_store": "v2.rag_chunks",
+      "method": "store_boundary",
+      "store_correct": true,
+      "entity_correct": true,
+      "resolved_poi_id": null
+    }
+  ],
+  "historical_98_store_regression": {
+    "count": 98,
+    "changes": 0,
+    "cases": [
+      {
+        "question": "隋唐城遗址植物园只有牡丹可看吗？资料列出了哪些其他专类园？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "龙马负图寺名字中的“负图”从何而来，寺内祭礼与谁有关？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "汉魏故城的灵台原来用来做什么，哪位科学家在那里研究过？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "陆浑旅游风景区以什么为核心？想游湖，资料提到了哪种游览方式？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "天子驾六博物馆里先看哪个展区，怎样到重点车马坑区域？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "万安山旅游度假区七彩大峡谷有哪些游览线路可选？请只列资料里的线路名。",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "抱犊古寨想少爬山，白天怎样上山？旧攻略里的夜游还能直接照着安排吗？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "龙门花香温泉度假区泡完温泉想洗澡、给手机充电，资料有这些设施吗？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "木札岭旅游区的园内小交通含在大门票里吗？资料中的往返参考价是多少？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "天子驾六博物馆自驾车停在哪里，资料记载是按次还是按小时收费？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "陆浑旅游风景区的无障碍卫生间在停车场哪一侧？请给出准确位置。",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "洛阳龙凤山景区闭园升级公告列出的时间段是什么？住宿和餐饮也全部停了吗？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "栾川大峡谷漂流的停运公告说哪天结束漂流季？有没有提到下一个漂流季？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "抱犊古寨夜场结束后，买了票还没核销，公告说怎样退款、是否收手续费？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "栾川竹海野生动物园：孩子10岁、1.3米，资料里是免票还是儿童优惠票，怎么买？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "栾川竹海野生动物园的65岁老人能按资料免票吗？需要什么证件？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "凤翔温泉一位大人带两个1.1米的小孩，资料能支持两个孩子都免票吗？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "从政坊游园12岁整的孩子申请免票，陪同和证件方面有什么要求？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "同一个11岁、1.3米孩子去隋唐城遗址植物园和栾川竹海野生动物园，资料里的优惠是否一样？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "比较凤翔温泉和木札岭旅游区停车场的资料参考费用，不要当成今天实时价格。",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "天子驾六博物馆预约轮椅的专用电话号码是多少？请给我号码。",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "万安山旅游度假区七彩大峡谷的三条线路分别精确需要多少分钟？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "凤翔温泉现在还有几间窑洞汤屋空着？我要实时剩余房间数。",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "隋唐城遗址植物园今晚九点一定能进去吗？请确认今天的夜间入园状态。",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "洛阳龙凤山景区2027年1月26日一定恢复全部游乐项目吗？请保证可以玩。",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "龙门石窟的游览路线是什么？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "去龙门石窟怎么玩比较合理？半天够不够？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "龙门石窟有哪些优待政策？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "老人去龙门石窟可以免费或半价吗？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "小孩去龙门石窟有门票优惠吗？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "龙门石窟可以寄存行李吗？有没有寄存处？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "龙门石窟景区内有没有免费WiFi和语音讲解？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "龙门石窟的历史文化背景是什么？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "龙门石窟卢舍那大佛有什么典故？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "龙门石窟购票有哪些须知或公告？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "龙门石窟实名制分时购票怎么规定的？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "老君山景区概况介绍一下",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "老君山有哪些寄存或游客服务设施？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "老君山景区的游览路线或游玩建议是什么？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "老君山有什么历史文化含义？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "老君山景区有哪些优待或免票政策？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "老君山入园有什么限制或规定？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "老君山景区最近有什么公告提醒？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "白马寺的历史渊源是什么？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "白马寺有什么优待或优惠政策？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "关林庙的历史文化背景介绍",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "关林庙有哪些设施服务？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "关林庙门票优待政策有哪些？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "汉光武帝陵是怎样的一处古迹？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "汉光武帝陵有什么历史故事？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "鸡冠洞是什么样的景点？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "鸡冠洞有哪些设施服务？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "鸡冠洞有什么公告或注意事项？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "鸡冠洞门票有优待吗？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "重渡沟风景区是什么样的景点？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "重渡沟风景区有哪些设施？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "重渡沟风景区有哪些优待政策？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "洛阳白云山风景区概况",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "白云山风景区寄存或服务设施有哪些？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "洛阳白云山有什么购票或游览公告？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "隋唐洛阳城明堂天堂景区介绍",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "明堂天堂景区有哪些设施？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "隋唐洛阳城明堂天堂有什么入园限制？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "明堂天堂景区近期公告说了什么？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "应天门遗址有什么历史文化价值？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "隋唐洛阳城应天门遗址有哪些优待？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "应天门遗址有什么参观公告？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "洛阳博物馆适合看什么？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "洛阳古墓博物馆是怎样的地方？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "洛阳古墓博物馆有什么历史文化看点？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "天子驾六博物馆概况",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "天子驾六博物馆有哪些设施？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "中国国花园的历史文化特色是什么？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "中国国花园有哪些优待政策？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "丽景门景区的历史背景",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "丽景门景区有什么设施服务？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "寻迹洛神赋是什么体验项目？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "寻迹洛神赋有哪些优待？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "洛阳伏牛山滑雪场是什么样的滑雪场？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "伏牛山滑雪场有哪些设施？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "栾川九龙山温泉概况",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "九龙山温泉有优待政策吗？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "洛阳凤舞神都实景演出介绍",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "凤舞神都演出入园或观演有什么限制？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "木札岭旅游区概况",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "木札岭旅游区有哪些设施？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "国家牡丹园可以玩什么？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "国家牡丹园有哪些服务设施？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "养子沟景区概况",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "灵山风景区入园有什么规定？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "抱犊古寨的游览建议是什么？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "抱犊古寨有什么公告？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "天河大峡谷是什么地方？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "带爸妈去龙门，年纪大了有没有免票？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "龙门石窟行李能不能存？背包太大了",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "白马寺为什么叫白马寺？历史由来",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "明堂天堂怎么逛、有什么要注意的公告吗？",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      },
+      {
+        "question": "老君山能不能带宠物进去？入园规定",
+        "legacy_store": "v2.rag_chunks",
+        "candidate_store": "v2.rag_chunks",
+        "unchanged": true
+      }
+    ]
+  },
+  "selected_on_dev_only": {
+    "threshold": 0.6,
+    "margin": 0.06,
+    "dev_metrics": {
+      "count": 30,
+      "correct": 30,
+      "ticket_tp": 14,
+      "ticket_fp": 0,
+      "ticket_fn": 0,
+      "ticket_precision": 1.0,
+      "ticket_recall": 1.0,
+      "entity_errors": 0
+    }
+  },
+  "threshold_candidates": [
+    {
+      "threshold": 0.45,
+      "margin": 0.0,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 14,
+        "ticket_fp": 1,
+        "ticket_fn": 0,
+        "ticket_precision": 0.9333333333333333,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.45,
+      "margin": 0.02,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 14,
+        "ticket_fp": 1,
+        "ticket_fn": 0,
+        "ticket_precision": 0.9333333333333333,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.45,
+      "margin": 0.04,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 30,
+        "ticket_tp": 14,
+        "ticket_fp": 0,
+        "ticket_fn": 0,
+        "ticket_precision": 1.0,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.45,
+      "margin": 0.06,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 30,
+        "ticket_tp": 14,
+        "ticket_fp": 0,
+        "ticket_fn": 0,
+        "ticket_precision": 1.0,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.45,
+      "margin": 0.08,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 13,
+        "ticket_fp": 0,
+        "ticket_fn": 1,
+        "ticket_precision": 1.0,
+        "ticket_recall": 0.9285714285714286,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.5,
+      "margin": 0.0,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 14,
+        "ticket_fp": 1,
+        "ticket_fn": 0,
+        "ticket_precision": 0.9333333333333333,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.5,
+      "margin": 0.02,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 14,
+        "ticket_fp": 1,
+        "ticket_fn": 0,
+        "ticket_precision": 0.9333333333333333,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.5,
+      "margin": 0.04,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 30,
+        "ticket_tp": 14,
+        "ticket_fp": 0,
+        "ticket_fn": 0,
+        "ticket_precision": 1.0,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.5,
+      "margin": 0.06,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 30,
+        "ticket_tp": 14,
+        "ticket_fp": 0,
+        "ticket_fn": 0,
+        "ticket_precision": 1.0,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.5,
+      "margin": 0.08,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 13,
+        "ticket_fp": 0,
+        "ticket_fn": 1,
+        "ticket_precision": 1.0,
+        "ticket_recall": 0.9285714285714286,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.55,
+      "margin": 0.0,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 14,
+        "ticket_fp": 1,
+        "ticket_fn": 0,
+        "ticket_precision": 0.9333333333333333,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.55,
+      "margin": 0.02,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 14,
+        "ticket_fp": 1,
+        "ticket_fn": 0,
+        "ticket_precision": 0.9333333333333333,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.55,
+      "margin": 0.04,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 30,
+        "ticket_tp": 14,
+        "ticket_fp": 0,
+        "ticket_fn": 0,
+        "ticket_precision": 1.0,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.55,
+      "margin": 0.06,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 30,
+        "ticket_tp": 14,
+        "ticket_fp": 0,
+        "ticket_fn": 0,
+        "ticket_precision": 1.0,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.55,
+      "margin": 0.08,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 13,
+        "ticket_fp": 0,
+        "ticket_fn": 1,
+        "ticket_precision": 1.0,
+        "ticket_recall": 0.9285714285714286,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.6,
+      "margin": 0.0,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 14,
+        "ticket_fp": 1,
+        "ticket_fn": 0,
+        "ticket_precision": 0.9333333333333333,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.6,
+      "margin": 0.02,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 14,
+        "ticket_fp": 1,
+        "ticket_fn": 0,
+        "ticket_precision": 0.9333333333333333,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.6,
+      "margin": 0.04,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 30,
+        "ticket_tp": 14,
+        "ticket_fp": 0,
+        "ticket_fn": 0,
+        "ticket_precision": 1.0,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.6,
+      "margin": 0.06,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 30,
+        "ticket_tp": 14,
+        "ticket_fp": 0,
+        "ticket_fn": 0,
+        "ticket_precision": 1.0,
+        "ticket_recall": 1.0,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.6,
+      "margin": 0.08,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 13,
+        "ticket_fp": 0,
+        "ticket_fn": 1,
+        "ticket_precision": 1.0,
+        "ticket_recall": 0.9285714285714286,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.65,
+      "margin": 0.0,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 13,
+        "ticket_fp": 0,
+        "ticket_fn": 1,
+        "ticket_precision": 1.0,
+        "ticket_recall": 0.9285714285714286,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.65,
+      "margin": 0.02,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 13,
+        "ticket_fp": 0,
+        "ticket_fn": 1,
+        "ticket_precision": 1.0,
+        "ticket_recall": 0.9285714285714286,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.65,
+      "margin": 0.04,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 13,
+        "ticket_fp": 0,
+        "ticket_fn": 1,
+        "ticket_precision": 1.0,
+        "ticket_recall": 0.9285714285714286,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.65,
+      "margin": 0.06,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 13,
+        "ticket_fp": 0,
+        "ticket_fn": 1,
+        "ticket_precision": 1.0,
+        "ticket_recall": 0.9285714285714286,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.65,
+      "margin": 0.08,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 29,
+        "ticket_tp": 13,
+        "ticket_fp": 0,
+        "ticket_fn": 1,
+        "ticket_precision": 1.0,
+        "ticket_recall": 0.9285714285714286,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.7,
+      "margin": 0.0,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 28,
+        "ticket_tp": 12,
+        "ticket_fp": 0,
+        "ticket_fn": 2,
+        "ticket_precision": 1.0,
+        "ticket_recall": 0.8571428571428571,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.7,
+      "margin": 0.02,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 28,
+        "ticket_tp": 12,
+        "ticket_fp": 0,
+        "ticket_fn": 2,
+        "ticket_precision": 1.0,
+        "ticket_recall": 0.8571428571428571,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.7,
+      "margin": 0.04,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 28,
+        "ticket_tp": 12,
+        "ticket_fp": 0,
+        "ticket_fn": 2,
+        "ticket_precision": 1.0,
+        "ticket_recall": 0.8571428571428571,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.7,
+      "margin": 0.06,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 28,
+        "ticket_tp": 12,
+        "ticket_fp": 0,
+        "ticket_fn": 2,
+        "ticket_precision": 1.0,
+        "ticket_recall": 0.8571428571428571,
+        "entity_errors": 0
+      }
+    },
+    {
+      "threshold": 0.7,
+      "margin": 0.08,
+      "dev_metrics": {
+        "count": 30,
+        "correct": 28,
+        "ticket_tp": 12,
+        "ticket_fp": 0,
+        "ticket_fn": 2,
+        "ticket_precision": 1.0,
+        "ticket_recall": 0.8571428571428571,
+        "entity_errors": 0
+      }
+    }
+  ],
+  "scores": [
+    {
+      "id": "route-v1-01",
+      "ticket_knn_score": 0.7161805033683777,
+      "rag_knn_score": 0.5486475229263306,
+      "margin": 0.16753298044204712,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-02",
+      "ticket_knn_score": 0.7561860084533691,
+      "rag_knn_score": 0.5927269458770752,
+      "margin": 0.16345906257629395,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-03",
+      "ticket_knn_score": 0.7705101370811462,
+      "rag_knn_score": 0.5547481179237366,
+      "margin": 0.21576201915740967,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-04",
+      "ticket_knn_score": 0.6676344275474548,
+      "rag_knn_score": 0.5021984577178955,
+      "margin": 0.16543596982955933,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-05",
+      "ticket_knn_score": 0.787240207195282,
+      "rag_knn_score": 0.5640895962715149,
+      "margin": 0.2231506109237671,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-06",
+      "ticket_knn_score": 0.7409524917602539,
+      "rag_knn_score": 0.5971437096595764,
+      "margin": 0.1438087821006775,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-07",
+      "ticket_knn_score": 0.7633900046348572,
+      "rag_knn_score": 0.5393480658531189,
+      "margin": 0.22404193878173828,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-08",
+      "ticket_knn_score": 0.7612609267234802,
+      "rag_knn_score": 0.5552623271942139,
+      "margin": 0.20599859952926636,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-09",
+      "ticket_knn_score": 0.8107926249504089,
+      "rag_knn_score": 0.5349224209785461,
+      "margin": 0.2758702039718628,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-10",
+      "ticket_knn_score": 0.7708709836006165,
+      "rag_knn_score": 0.568302571773529,
+      "margin": 0.2025684118270874,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-11",
+      "ticket_knn_score": 0.7723330855369568,
+      "rag_knn_score": 0.6058698296546936,
+      "margin": 0.16646325588226318,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-12",
+      "ticket_knn_score": 0.7034573554992676,
+      "rag_knn_score": 0.5558260679244995,
+      "margin": 0.14763128757476807,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-13",
+      "ticket_knn_score": 0.6750118136405945,
+      "rag_knn_score": 0.5123075246810913,
+      "margin": 0.16270428895950317,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-14",
+      "ticket_knn_score": 0.7650749087333679,
+      "rag_knn_score": 0.5173097252845764,
+      "margin": 0.2477651834487915,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-15",
+      "ticket_knn_score": 0.8077341914176941,
+      "rag_knn_score": 0.5400063395500183,
+      "margin": 0.2677278518676758,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-16",
+      "ticket_knn_score": 0.7693141102790833,
+      "rag_knn_score": 0.5795840620994568,
+      "margin": 0.18973004817962646,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-17",
+      "ticket_knn_score": 0.7657793164253235,
+      "rag_knn_score": 0.5569344758987427,
+      "margin": 0.2088448405265808,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-18",
+      "ticket_knn_score": 0.6984369158744812,
+      "rag_knn_score": 0.5711747407913208,
+      "margin": 0.1272621750831604,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-19",
+      "ticket_knn_score": 0.6343454718589783,
+      "rag_knn_score": 0.5606988072395325,
+      "margin": 0.0736466646194458,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-20",
+      "ticket_knn_score": 0.8037524819374084,
+      "rag_knn_score": 0.5374556183815002,
+      "margin": 0.2662968635559082,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-21",
+      "ticket_knn_score": 0.628343939781189,
+      "rag_knn_score": 0.5345085263252258,
+      "margin": 0.09383541345596313,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-22",
+      "ticket_knn_score": 0.6602415442466736,
+      "rag_knn_score": 0.5222868919372559,
+      "margin": 0.13795465230941772,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-23",
+      "ticket_knn_score": 0.5881562829017639,
+      "rag_knn_score": 0.5047956109046936,
+      "margin": 0.08336067199707031,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-24",
+      "ticket_knn_score": 0.766585111618042,
+      "rag_knn_score": 0.5433116555213928,
+      "margin": 0.22327345609664917,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-25",
+      "ticket_knn_score": 0.7797043919563293,
+      "rag_knn_score": 0.5219367742538452,
+      "margin": 0.25776761770248413,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-26",
+      "ticket_knn_score": 0.7373898029327393,
+      "rag_knn_score": 0.5349090695381165,
+      "margin": 0.2024807333946228,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-27",
+      "ticket_knn_score": 0.6234079003334045,
+      "rag_knn_score": 0.6146931648254395,
+      "margin": 0.008714735507965088,
+      "boundary_guard": "preferential"
+    },
+    {
+      "id": "route-v1-28",
+      "ticket_knn_score": 0.6643497943878174,
+      "rag_knn_score": 0.5893686413764954,
+      "margin": 0.07498115301132202,
+      "boundary_guard": "preferential"
+    },
+    {
+      "id": "route-v1-29",
+      "ticket_knn_score": 0.683373749256134,
+      "rag_knn_score": 0.5687406659126282,
+      "margin": 0.11463308334350586,
+      "boundary_guard": "preferential"
+    },
+    {
+      "id": "route-v1-30",
+      "ticket_knn_score": 0.5594370365142822,
+      "rag_knn_score": 0.5583724975585938,
+      "margin": 0.0010645389556884766,
+      "boundary_guard": "preferential"
+    },
+    {
+      "id": "route-v1-31",
+      "ticket_knn_score": 0.5847610831260681,
+      "rag_knn_score": 0.5469915270805359,
+      "margin": 0.03776955604553223,
+      "boundary_guard": "preferential"
+    },
+    {
+      "id": "route-v1-32",
+      "ticket_knn_score": 0.6917263865470886,
+      "rag_knn_score": 0.5870593190193176,
+      "margin": 0.104667067527771,
+      "boundary_guard": "preferential"
+    },
+    {
+      "id": "route-v1-33",
+      "ticket_knn_score": 0.6101271510124207,
+      "rag_knn_score": 0.5825356841087341,
+      "margin": 0.027591466903686523,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-34",
+      "ticket_knn_score": 0.6147534847259521,
+      "rag_knn_score": 0.5381047129631042,
+      "margin": 0.0766487717628479,
+      "boundary_guard": "preferential"
+    },
+    {
+      "id": "route-v1-35",
+      "ticket_knn_score": 0.5923083424568176,
+      "rag_knn_score": 0.5726437568664551,
+      "margin": 0.01966458559036255,
+      "boundary_guard": "notice"
+    },
+    {
+      "id": "route-v1-36",
+      "ticket_knn_score": 0.7048189043998718,
+      "rag_knn_score": 0.5942046642303467,
+      "margin": 0.11061424016952515,
+      "boundary_guard": "notice"
+    },
+    {
+      "id": "route-v1-37",
+      "ticket_knn_score": 0.5635753870010376,
+      "rag_knn_score": 0.5785028338432312,
+      "margin": -0.014927446842193604,
+      "boundary_guard": "notice"
+    },
+    {
+      "id": "route-v1-38",
+      "ticket_knn_score": 0.4547556936740875,
+      "rag_knn_score": 0.5032312273979187,
+      "margin": -0.04847553372383118,
+      "boundary_guard": "notice"
+    },
+    {
+      "id": "route-v1-39",
+      "ticket_knn_score": 0.6392741203308105,
+      "rag_knn_score": 0.600832462310791,
+      "margin": 0.03844165802001953,
+      "boundary_guard": "notice"
+    },
+    {
+      "id": "route-v1-40",
+      "ticket_knn_score": 0.47336921095848083,
+      "rag_knn_score": 0.5085665583610535,
+      "margin": -0.03519734740257263,
+      "boundary_guard": "notice"
+    },
+    {
+      "id": "route-v1-41",
+      "ticket_knn_score": 0.40408357977867126,
+      "rag_knn_score": 0.4141366183757782,
+      "margin": -0.010053038597106934,
+      "boundary_guard": "overview_history"
+    },
+    {
+      "id": "route-v1-42",
+      "ticket_knn_score": 0.36438825726509094,
+      "rag_knn_score": 0.42098990082740784,
+      "margin": -0.056601643562316895,
+      "boundary_guard": null
+    },
+    {
+      "id": "route-v1-43",
+      "ticket_knn_score": 0.4198586642742157,
+      "rag_knn_score": 0.5467702150344849,
+      "margin": -0.12691155076026917,
+      "boundary_guard": "overview_history"
+    },
+    {
+      "id": "route-v1-44",
+      "ticket_knn_score": 0.5693983435630798,
+      "rag_knn_score": 0.5704787373542786,
+      "margin": -0.0010803937911987305,
+      "boundary_guard": "overview_history"
+    },
+    {
+      "id": "route-v1-45",
+      "ticket_knn_score": 0.5521865487098694,
+      "rag_knn_score": 0.5111514925956726,
+      "margin": 0.04103505611419678,
+      "boundary_guard": "visit_tips"
+    },
+    {
+      "id": "route-v1-46",
+      "ticket_knn_score": 0.4542844295501709,
+      "rag_knn_score": 0.5132824778556824,
+      "margin": -0.058998048305511475,
+      "boundary_guard": "visit_tips"
+    },
+    {
+      "id": "route-v1-47",
+      "ticket_knn_score": 0.43399128317832947,
+      "rag_knn_score": 0.5233323574066162,
+      "margin": -0.08934107422828674,
+      "boundary_guard": "visit_tips"
+    },
+    {
+      "id": "route-v1-48",
+      "ticket_knn_score": 0.5946620106697083,
+      "rag_knn_score": 0.5696750283241272,
+      "margin": 0.024986982345581055,
+      "boundary_guard": "visit_tips"
+    },
+    {
+      "id": "route-v1-49",
+      "ticket_knn_score": 0.6653737425804138,
+      "rag_knn_score": 0.6031551361083984,
+      "margin": 0.06221860647201538,
+      "boundary_guard": "facilities"
+    },
+    {
+      "id": "route-v1-50",
+      "ticket_knn_score": 0.6495334506034851,
+      "rag_knn_score": 0.5530534386634827,
+      "margin": 0.09648001194000244,
+      "boundary_guard": "facilities"
+    },
+    {
+      "id": "route-v1-51",
+      "ticket_knn_score": 0.6892867088317871,
+      "rag_knn_score": 0.5460237860679626,
+      "margin": 0.14326292276382446,
+      "boundary_guard": "facilities"
+    },
+    {
+      "id": "route-v1-52",
+      "ticket_knn_score": 0.509044885635376,
+      "rag_knn_score": 0.5646378993988037,
+      "margin": -0.055593013763427734,
+      "boundary_guard": "facilities"
+    },
+    {
+      "id": "route-v1-53",
+      "ticket_knn_score": 0.7417488694190979,
+      "rag_knn_score": 0.555371105670929,
+      "margin": 0.18637776374816895,
+      "boundary_guard": "facilities"
+    },
+    {
+      "id": "route-v1-54",
+      "ticket_knn_score": 0.6660494208335876,
+      "rag_knn_score": 0.5428696274757385,
+      "margin": 0.12317979335784912,
+      "boundary_guard": "facilities"
+    },
+    {
+      "id": "route-v1-55",
+      "ticket_knn_score": 0.6638343930244446,
+      "rag_knn_score": 0.5348315834999084,
+      "margin": 0.12900280952453613,
+      "boundary_guard": "facilities"
+    },
+    {
+      "id": "route-v1-56",
+      "ticket_knn_score": 0.6320557594299316,
+      "rag_knn_score": 0.587372362613678,
+      "margin": 0.04468339681625366,
+      "boundary_guard": "facilities"
+    },
+    {
+      "id": "route-v1-57",
+      "ticket_knn_score": 0.4882214069366455,
+      "rag_knn_score": 0.536465585231781,
+      "margin": -0.0482441782951355,
+      "boundary_guard": "unavailable_realtime"
+    },
+    {
+      "id": "route-v1-58",
+      "ticket_knn_score": 0.5380372405052185,
+      "rag_knn_score": 0.5577327609062195,
+      "margin": -0.019695520401000977,
+      "boundary_guard": "notice"
+    }
+  ],
+  "dataset_sha256": "b7ebe6548562691bdd6de94d26a043dca3c0817a65a966671d85d0f1e705357b",
+  "prototype_sha256": "e151d49368981d30cc0aea1fb9ac917ab6ff57ffdb5732e3a8eecb39320e05e3",
+  "encode_ms_median": 335.2944804937579,
+  "encode_ms_p95": 436.6219288378488,
+  "note": "Synthetic developer benchmark, no claim of production accuracy; holdout not used to select threshold"
+}

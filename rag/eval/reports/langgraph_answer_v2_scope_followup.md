@@ -1,0 +1,1149 @@
+# LangGraph回答证据修复 v2：4题运行与人工复评
+
+用户于2026-10-13独立复评本文件四题，六项与归因标记共28项全部pass，无fail。answer_evidence_v2本轮验收通过并冻结；仅代表这四题，guard不是通用矛盾检测。
+
+自动汇总：`{"mixed_tool_evidence_checks": 4, "scope": "four_mixed_only", "new_answer_human_review": "completed_4_of_4_pass", "unit_tests_passed": 64, "langgraph_dispatch_checked": 4, "langgraph_version": "1.2.14", "workflow": "langgraph_v1", "extra_smoke_dispatch_checked": 2, "total_dispatch_checked": 6, "answer_guard_scope": "known wheelchair documentation gap and elderly nationality conflict; not general contradiction detection"}`
+
+## challenge-v1-27
+
+图节点：plan → ticket_sql → retrieve_chunks → answer_validate → merge
+
+证据范围：normal_answer
+
+龙门石窟门票资料原文是什么，游览路线怎么安排？
+
+预期行为：需要票价原文与路线两类证据；单路径属于能力缺口，不能算完整通过。
+
+门票资料：
+龙门石窟的门票资料原文为：
+门票￥90起
+[SQL1：龙门石窟／门票原文]
+这是采集时的原始文案，未换算为统一数值；“起”不等于固定票价。
+采集时间：2026-10-11T20:36:44+08:00。
+
+文本资料：
+龙门石窟整个景区规划好了固定的游览路线，从西山石窟—东山石窟—香山寺—白园，顺着一个方向，大概花半天的时间就能游览完。 [S1：龙门石窟／visit_tips]
+西山石窟开凿于北朝和隋唐时期，是龙门石窟精华和完整的部分；其中知名的是奉先寺的卢舍那大佛和古阳洞中的“龙门二十品”。 [S1：龙门石窟／visit_tips]
+卢舍那大佛据说是按照武则天的形象塑造的，有17米多高。 [S1：龙门石窟／visit_tips]
+从西山石窟出来，经过一座横跨伊河的桥，就可以抵达东边的东山石窟；站在桥上，遥望远处的龙门大桥，欣赏东西两岸石窟是个不错的主意。 [S1：龙门石窟／visit_tips]
+在景区的奉先寺码头和礼佛台码头都可以乘坐游船，泛舟碧波之上，两岸风光尽收眼底。 [S1：龙门石窟／visit_tips]
+相比西山石窟，东山石窟的规模稍显逊色，游客也比较少；如果走完西山石窟已经感觉有点累了，这里粗略看看就好。 [S1：龙门石窟／visit_tips]
+从东山石窟可以从不同角度观看对岸的西山，尤其是卢舍那大佛的全景。 [S1：龙门石窟／visit_tips]
+无法确认或资料限制：资料仅给出固定游览路线顺序和大致耗时，未提供各点具体停留时长、步行距离、电瓶车与游船衔接等更细的安排；公告、设施等为采集快照，不是实时信息。 [S1：龙门石窟／visit_tips]
+
+工具与证据：
+
+```json
+{
+  "route": "mixed",
+  "status": "answered",
+  "required_stores": [
+    "ticket_sql",
+    "rag"
+  ],
+  "tasks": [
+    {
+      "store": "ticket_sql",
+      "question": "龙门石窟门票资料原文是什么",
+      "state": "queried_with_evidence",
+      "tool_called": true,
+      "query_executed": true,
+      "reason": "",
+      "evidence_ids": [
+        "SQL1"
+      ],
+      "answer_status": "answered",
+      "retrieved_count": 0
+    },
+    {
+      "store": "rag",
+      "question": "龙门石窟：游览路线怎么安排",
+      "state": "queried_with_evidence",
+      "tool_called": true,
+      "query_executed": true,
+      "reason": "",
+      "evidence_ids": [
+        "S1"
+      ],
+      "answer_status": "answered",
+      "retrieved_count": 5
+    }
+  ],
+  "entity_resolution": {
+    "status": "resolved",
+    "matches": [
+      {
+        "poi_id": 77498,
+        "name": "龙门石窟"
+      }
+    ]
+  },
+  "structured_data": {
+    "poi_id": 77498,
+    "name": "龙门石窟",
+    "ticket_raw": "门票￥90起",
+    "detail_exists": true,
+    "source_table": "v2.poi_details",
+    "field": "ticket_raw",
+    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+    "source": "ctrip",
+    "collected_at": "2026-10-11T20:36:44+08:00",
+    "verify_status": "unverified"
+  },
+  "citations": [
+    {
+      "source_id": "SQL1",
+      "chunk_id": null,
+      "poi_id": 77498,
+      "name": "龙门石窟",
+      "theme": "ticket",
+      "theme_label": "门票原文",
+      "source_table": "v2.poi_details",
+      "field": "ticket_raw",
+      "record_ref": "v2.poi_details:77498:ticket_raw",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T20:36:44+08:00",
+      "verify_status": "unverified",
+      "quotes": [
+        "门票￥90起"
+      ]
+    },
+    {
+      "source_id": "S1",
+      "chunk_id": "poi-77498-visit_tips",
+      "poi_id": 77498,
+      "name": "龙门石窟",
+      "theme": "visit_tips",
+      "theme_label": "游览路线与建议",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:44+00:00",
+      "verify_status": "unverified",
+      "quotes": [
+        "龙门石窟整个景区规划好了固定的游览路线，从西山石窟-东山石窟-香山寺-白园，顺着一个方向，大概花半天的时间就能游览完。",
+        "西山石窟开凿于北朝和隋唐时期，是龙门石窟精华和完整的部分。其中知名的就是奉先寺的卢舍那大佛和古阳洞中的“龙门二十品”。",
+        "卢舍那大佛据说是按照武则天的形象塑造的，有17米多高。",
+        "从西山石窟出来，经过一座横跨伊河的桥，就可以抵达东边的东山石窟。站在桥上，遥望远处的龙门大桥，欣赏东西两岸石窟是个不错的主意。",
+        "除此之外，在景区的奉先寺码头和礼佛台码头都可以乘坐游船，泛舟碧波之上，两岸风光尽收眼底。",
+        "相比西山石窟，东山石窟的规模稍显逊色，游客也比较少。如果走完西山石窟，已经感觉有点累了，这里粗略看看就好。",
+        "从东山石窟可以从不同角度观看对岸的西山，尤其是卢舍那大佛的全景。"
+      ]
+    }
+  ],
+  "retrieved_sources": [
+    {
+      "chunk_id": "poi-77498-visit_tips",
+      "poi_id": 77498,
+      "name": "龙门石窟",
+      "theme": "visit_tips",
+      "theme_label": "游览路线与建议",
+      "text": "【龙门石窟 · 游览路线与建议】\n去龙门石窟的N个理由\n\n旅行干货\n\n游览路线\n\n龙门石窟整个景区规划好了固定的游览路线，从西山石窟-东山石窟-香山寺-白园，顺着一个方向，大概花半天的时间就能游览完。不用来回折返走冤枉路，也不会迷路。\n\n西山石窟：龙门石窟浓墨重彩的部分\n\n西山石窟开凿于北朝和隋唐时期，是龙门石窟精华和完整的部分。其中知名的就是奉先寺的卢舍那大佛和古阳洞中的“龙门二十品”。卢舍那大佛据说是按照武则天的形象塑造的，有17米多高。万佛洞内南北两侧雕刻有整齐排列的一万五千尊小佛，密密麻麻的佛像每个大约一只拳头大小，形态逼真。\n\n泛舟伊河：望东西两岸优美景色\n\n从西山石窟出来，经过一座横跨伊河的桥，就可以抵达东边的东山石窟。站在桥上，遥望远处的龙门大桥，欣赏东西两岸石窟是个不错的主意。除此之外，在景区的奉先寺码头和礼佛台码头都可以乘坐游船，泛舟碧波之上，两岸风光尽收眼底。\n\n东山石窟：隔伊河，看西山。\n\n相比西山石窟，东山石窟的规模稍显逊色，游客也比较少。如果走完西山石窟，已经感觉有点累了，这里粗略看看就好。从东山石窟可以从不同角度观看对岸的西山，尤其是卢舍那大佛的全景。",
+      "similarity": 0.7139647773525264,
+      "source_id": "S1",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:44+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-77498-notice",
+      "poi_id": 77498,
+      "name": "龙门石窟",
+      "theme": "notice",
+      "theme_label": "公告",
+      "text": "【龙门石窟 · 公告】\n【购票须知】\n1.龙门石窟实行实名制分时购票，同一有效证件单日限购一张门票（龙门石窟采用人脸识别设备辅助快速实名核验，人脸信息仅用于实时比对，不存储）。\n2.符合政策性免票及不能线上核验入园的半价优惠人群，凭本人优惠证件原件及身份证原件到票务中心窗口办理，具体优惠政策详见各票型预订须知。\n\n【退票及爽约规则】\n1.门票当日单次有效，一经使用，不予退票退款。\n2.未使用门票：\n（1）出游当日20:00前通过原订票渠道退票，不计爽约；\n（2）出游日起第七天 23:00 前仍可申请退票，计 1 次爽约；\n（3）出游日起第七天 23:00 后系统自动清算，不予退票退款。\n3.爽约 1 次，自爽约之日起限制预约龙门石窟门票 3 天；累计爽约 2 次，自第 2 次爽约之日起限制预约 30 天；累计爽约 3 次，自第 3 次爽约之日起限制预约 180 天。",
+      "similarity": 0.6662666002670896,
+      "source_id": "S2",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:44+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-77498-facilities",
+      "poi_id": 77498,
+      "name": "龙门石窟",
+      "theme": "facilities",
+      "theme_label": "设施服务",
+      "text": "【龙门石窟 · 设施服务】\n免费WIFI覆盖：扫码收听语音讲解\n\n龙门石窟是无现金景区，从购买景区门票和电瓶车票、乘坐游船、预约景区讲解、购买纪念品、停车缴费等所有你能想到的一切，龙门石窟都已经完全实现无现金支付，直接微信扫码即可。\n\n景区内还有免费WiFi覆盖，几乎每个景点都可以扫描二维码收听语音讲解，非常方便。\n\n景区还标注了拍照点，给爱好拍照的驴友们参考。",
+      "similarity": 0.6238800473177449,
+      "source_id": "S3",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:44+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-77498-facilities_struct",
+      "poi_id": 77498,
+      "name": "龙门石窟",
+      "theme": "facilities",
+      "theme_label": "设施服务",
+      "text": "【龙门石窟 · 设施服务】\n- 停车场：名称：龙门石窟东北服务区；参考价格：10.0；地址：河南省洛阳市洛龙区伊河两岸龙门石窟东北服务区；库位：以现场为准；名称：龙门石窟东北服务区\n- WIFI：账号：LMSK；密码：无密码；范围：全覆盖；名称：LMSK\n- 手机充电：备注：景区服务中心提供插口，不提供充电线和插头；类型：手机充电服务\n- 行李寄存：参考价格：以现场为准；地址：东北服务区和西北服务区；类型：物品寄存、宠物寄存\n- 景区讲解：备注：地址：景区讲解中心\n- 园内交通：参考价格：以现场为准；地址：景区售票厅出口；备注：运行于售票处到龙门石窟西山检票口；类型：电瓶车\n- 讲解器租赁：参考价格：以现场为准；地址：景区游客中心\n- 童车租赁：参考价格：免费；地址：东北服务区、西北服务区\n- 卫生间：备注：景区内设有多个卫生间，分布在景区内部及游客中心附近，并标有醒目的指示牌。\n- 便利店：备注：景区内有便利店，具体指引以现场为准",
+      "similarity": 0.6223017944277414,
+      "source_id": "S4",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:44+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-77498-preferential",
+      "poi_id": 77498,
+      "name": "龙门石窟",
+      "theme": "preferential",
+      "theme_label": "优待政策",
+      "text": "【龙门石窟 · 优待政策】\n- 老人：免费（60周岁（含）以上老年人（含中华人民共和国外国人永久居留身份证））\n- 儿童：免费（身高1.4米（含）以下儿童直接入园；12周岁（含）以下儿童凭有效身份证件原件或外国人永久居留身份证直接入园。）\n- 儿童：半价（13周岁（含）-17周岁（含）未成年人（仅限中国国籍），凭身份证原件或户口本原件等有效身份证件至票务中心购买半价票或通过网络购票，经景区检票人员查验证件后入园）\n- 导游：免费（导游人员持本人有效期内的导游证或电子导游证、有效身份证原件，配合派团单或行程计划单原件与团内游客（凭本人有效证件原件）一并入园。）\n- 军人：免费（现役军人、军队离退休干部，凭军官证、军士证、义务兵证、学员证、军官退休证、军士退休证原件及身份证原件。现役军人转文职人员凭本人身份证原件、军人保障卡原件及有效期内文职人员证原件。）\n- 退役军人及三属：免费（退役军人和其他优抚对象（烈士遗属、因公牺牲军人遗属和病故军人遗属），凭《中华人民共和国退役军人优待证》《中华人民共和国烈士、因公牺牲军人、病故军人遗属优待证》及身份证原件。）\n- 人民警察：免费（人民警察，凭《人民警察证》原件及身份证原件。）\n- 消防员：免费（国家综合性消防救援人员，凭中华人民共和国应急管理部制发的干部证、消防员证、学员证、退休证原件及身份证原件。河南省专职消防员，凭河南省消防救援总队或河南省市级消防救援支队制发的政府专职消防员证原件和身份证原件。）\n- 残疾人：免费（残疾人，凭中国残疾人联合会制发的《中华人民共和国残疾人证》原件及身份证原件；持退役军人事务部制发的《中华人民共和国残疾军人证》《中华人民共和国伤残人民警察证》《中华人民共和国伤残预备役人员、伤残民兵民工证》的人员，凭证件原件及身份证原件。（注：其中视力、智力残疾者和一 级、二级肢体残疾者可免一名陪护人员门票））\n- 先进人物：免费（国家优秀专家、全国五一劳动奖章获得者、全国三八红旗手、全国优秀教师、全国道德模范先进人物、省部级以上劳动模范，凭相关部门颁发的荣誉证书及身份证原件。）\n- 记者：免费（持国家新闻出版署发放的有效期内记者证的记者。港澳台记者应持有加盖单位行政公章的记者证或工作证，配合《港澳居民来往内地通行证》原件或《台湾居民来往大陆通行证》原件同时使用。）\n- 教职工：免费（洛阳市各级各类学校（含驻洛高校、党校、职业学校、中小学、幼儿园、特殊教育学校、技工学校等）在职教职工，凭河南省人社厅颁发的教师专业技术人员聘任证书或加盖所属教育行政部门人事公章的工作证及身份证原件。）\n- 台胞：免费（台湾同胞持首 次办理台胞证（签发次数为“01”），自证件签发之日起一年内进入本景区。）\n- 中原学者：免费（河南省委人才工作领导小组办公室颁发的A、B、C、D、四类“中原学者证”的高层次人才，凭“中原学者证”及身份证原件。）\n- 献血优待人群：免费（河南省获得国家“无偿献血奉献奖”“无偿捐献造血干细胞奉献奖”“无偿献血志愿服务终身荣誉奖”的个人持本人身份证原件，出示“全国电子无偿献血证”小程序中对应获奖记录，或纸质获奖证书，且该小程序显示的献血地点为河南境内血站。）\n- 学生：半价（全日制大学本科及以下学历学生，凭学生证原件及身份证至票务中心购买半价票或通过网络购票，经景区检票人员查验证件后入园。（成教生、自考生、进修生、网络教育和中国籍国外留学生等均不享受优惠））\n- 人民教师：半价（人民教师（仅限中国国籍），凭教师资格证原件及身份证至票务中心购买半价票或通过网络购票，经景区检票人员查验证件后入园）\n- 现役军人家属：半价（现役军人家属。现役军人的父母（抚养人）、配偶、子女，凭优待证及本人有效身份证原件。）\n补充说明：以上免票范围，除身高1.4米以下未成年人不限国籍，其他仅限中国公民享有。\n",
+      "similarity": 0.5955749395147013,
+      "source_id": "S5",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:44+00:00",
+      "verify_status": "unverified"
+    }
+  ],
+  "warnings": [
+    "门票文案为采集快照，不代表实时售价；请核对采集时间和官方购票渠道。",
+    "来源资料尚未经人工核验。",
+    "以上依据为采集资料，公告、票价、优待和开放状态可能变化；请核对引用采集时间及官方渠道。",
+    "引用资料尚未经人工核验。"
+  ]
+}
+```
+
+用户评分：事实 pass；引用 pass；景点隔离 pass；不确定性处理 pass；时效 pass；覆盖 pass；归因标记 pass
+
+## challenge-v1-28
+
+图节点：plan → ticket_sql → retrieve_chunks → answer_validate → merge
+
+证据范围：normal_answer
+
+老君山景区入场花多少钱，同时给我讲讲历史。
+
+预期行为：完整答案需ticket_raw与历史片段；可明确限制，请拆分问题。
+
+门票资料：
+老君山景区的门票资料原文为：
+门票￥100起
+[SQL1：老君山景区／门票原文]
+这是采集时的原始文案，未换算为统一数值；“起”不等于固定票价。
+采集时间：2026-10-11T20:36:46+08:00。
+
+文本资料：
+资料记载，老君山景区相传是道教始祖李耳（老子）的归隐修炼之地。 [S1：老君山景区／overview]
+资料记载，北魏时在山中建庙纪念，后来被封为“天下名山”，历来香火旺盛。 [S1：老君山景区／overview]
+资料记载，金顶道观群-老君庙自北魏始建以来，就是中原香客朝拜的中心。 [S3：老君山景区／history_culture]
+无法确认或资料限制：资料仅涉及老君山景区的传说性归隐说法、北魏建庙及老君庙朝拜中心等历史记述，未提供更详细的历史沿革或年代信息。 [S1：老君山景区／overview]
+
+工具与证据：
+
+```json
+{
+  "route": "mixed",
+  "status": "answered",
+  "required_stores": [
+    "ticket_sql",
+    "rag"
+  ],
+  "tasks": [
+    {
+      "store": "ticket_sql",
+      "question": "老君山景区入场花多少钱",
+      "state": "queried_with_evidence",
+      "tool_called": true,
+      "query_executed": true,
+      "reason": "",
+      "evidence_ids": [
+        "SQL1"
+      ],
+      "answer_status": "answered",
+      "retrieved_count": 0
+    },
+    {
+      "store": "rag",
+      "question": "老君山景区：给我讲讲历史",
+      "state": "queried_with_evidence",
+      "tool_called": true,
+      "query_executed": true,
+      "reason": "",
+      "evidence_ids": [
+        "S1",
+        "S3"
+      ],
+      "answer_status": "answered",
+      "retrieved_count": 5
+    }
+  ],
+  "entity_resolution": {
+    "status": "resolved",
+    "matches": [
+      {
+        "poi_id": 77806,
+        "name": "老君山景区"
+      }
+    ]
+  },
+  "structured_data": {
+    "poi_id": 77806,
+    "name": "老君山景区",
+    "ticket_raw": "门票￥100起",
+    "detail_exists": true,
+    "source_table": "v2.poi_details",
+    "field": "ticket_raw",
+    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1930/0.html?poiId=77806&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+    "source": "ctrip",
+    "collected_at": "2026-10-11T20:36:46+08:00",
+    "verify_status": "unverified"
+  },
+  "citations": [
+    {
+      "source_id": "SQL1",
+      "chunk_id": null,
+      "poi_id": 77806,
+      "name": "老君山景区",
+      "theme": "ticket",
+      "theme_label": "门票原文",
+      "source_table": "v2.poi_details",
+      "field": "ticket_raw",
+      "record_ref": "v2.poi_details:77806:ticket_raw",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1930/0.html?poiId=77806&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T20:36:46+08:00",
+      "verify_status": "unverified",
+      "quotes": [
+        "门票￥100起"
+      ]
+    },
+    {
+      "source_id": "S1",
+      "chunk_id": "poi-77806-overview",
+      "poi_id": 77806,
+      "name": "老君山景区",
+      "theme": "overview",
+      "theme_label": "景点概况",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1930/0.html?poiId=77806&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:46+00:00",
+      "verify_status": "unverified",
+      "quotes": [
+        "老君山景区相传是道教始祖李耳（老子）的归隐修炼之地",
+        "北魏时在山中建庙纪念，后来被封为“天下名山”，历来香火旺盛。",
+        "老君山景区相传是道教始祖李耳（老子）的归隐修炼之地，北魏时在山中建庙纪念，后来被封为“天下名山”，历来香火旺盛。"
+      ]
+    },
+    {
+      "source_id": "S3",
+      "chunk_id": "poi-77806-history_culture",
+      "poi_id": 77806,
+      "name": "老君山景区",
+      "theme": "history_culture",
+      "theme_label": "历史文化",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1930/0.html?poiId=77806&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:46+00:00",
+      "verify_status": "unverified",
+      "quotes": [
+        "金顶道观群-老君庙自北魏始建以来，就是中原香客朝拜的中心"
+      ]
+    }
+  ],
+  "retrieved_sources": [
+    {
+      "chunk_id": "poi-77806-overview",
+      "poi_id": 77806,
+      "name": "老君山景区",
+      "theme": "overview",
+      "theme_label": "景点概况",
+      "text": "【老君山景区 · 景点概况】\n老君山景区相传是道教始祖李耳（老子）的归隐修炼之地，北魏时在山中建庙纪念，后来被封为“天下名山”，历来香火旺盛。山中树木茂盛，风景如画，处处都能看到山泉。金秋时分，这里更是周边地区赏红叶的不二之选。雨后的景区，云雾环绕在各个山峰中，犹如天上仙境。\n\n景区面积庞大，主要分为居中的老君山主景区、西部的追梦谷和东部的寨沟。一般游客会用一天的时间游玩主景区，这也是整个景区开发完善的区域。如果你去山顶，还有机会观赏到美丽的云海、日出、夕阳。",
+      "similarity": 0.6635353762965019,
+      "source_id": "S1",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1930/0.html?poiId=77806&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:46+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-77806-visit_tips",
+      "poi_id": 77806,
+      "name": "老君山景区",
+      "theme": "visit_tips",
+      "theme_label": "游览路线与建议",
+      "text": "【老君山景区 · 游览路线与建议】\n行程推荐：\n\n一日游\n\n用一天的时间，游玩主景区，是大多数游客的选择。大致线路：\n\n灵观殿-山脚下的老君像-淋醋殿-中天门-林荫步道-卧云松-菩萨殿-金顶道观群-老君庙、金顶-金顶道观群-玉皇顶，然后原路返回。\n\n游客可以根据自身的情况，选择全程步行或者“步行+索道”的方式游玩景区。在山下的灵观殿与山腰的中天门之间，有景区的中灵索道。乘坐中灵索道，然后从中天门步行登上山顶的金顶道观群-玉皇顶，中天门至山顶的道路不是很陡峭，一般在一个小时左右可以走完。\n\n二日游\n\n如果你时间充裕，可以用两天的时间游玩景区，大致线路：\n\nD1：游览主景区，当晚住宿在山中。\n\nD2：从山顶，选择西面的追梦谷或者东边的寨沟下山，分别到达景区的西大门和东大门。\n\n主景区内，在山腰的中天门-和山顶金顶道观群-老君庙附近都可以住宿，中天门-附近有宾馆，住宿条件比较好，金顶道观群-老君庙周边住宿条件比较差。如果你是准备第二天清晨去山顶看日出，那么你可以住宿在金顶道观群-老君庙周边。\n\n追梦谷相比较东边的寨沟，山中道路更加的平缓一些，游客可以根据自身喜欢选择其中一个下山。\n\n整个景区有多处可以为游客提供餐饮服务，但景区内部分路段指示牌目前还不是很完善，游客游玩时需要多留心。",
+      "similarity": 0.6375044178218969,
+      "source_id": "S2",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1930/0.html?poiId=77806&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:46+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-77806-history_culture",
+      "poi_id": 77806,
+      "name": "老君山景区",
+      "theme": "history_culture",
+      "theme_label": "历史文化",
+      "text": "【老君山景区 · 历史文化】\n老君山主景区内包括了中天门、金顶、金顶道观群-老君庙、金顶道观群-南天门、金顶道观群-玉皇顶以及老君山景区-马鬃岭等主要景点。金顶道观群-老君庙自北魏始建以来，就是中原香客朝拜的中心；金顶道观群-玉皇顶的道观中供奉着玉皇大帝，这里也是山中观景的好地方；金顶和老君山景区-马鬃岭则是观看日出和云海的好地方。",
+      "similarity": 0.635936143761629,
+      "source_id": "S3",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1930/0.html?poiId=77806&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:46+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-60697944-overview",
+      "poi_id": 60697944,
+      "name": "十里画屏",
+      "theme": "overview",
+      "theme_label": "景点概况",
+      "text": "【十里画屏 · 景点概况】\n十里画屏是老君山景区的核心游览区之一，地处登山主干道的中段，是一片花岗岩峰林，又称“石林”。远古造山运动将原本完整的山体切割成犬牙交错的石峰群，远看峰峦成林，近观又各自成峰，素有“扩大的盆景，缩小的仙境”之称，民间还有三十六峰、七十二景之说。因游览线路绵延十里、沿途如一幅徐徐展开的山水长卷而得名。游览这里，走的是贴崖而建的悬空栈道，一侧是刀劈斧削般的花岗岩壁，一侧是深谷云海，云雾涌上栈道时，能真切感到云气擦身而过的清凉。这里四季各有味道：春有残雪，夏雨后云雾缭绕，秋季层林尽染，冬雪过后更似童话世界。游走其间，一步一景，景景如画，让人如痴如醉。",
+      "similarity": 0.6269837582394864,
+      "source_id": "S4",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1930/0.html?poiId=60697944&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:37:19+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-77806-preferential",
+      "poi_id": 77806,
+      "name": "老君山景区",
+      "theme": "preferential",
+      "theme_label": "优待政策",
+      "text": "【老君山景区 · 优待政策】\n- 儿童：免门票及索道（12周岁（含）以下且身高在1.4米（含）以下凭相关证件（本优惠政策须年龄、身高两项都符合））\n- 儿童：免门票（12周岁（含）以下且身高在1.4米（不含）以上凭相关证件）\n- 未成年人：半价门票（12周岁（不含）-18周岁（含）以下的未成年人凭学生证及本人身份证原件）\n- 学生：半价门票（全日制大中专及以下学历的在校生，凭学生证及本人身份证原件）\n- 老人：免门票（60周岁以上（含60周岁）老年人凭本人身份证原件）\n- 残疾人：免门票（凭残疾证（视力残疾/智力残疾/一 级或二级肢体残疾可免一名陪护人员门票））\n- 军人：免门票（持士兵证、军官证、残疾军人证等有效证件的现役军人、残疾军人；全国退役军人，持本人优待证及本人身份证原件）\n- 警察：免门票（全国人民警察凭身份证和人民警察证）\n- 消防员：免门票（全国在职消防员凭本人消防证和身份证）\n- 人民教师：半价门票（持教师证）\n- 记者：免门票（持记者证（原件）及本人身份证）\n- 导游：免门票（持导游证及本人身份证）\n- 摄影师：免门票（持摄影证及本人身份证）\n- 信教群众：免门票（持道、佛教协会颁发带有钢印、照片的居士证、皈依证、戒牒证的信教群众部分时段免门票；(在春节期间、国家法定节假日、每周六周日、每年七月八月期间不可使用，需正常购票）。）\n- 栾川居民：免门票（栾川县居民持本人身份证（每人每天仅限入园一次。在国家法定节假、春节期间及七月八月的每周六周日，需提前一天在老君山官方微信公众号上预约，预约成功后方可入园））\n- 铁路职工：免门票（2025年7月9日之前，全国在职铁路职工、铁路警察持本人工作证及身份证）\n- 铁路职工家属：半价门票（铁路职工家属持职工家属证、身份证、结婚证、户口本，享受门票半价优惠（工作证、职工家属证、结婚证、户口本需与本人身份证一致。）(在每年七月八月期间不可使用，需正常购票）。）\n补充说明：享受减免优惠政策的人员，需出示本人身份证原件并携带有效证件方可入园。工作证、职工家属证（或结婚证、户口本）需要与本人有效证件配套使用，涂改、转借、过期的证件不能享受此政策；已退休的铁路职工及铁路警察不享受此优惠政策。免门票游客到景区游览请提前一天向景区预约，预约方式（老君山风景名胜区公众号——预约购票——免门票预约）。若有疑问，可咨询景区客服电话。",
+      "similarity": 0.6263362355928495,
+      "source_id": "S5",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1930/0.html?poiId=77806&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:46+00:00",
+      "verify_status": "unverified"
+    }
+  ],
+  "warnings": [
+    "门票文案为采集快照，不代表实时售价；请核对采集时间和官方购票渠道。",
+    "来源资料尚未经人工核验。",
+    "以上依据为采集资料，公告、票价、优待和开放状态可能变化；请核对引用采集时间及官方渠道。",
+    "引用资料尚未经人工核验。"
+  ]
+}
+```
+
+用户评分：事实 pass；引用 pass；景点隔离 pass；不确定性处理 pass；时效 pass；覆盖 pass；归因标记 pass
+
+## challenge-v1-29
+
+图节点：plan → ticket_sql → retrieve_chunks → answer_validate → merge
+
+证据范围：documentation_gap
+
+凤翔温泉门票资料怎么写，有没有轮椅设施？
+
+预期行为：需票价原文与设施证据，不能只答其中一半。
+
+门票资料：
+凤翔温泉的门票资料原文为：
+门票￥78起
+[SQL1：凤翔温泉／门票原文]
+这是采集时的原始文案，未换算为统一数值；“起”不等于固定票价。
+采集时间：2026-10-11T20:37:38+08:00。
+
+文本资料：
+本次提供的凤翔温泉设施条目仅列出停车场，未提到轮椅设施。 [S2：凤翔温泉／facilities]
+无法确认或资料限制：因此无法确认是否提供轮椅设施；这些条目未提到不等于现场没有，请向景区核实。
+
+工具与证据：
+
+```json
+{
+  "route": "mixed",
+  "status": "insufficient_evidence",
+  "required_stores": [
+    "ticket_sql",
+    "rag"
+  ],
+  "tasks": [
+    {
+      "store": "ticket_sql",
+      "question": "凤翔温泉门票资料怎么写",
+      "state": "queried_with_evidence",
+      "tool_called": true,
+      "query_executed": true,
+      "reason": "",
+      "evidence_ids": [
+        "SQL1"
+      ],
+      "answer_status": "answered",
+      "retrieved_count": 0
+    },
+    {
+      "store": "rag",
+      "question": "凤翔温泉：有没有轮椅设施",
+      "state": "queried_no_evidence",
+      "tool_called": true,
+      "query_executed": true,
+      "reason": "",
+      "evidence_ids": [
+        "S2"
+      ],
+      "answer_status": "insufficient_evidence",
+      "retrieved_count": 5
+    }
+  ],
+  "entity_resolution": {
+    "status": "resolved",
+    "matches": [
+      {
+        "poi_id": 10615019,
+        "name": "凤翔温泉"
+      }
+    ]
+  },
+  "structured_data": {
+    "poi_id": 10615019,
+    "name": "凤翔温泉",
+    "ticket_raw": "门票￥78起",
+    "detail_exists": true,
+    "source_table": "v2.poi_details",
+    "field": "ticket_raw",
+    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=10615019&seo=0&isHideNavBar=YES&poiType=66&scene=online",
+    "source": "ctrip",
+    "collected_at": "2026-10-11T20:37:38+08:00",
+    "verify_status": "unverified"
+  },
+  "citations": [
+    {
+      "source_id": "SQL1",
+      "chunk_id": null,
+      "poi_id": 10615019,
+      "name": "凤翔温泉",
+      "theme": "ticket",
+      "theme_label": "门票原文",
+      "source_table": "v2.poi_details",
+      "field": "ticket_raw",
+      "record_ref": "v2.poi_details:10615019:ticket_raw",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=10615019&seo=0&isHideNavBar=YES&poiType=66&scene=online",
+      "collected_at": "2026-10-11T20:37:38+08:00",
+      "verify_status": "unverified",
+      "quotes": [
+        "门票￥78起"
+      ]
+    },
+    {
+      "source_id": "S2",
+      "chunk_id": "poi-10615019-facilities_struct",
+      "poi_id": 10615019,
+      "name": "凤翔温泉",
+      "theme": "facilities",
+      "theme_label": "设施服务",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=10615019&seo=0&isHideNavBar=YES&poiType=66&scene=online",
+      "collected_at": "2026-10-11T12:37:38+00:00",
+      "verify_status": "unverified",
+      "quotes": [
+        "【凤翔温泉 · 设施服务】\n- 停车场：名称：停车位；参考价格：免费；地址：景区内；库位：200；名称：停车位"
+      ]
+    }
+  ],
+  "retrieved_sources": [
+    {
+      "chunk_id": "poi-10615019-preferential",
+      "poi_id": 10615019,
+      "name": "凤翔温泉",
+      "theme": "preferential",
+      "theme_label": "优待政策",
+      "text": "【凤翔温泉 · 优待政策】\n- 儿童：优惠价（身高：1.2米（含）~1.5米（不含））\n- 儿童：免费（身高：1.2米（不含）以下免票，一位成人限带一位儿童。）",
+      "similarity": 0.6808456182479907,
+      "source_id": "S1",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=10615019&seo=0&isHideNavBar=YES&poiType=66&scene=online",
+      "collected_at": "2026-10-11T12:37:38+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-10615019-facilities_struct",
+      "poi_id": 10615019,
+      "name": "凤翔温泉",
+      "theme": "facilities",
+      "theme_label": "设施服务",
+      "text": "【凤翔温泉 · 设施服务】\n- 停车场：名称：停车位；参考价格：免费；地址：景区内；库位：200；名称：停车位",
+      "similarity": 0.6544655951539048,
+      "source_id": "S2",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=10615019&seo=0&isHideNavBar=YES&poiType=66&scene=online",
+      "collected_at": "2026-10-11T12:37:38+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-10615019-overview",
+      "poi_id": 10615019,
+      "name": "凤翔温泉",
+      "theme": "overview",
+      "theme_label": "景点概况",
+      "text": "【凤翔温泉 · 景点概况】\n凤翔温泉位于洛阳新区王城大道南端，与龙门山群融为一体，风景秀丽，气候宜人，交通便利，地理位置优越。占地面积千余亩，是集温泉、特色餐饮、休闲度假、生态农业、观光旅游、娱乐健身于一体的综合性生态温泉度假山庄。\n\n温泉位于龙门西山森林公园中，经龙门西山亿年岩层孕育而成，被誉为“千年古汤，天赐奇泉”。凤翔温泉为露天温泉，具有特色汤池二十几种。\n\n凤翔温泉内部由温泉专业设计大师精心设计，注重人、泉、自然的交流与和谐；更有特色的窑洞汤屋、古朴的露天汤池等，还原了温泉本质，是真正的休闲享受。",
+      "similarity": 0.6538251030884779,
+      "source_id": "S3",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=10615019&seo=0&isHideNavBar=YES&poiType=66&scene=online",
+      "collected_at": "2026-10-11T12:37:38+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-151718083-preferential",
+      "poi_id": 151718083,
+      "name": "龙门花香温泉度假区",
+      "theme": "preferential",
+      "theme_label": "优待政策",
+      "text": "【龙门花香温泉度假区 · 优待政策】\n- 儿童：免费（身高1.2米(不含)以下儿童）\n- 儿童：优惠（身高1.2米（含）-1.5米（不含）儿童。）\n- 军人：免费（现役军人，凭本人士兵证、军官证享受免票政策）",
+      "similarity": 0.571203112602238,
+      "source_id": "S4",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=151718083&seo=0&isHideNavBar=YES&poiType=66&scene=online",
+      "collected_at": "2026-10-11T12:41:46+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-143166413-preferential",
+      "poi_id": 143166413,
+      "name": "栾川九龙山温泉",
+      "theme": "preferential",
+      "theme_label": "优待政策",
+      "text": "【栾川九龙山温泉 · 优待政策】\n- 儿童：免费（1.2米（不含）以下）\n- 儿童：优惠（1.2米（含）-1.5米（不含））",
+      "similarity": 0.5648634097061599,
+      "source_id": "S5",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1930/0.html?poiId=143166413&seo=0&isHideNavBar=YES&poiType=66&scene=online",
+      "collected_at": "2026-10-11T12:40:16+00:00",
+      "verify_status": "unverified"
+    }
+  ],
+  "warnings": [
+    "门票文案为采集快照，不代表实时售价；请核对采集时间和官方购票渠道。",
+    "来源资料尚未经人工核验。",
+    "以上依据为采集资料，公告、票价、优待和开放状态可能变化；请核对引用采集时间及官方渠道。",
+    "引用资料尚未经人工核验。"
+  ]
+}
+```
+
+用户评分：事实 pass；引用 pass；景点隔离 pass；不确定性处理 pass；时效 pass；覆盖 pass；归因标记 pass
+
+## challenge-v1-30
+
+图节点：plan → ticket_sql → retrieve_chunks → answer_validate → merge
+
+证据范围：conflicting_policy
+
+龙门石窟票价资料和老人免票条件分别是什么？
+
+预期行为：区分门票原价与优待条件，当前单路径不能视作完整覆盖。
+
+门票资料：
+龙门石窟的门票资料原文为：
+门票￥90起
+[SQL1：龙门石窟／门票原文]
+这是采集时的原始文案，未换算为统一数值；“起”不等于固定票价。
+采集时间：2026-10-11T20:36:44+08:00。
+
+文本资料：
+采集资料的老人条目写为：老人：免费（60周岁（含）以上老年人（含中华人民共和国外国人永久居留身份证）） [S1：龙门石窟／preferential]
+同一景点的免票补充说明写为：补充说明：以上免票范围，除身高1.4米以下未成年人不限国籍，其他仅限中国公民享有。 [S1：龙门石窟／preferential]
+无法确认或资料限制：老人条目涉及外国人永久居留身份证，补充说明却限定其他免票仅限中国公民，两处口径存在冲突。仅凭本批资料无法确定老人免票的完整适用条件，请向景区官方核实；这些记载不是实时政策确认。 [S1：龙门石窟／preferential]
+
+工具与证据：
+
+```json
+{
+  "route": "mixed",
+  "status": "insufficient_evidence",
+  "required_stores": [
+    "ticket_sql",
+    "rag"
+  ],
+  "tasks": [
+    {
+      "store": "ticket_sql",
+      "question": "龙门石窟票价资料",
+      "state": "queried_with_evidence",
+      "tool_called": true,
+      "query_executed": true,
+      "reason": "",
+      "evidence_ids": [
+        "SQL1"
+      ],
+      "answer_status": "answered",
+      "retrieved_count": 0
+    },
+    {
+      "store": "rag",
+      "question": "龙门石窟：老人免票条件分别是什么",
+      "state": "queried_with_evidence",
+      "tool_called": true,
+      "query_executed": true,
+      "reason": "",
+      "evidence_ids": [
+        "S1"
+      ],
+      "answer_status": "insufficient_evidence",
+      "retrieved_count": 5
+    }
+  ],
+  "entity_resolution": {
+    "status": "resolved",
+    "matches": [
+      {
+        "poi_id": 77498,
+        "name": "龙门石窟"
+      }
+    ]
+  },
+  "structured_data": {
+    "poi_id": 77498,
+    "name": "龙门石窟",
+    "ticket_raw": "门票￥90起",
+    "detail_exists": true,
+    "source_table": "v2.poi_details",
+    "field": "ticket_raw",
+    "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+    "source": "ctrip",
+    "collected_at": "2026-10-11T20:36:44+08:00",
+    "verify_status": "unverified"
+  },
+  "citations": [
+    {
+      "source_id": "SQL1",
+      "chunk_id": null,
+      "poi_id": 77498,
+      "name": "龙门石窟",
+      "theme": "ticket",
+      "theme_label": "门票原文",
+      "source_table": "v2.poi_details",
+      "field": "ticket_raw",
+      "record_ref": "v2.poi_details:77498:ticket_raw",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T20:36:44+08:00",
+      "verify_status": "unverified",
+      "quotes": [
+        "门票￥90起"
+      ]
+    },
+    {
+      "source_id": "S1",
+      "chunk_id": "poi-77498-preferential",
+      "poi_id": 77498,
+      "name": "龙门石窟",
+      "theme": "preferential",
+      "theme_label": "优待政策",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:44+00:00",
+      "verify_status": "unverified",
+      "quotes": [
+        "- 老人：免费（60周岁（含）以上老年人（含中华人民共和国外国人永久居留身份证））",
+        "补充说明：以上免票范围，除身高1.4米以下未成年人不限国籍，其他仅限中国公民享有。"
+      ]
+    }
+  ],
+  "retrieved_sources": [
+    {
+      "chunk_id": "poi-77498-preferential",
+      "poi_id": 77498,
+      "name": "龙门石窟",
+      "theme": "preferential",
+      "theme_label": "优待政策",
+      "text": "【龙门石窟 · 优待政策】\n- 老人：免费（60周岁（含）以上老年人（含中华人民共和国外国人永久居留身份证））\n- 儿童：免费（身高1.4米（含）以下儿童直接入园；12周岁（含）以下儿童凭有效身份证件原件或外国人永久居留身份证直接入园。）\n- 儿童：半价（13周岁（含）-17周岁（含）未成年人（仅限中国国籍），凭身份证原件或户口本原件等有效身份证件至票务中心购买半价票或通过网络购票，经景区检票人员查验证件后入园）\n- 导游：免费（导游人员持本人有效期内的导游证或电子导游证、有效身份证原件，配合派团单或行程计划单原件与团内游客（凭本人有效证件原件）一并入园。）\n- 军人：免费（现役军人、军队离退休干部，凭军官证、军士证、义务兵证、学员证、军官退休证、军士退休证原件及身份证原件。现役军人转文职人员凭本人身份证原件、军人保障卡原件及有效期内文职人员证原件。）\n- 退役军人及三属：免费（退役军人和其他优抚对象（烈士遗属、因公牺牲军人遗属和病故军人遗属），凭《中华人民共和国退役军人优待证》《中华人民共和国烈士、因公牺牲军人、病故军人遗属优待证》及身份证原件。）\n- 人民警察：免费（人民警察，凭《人民警察证》原件及身份证原件。）\n- 消防员：免费（国家综合性消防救援人员，凭中华人民共和国应急管理部制发的干部证、消防员证、学员证、退休证原件及身份证原件。河南省专职消防员，凭河南省消防救援总队或河南省市级消防救援支队制发的政府专职消防员证原件和身份证原件。）\n- 残疾人：免费（残疾人，凭中国残疾人联合会制发的《中华人民共和国残疾人证》原件及身份证原件；持退役军人事务部制发的《中华人民共和国残疾军人证》《中华人民共和国伤残人民警察证》《中华人民共和国伤残预备役人员、伤残民兵民工证》的人员，凭证件原件及身份证原件。（注：其中视力、智力残疾者和一 级、二级肢体残疾者可免一名陪护人员门票））\n- 先进人物：免费（国家优秀专家、全国五一劳动奖章获得者、全国三八红旗手、全国优秀教师、全国道德模范先进人物、省部级以上劳动模范，凭相关部门颁发的荣誉证书及身份证原件。）\n- 记者：免费（持国家新闻出版署发放的有效期内记者证的记者。港澳台记者应持有加盖单位行政公章的记者证或工作证，配合《港澳居民来往内地通行证》原件或《台湾居民来往大陆通行证》原件同时使用。）\n- 教职工：免费（洛阳市各级各类学校（含驻洛高校、党校、职业学校、中小学、幼儿园、特殊教育学校、技工学校等）在职教职工，凭河南省人社厅颁发的教师专业技术人员聘任证书或加盖所属教育行政部门人事公章的工作证及身份证原件。）\n- 台胞：免费（台湾同胞持首 次办理台胞证（签发次数为“01”），自证件签发之日起一年内进入本景区。）\n- 中原学者：免费（河南省委人才工作领导小组办公室颁发的A、B、C、D、四类“中原学者证”的高层次人才，凭“中原学者证”及身份证原件。）\n- 献血优待人群：免费（河南省获得国家“无偿献血奉献奖”“无偿捐献造血干细胞奉献奖”“无偿献血志愿服务终身荣誉奖”的个人持本人身份证原件，出示“全国电子无偿献血证”小程序中对应获奖记录，或纸质获奖证书，且该小程序显示的献血地点为河南境内血站。）\n- 学生：半价（全日制大学本科及以下学历学生，凭学生证原件及身份证至票务中心购买半价票或通过网络购票，经景区检票人员查验证件后入园。（成教生、自考生、进修生、网络教育和中国籍国外留学生等均不享受优惠））\n- 人民教师：半价（人民教师（仅限中国国籍），凭教师资格证原件及身份证至票务中心购买半价票或通过网络购票，经景区检票人员查验证件后入园）\n- 现役军人家属：半价（现役军人家属。现役军人的父母（抚养人）、配偶、子女，凭优待证及本人有效身份证原件。）\n补充说明：以上免票范围，除身高1.4米以下未成年人不限国籍，其他仅限中国公民享有。\n",
+      "similarity": 0.7842707891141427,
+      "source_id": "S1",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:44+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-56309164-preferential",
+      "poi_id": 56309164,
+      "name": "洛阳龙门博物馆",
+      "theme": "preferential",
+      "theme_label": "优待政策",
+      "text": "【洛阳龙门博物馆 · 优待政策】\n- 学生：半价（凭在校学生证）\n- 教职工：半价（凭教师证）\n- 老人：免费（60周岁(含)以上，凭有效证件）\n- 儿童：免费（12周岁(含)以下）\n- 军人：免费（现役军人凭有效证件）\n- 记者：免费（凭有效证件）\n- 导游：免费（凭导游证）\n- 残疾人：免费（凭有效证件）",
+      "similarity": 0.7126389529514653,
+      "source_id": "S2",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=56309164&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:38:01+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-97248-preferential",
+      "poi_id": 97248,
+      "name": "龙潭大峡谷",
+      "theme": "preferential",
+      "theme_label": "优待政策",
+      "text": "【龙潭大峡谷 · 优待政策】\n- 儿童：免费（12周岁(含12周岁)及1.4米(含1.4米)以下儿童凭相关证件）\n- 老人：免费（60岁以上(含60岁)凭相关证件）\n- 残疾人：免费（凭相关证件）\n- 军人：免费（现役军人、退役军人凭相关证件）\n- 人民警察：免费（凭相关证件）\n- 学生：半价（大学生凭相关证件）\n- 国家消防救援人员：免费（凭相关证件）\n- 教师：半价（凭相关证件）\n补充说明：票务年龄核算按出生年月日准确核算，是否符合免票政策以现场核验为准\n儿童优惠\n 入园时间：2026-08-19\n- 生日：2014-08-19 → 正好12周岁，免票\n- 生日：2014-08-20 → 未满12周岁，免票\n- 生日：2014-08-18 → 已满12周岁，不免票\n老年优惠\n 入园时间：2026-08-19\n举例\n- 生日：1966-08-19 → 正好60周岁，免票\n- 生日：1966-08-18 → 已满60周岁，免票\n- 生日：1966-08-20 → 未满60周岁，不免票",
+      "similarity": 0.7121781323009252,
+      "source_id": "S3",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/2315/0.html?poiId=97248&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:37:00+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-77498-notice",
+      "poi_id": 77498,
+      "name": "龙门石窟",
+      "theme": "notice",
+      "theme_label": "公告",
+      "text": "【龙门石窟 · 公告】\n【购票须知】\n1.龙门石窟实行实名制分时购票，同一有效证件单日限购一张门票（龙门石窟采用人脸识别设备辅助快速实名核验，人脸信息仅用于实时比对，不存储）。\n2.符合政策性免票及不能线上核验入园的半价优惠人群，凭本人优惠证件原件及身份证原件到票务中心窗口办理，具体优惠政策详见各票型预订须知。\n\n【退票及爽约规则】\n1.门票当日单次有效，一经使用，不予退票退款。\n2.未使用门票：\n（1）出游当日20:00前通过原订票渠道退票，不计爽约；\n（2）出游日起第七天 23:00 前仍可申请退票，计 1 次爽约；\n（3）出游日起第七天 23:00 后系统自动清算，不予退票退款。\n3.爽约 1 次，自爽约之日起限制预约龙门石窟门票 3 天；累计爽约 2 次，自第 2 次爽约之日起限制预约 30 天；累计爽约 3 次，自第 3 次爽约之日起限制预约 180 天。",
+      "similarity": 0.7078992128372242,
+      "source_id": "S4",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:44+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-119534023-preferential",
+      "poi_id": 119534023,
+      "name": "无上龙门沉浸体验馆",
+      "theme": "preferential",
+      "theme_label": "优待政策",
+      "text": "【无上龙门沉浸体验馆 · 优待政策】\n- 儿童：免费（身高1.2米（含）以下，需购票监护人陪同）\n- 全日制大中小学生：门票优惠（凭学生证）\n- 老人：门票优惠（年龄60周岁（含）以上，凭有效证件）\n- 现役军人：门票优惠（凭军官证）\n- 残疾人：门票优惠（凭残疾证）\n- 教职工：门票优惠（凭教师资格证）\n- 医护工作者：门票优惠（凭医师证或护士证）",
+      "similarity": 0.6960646872443333,
+      "source_id": "S5",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=119534023&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:37:45+00:00",
+      "verify_status": "unverified"
+    }
+  ],
+  "warnings": [
+    "门票文案为采集快照，不代表实时售价；请核对采集时间和官方购票渠道。",
+    "来源资料尚未经人工核验。",
+    "以上依据为采集资料，公告、票价、优待和开放状态可能变化；请核对引用采集时间及官方渠道。",
+    "引用资料尚未经人工核验。"
+  ]
+}
+```
+
+用户评分：事实 pass；引用 pass；景点隔离 pass；不确定性处理 pass；时效 pass；覆盖 pass；归因标记 pass
+
+
+## 额外冒烟：ambiguous_mixed
+
+龙门石窟和老君山景区门票资料，路线怎么安排？
+
+门票资料：
+当前门票查询一次只支持一个景点。识别到：龙门石窟、老君山景区。请选择其中一个完整景点名称后查询。
+
+文本资料：
+文本子任务未执行：请先明确一个景点，再分别查询所需资料。
+
+```json
+{
+  "question": "龙门石窟和老君山景区门票资料，路线怎么安排？",
+  "top_k": 5,
+  "status": "insufficient_evidence",
+  "answer": "门票资料：\n当前门票查询一次只支持一个景点。识别到：龙门石窟、老君山景区。请选择其中一个完整景点名称后查询。\n\n文本资料：\n文本子任务未执行：请先明确一个景点，再分别查询所需资料。",
+  "citations": [],
+  "warnings": [
+    "尚未定位景点，未推断门票价格。"
+  ],
+  "retrieved_sources": [],
+  "elapsed_ms": 11.0,
+  "route": "mixed",
+  "structured_data": null,
+  "required_stores": [
+    "ticket_sql",
+    "rag"
+  ],
+  "tasks": [
+    {
+      "store": "ticket_sql",
+      "question": "龙门石窟和老君山景区门票资料",
+      "state": "not_queried",
+      "tool_called": true,
+      "query_executed": false,
+      "reason": "entity_unresolved",
+      "evidence_ids": [],
+      "answer_status": "insufficient_evidence",
+      "retrieved_count": 0
+    },
+    {
+      "store": "rag",
+      "question": "龙门石窟和老君山景区：路线怎么安排",
+      "state": "not_queried",
+      "tool_called": false,
+      "query_executed": false,
+      "reason": "entity_unresolved",
+      "evidence_ids": [],
+      "answer_status": "insufficient_evidence",
+      "retrieved_count": 0
+    }
+  ],
+  "entity_resolution": {
+    "status": "multiple_matches",
+    "matches": [
+      {
+        "poi_id": 77498,
+        "name": "龙门石窟"
+      },
+      {
+        "poi_id": 77806,
+        "name": "老君山景区"
+      }
+    ]
+  },
+  "workflow": "langgraph_v1",
+  "node_trace": [
+    "plan",
+    "ticket_sql",
+    "merge"
+  ],
+  "tool_results": {
+    "ticket_sql": {
+      "state": "not_queried",
+      "tool_called": true,
+      "query_executed": false,
+      "reason": "entity_unresolved",
+      "evidence_ids": [],
+      "retrieved_count": 0,
+      "result": {
+        "route": "sql_ticket",
+        "status": "insufficient_evidence",
+        "answer": "当前门票查询一次只支持一个景点。识别到：龙门石窟、老君山景区。请选择其中一个完整景点名称后查询。",
+        "citations": [],
+        "warnings": [
+          "尚未定位景点，未推断门票价格。"
+        ],
+        "retrieved_sources": [],
+        "structured_data": null,
+        "ticket_lookup_executed": false,
+        "entity_resolution": {
+          "status": "multiple_matches",
+          "matches": [
+            {
+              "poi_id": 77498,
+              "name": "龙门石窟"
+            },
+            {
+              "poi_id": 77806,
+              "name": "老君山景区"
+            }
+          ]
+        }
+      }
+    },
+    "rag": {
+      "state": "not_queried",
+      "tool_called": false,
+      "query_executed": false,
+      "reason": "entity_unresolved",
+      "evidence_ids": [],
+      "retrieved_count": 0,
+      "result": {
+        "status": "insufficient_evidence",
+        "answer": "文本子任务未执行：请先明确一个景点，再分别查询所需资料。",
+        "citations": [],
+        "warnings": [],
+        "retrieved_sources": []
+      }
+    }
+  }
+}
+```
+
+人工评分：待评。
+
+## 额外冒烟：one_day_request
+
+给我安排洛阳一日游
+
+无法确认：模型未提供可核验的完整引用。
+
+```json
+{
+  "question": "给我安排洛阳一日游",
+  "top_k": 5,
+  "status": "insufficient_evidence",
+  "answer": "无法确认：模型未提供可核验的完整引用。",
+  "citations": [],
+  "warnings": [
+    "本次回答未通过引用校验，未展示生成的事实。"
+  ],
+  "retrieved_sources": [
+    {
+      "chunk_id": "poi-136595037-facilities_struct",
+      "poi_id": 136595037,
+      "name": "寻迹洛神赋",
+      "theme": "facilities",
+      "theme_label": "设施服务",
+      "text": "【寻迹洛神赋 · 设施服务】\n- 停车场：名称：洛阳十三朝驿站；参考价格：停车半小时内免费日间(7:00-23:00):3元;夜间(23:00-次日7:00):10元; 新能源汽车按上述标准半价收费；地址：洛阳市洛龙区洛阳大河荟；库位：1400\n- 手机充电\n- 行李寄存：参考价格：免费；地址：游客服务中心、检票口；类型：大件小件均可\n- 卫生间\n- 母婴室：地址：游客服务中心内\n- 餐饮\n- 纪念品商店\n- 自动售卖机\n- 便利店",
+      "similarity": 0.6334684928097183,
+      "source_id": "S1",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=136595037&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:57+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-77784-overview",
+      "poi_id": 77784,
+      "name": "洛阳白云山风景区",
+      "theme": "overview",
+      "theme_label": "景点概况",
+      "text": "【洛阳白云山风景区 · 景点概况】\n洛阳白云山风景区位于洛阳市嵩县境内，既有数不尽的瀑布深潭，还有随处可见的险峰奇石、原始森林景观，空气清新，是一个天然大氧吧。景区内的玉皇顶海拔约2200米，是中原地区数一数二的高峰，也是看日出和云海的好地方。除了自然景观外，洛阳白云山风景区还有乌曼寺、云岩寺、玉皇阁为代表的人文景观。\n\n景区面积比较大，如果时间比较充裕的话，建议花两天的时间来游玩洛阳白云山风景区。第一天进入景区后，可以游览白云峰、芦花谷、九龙瀑布等区域（可以选择步行与索道结合），当晚住宿在中心广场附近，中心广场是洛阳白云山风景区中住宿比较集中的区域。第二天游览小黄山和玉皇阁区域，并且登上中原极顶——玉皇顶。\n\n如果你是准备在玉皇顶看日出，那么第一天晚上可以住宿在玉皇阁附近。景区中有食宿点，但不是很多，所以游客爬山时可以自己带一些零食和饮用水。",
+      "similarity": 0.6236349978773367,
+      "source_id": "S2",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1445115/0.html?poiId=77784&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:37:09+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-153990577-overview",
+      "poi_id": 153990577,
+      "name": "洛阳逛博物馆",
+      "theme": "overview",
+      "theme_label": "景点概况",
+      "text": "【洛阳逛博物馆 · 景点概况】\n在古都洛阳逛博物馆，是系统了解中华文明起源与十三朝古都辉煌历史的钥匙。洛阳博物馆珍藏着大量夏商周青铜器、唐三彩等国之重器，脉络清晰地展现了河洛地区作为华夏文明核心的演进历程。参观者可以通过珍贵的出土文物，直观感受古代中国的礼制、艺术与科技成就。这是一次与中华文明根系对话的深刻文化体验，为理解中国历史提供了扎实而形象的注脚。",
+      "similarity": 0.6005192279196748,
+      "source_id": "S3",
+      "source_url": "https://m.ctrip.com/webapp/you/hotspoi/poiDetail?poiId=153990577&seo=0&isHideNavBar=YES",
+      "collected_at": "2026-10-11T12:36:56+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-148509879-preferential",
+      "poi_id": 148509879,
+      "name": "隋唐洛阳城国家遗址公园",
+      "theme": "preferential",
+      "theme_label": "优待政策",
+      "text": "【隋唐洛阳城国家遗址公园 · 优待政策】\n- 儿童：半价（十八周岁以下的未成年人（仅限中国国籍））\n- 学生：半价（国内全日制统招大学本科及以下在校学生，凭身份证及学生证原件（成教生、自考生、进修生、网络教育和中国籍国外留学生等均不享受优惠））",
+      "similarity": 0.5992146612149923,
+      "source_id": "S4",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=148509879&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:51+00:00",
+      "verify_status": "unverified"
+    },
+    {
+      "chunk_id": "poi-136595037-overview",
+      "poi_id": 136595037,
+      "name": "寻迹洛神赋",
+      "theme": "overview",
+      "theme_label": "景点概况",
+      "text": "【寻迹洛神赋 · 景点概况】\n“洛水汤汤，一川历史，一川文化。”\n\n黑弓BLACKBOW汲取“洛阳神韵”为精神符号\n\n以河洛文化为创作蓝本\n\n用科技艺术讲述洛阳故事\n\n构建中国首部数字行浸演艺\n\n《寻迹洛神赋》由北京冬季奥运会开幕式视效总监王志鸥担任总导演，开幕式视效总制作团队黑弓BLACKBOW担任总创制方。场馆运用数字影像、机械装置、现场演艺相结合的方式，展现古都洛阳城的轮回故事；集数字行浸演艺、沉浸式博物馆、多维度数字演艺于一体，全面全域的展示洛阳文化历史。\n\n专家团队",
+      "similarity": 0.5985337617634972,
+      "source_id": "S5",
+      "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=136595037&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+      "collected_at": "2026-10-11T12:36:57+00:00",
+      "verify_status": "unverified"
+    }
+  ],
+  "elapsed_ms": 2332.7,
+  "route": "vector",
+  "structured_data": null,
+  "required_stores": [
+    "rag"
+  ],
+  "tasks": [
+    {
+      "store": "ticket_sql",
+      "question": "给我安排洛阳一日游",
+      "state": "not_queried",
+      "tool_called": false,
+      "query_executed": false,
+      "reason": "not_required",
+      "evidence_ids": [],
+      "answer_status": null,
+      "retrieved_count": 0
+    },
+    {
+      "store": "rag",
+      "question": "给我安排洛阳一日游",
+      "state": "queried_no_evidence",
+      "tool_called": true,
+      "query_executed": true,
+      "reason": "",
+      "evidence_ids": [],
+      "answer_status": "insufficient_evidence",
+      "retrieved_count": 5
+    }
+  ],
+  "entity_resolution": null,
+  "workflow": "langgraph_v1",
+  "node_trace": [
+    "plan",
+    "retrieve_chunks",
+    "answer_validate",
+    "merge"
+  ],
+  "tool_results": {
+    "ticket_sql": {
+      "state": "not_queried",
+      "tool_called": false,
+      "query_executed": false,
+      "reason": "not_required",
+      "evidence_ids": [],
+      "retrieved_count": 0,
+      "result": null
+    },
+    "rag": {
+      "state": "queried_no_evidence",
+      "tool_called": true,
+      "query_executed": true,
+      "reason": "",
+      "evidence_ids": [],
+      "retrieved_count": 5,
+      "result": {
+        "status": "insufficient_evidence",
+        "answer": "无法确认：模型未提供可核验的完整引用。",
+        "citations": [],
+        "warnings": [
+          "本次回答未通过引用校验，未展示生成的事实。"
+        ],
+        "retrieved_sources": [
+          {
+            "chunk_id": "poi-136595037-facilities_struct",
+            "poi_id": 136595037,
+            "name": "寻迹洛神赋",
+            "theme": "facilities",
+            "theme_label": "设施服务",
+            "text": "【寻迹洛神赋 · 设施服务】\n- 停车场：名称：洛阳十三朝驿站；参考价格：停车半小时内免费日间(7:00-23:00):3元;夜间(23:00-次日7:00):10元; 新能源汽车按上述标准半价收费；地址：洛阳市洛龙区洛阳大河荟；库位：1400\n- 手机充电\n- 行李寄存：参考价格：免费；地址：游客服务中心、检票口；类型：大件小件均可\n- 卫生间\n- 母婴室：地址：游客服务中心内\n- 餐饮\n- 纪念品商店\n- 自动售卖机\n- 便利店",
+            "similarity": 0.6334684928097183,
+            "source_id": "S1",
+            "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=136595037&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+            "collected_at": "2026-10-11T12:36:57+00:00",
+            "verify_status": "unverified"
+          },
+          {
+            "chunk_id": "poi-77784-overview",
+            "poi_id": 77784,
+            "name": "洛阳白云山风景区",
+            "theme": "overview",
+            "theme_label": "景点概况",
+            "text": "【洛阳白云山风景区 · 景点概况】\n洛阳白云山风景区位于洛阳市嵩县境内，既有数不尽的瀑布深潭，还有随处可见的险峰奇石、原始森林景观，空气清新，是一个天然大氧吧。景区内的玉皇顶海拔约2200米，是中原地区数一数二的高峰，也是看日出和云海的好地方。除了自然景观外，洛阳白云山风景区还有乌曼寺、云岩寺、玉皇阁为代表的人文景观。\n\n景区面积比较大，如果时间比较充裕的话，建议花两天的时间来游玩洛阳白云山风景区。第一天进入景区后，可以游览白云峰、芦花谷、九龙瀑布等区域（可以选择步行与索道结合），当晚住宿在中心广场附近，中心广场是洛阳白云山风景区中住宿比较集中的区域。第二天游览小黄山和玉皇阁区域，并且登上中原极顶——玉皇顶。\n\n如果你是准备在玉皇顶看日出，那么第一天晚上可以住宿在玉皇阁附近。景区中有食宿点，但不是很多，所以游客爬山时可以自己带一些零食和饮用水。",
+            "similarity": 0.6236349978773367,
+            "source_id": "S2",
+            "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1445115/0.html?poiId=77784&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+            "collected_at": "2026-10-11T12:37:09+00:00",
+            "verify_status": "unverified"
+          },
+          {
+            "chunk_id": "poi-153990577-overview",
+            "poi_id": 153990577,
+            "name": "洛阳逛博物馆",
+            "theme": "overview",
+            "theme_label": "景点概况",
+            "text": "【洛阳逛博物馆 · 景点概况】\n在古都洛阳逛博物馆，是系统了解中华文明起源与十三朝古都辉煌历史的钥匙。洛阳博物馆珍藏着大量夏商周青铜器、唐三彩等国之重器，脉络清晰地展现了河洛地区作为华夏文明核心的演进历程。参观者可以通过珍贵的出土文物，直观感受古代中国的礼制、艺术与科技成就。这是一次与中华文明根系对话的深刻文化体验，为理解中国历史提供了扎实而形象的注脚。",
+            "similarity": 0.6005192279196748,
+            "source_id": "S3",
+            "source_url": "https://m.ctrip.com/webapp/you/hotspoi/poiDetail?poiId=153990577&seo=0&isHideNavBar=YES",
+            "collected_at": "2026-10-11T12:36:56+00:00",
+            "verify_status": "unverified"
+          },
+          {
+            "chunk_id": "poi-148509879-preferential",
+            "poi_id": 148509879,
+            "name": "隋唐洛阳城国家遗址公园",
+            "theme": "preferential",
+            "theme_label": "优待政策",
+            "text": "【隋唐洛阳城国家遗址公园 · 优待政策】\n- 儿童：半价（十八周岁以下的未成年人（仅限中国国籍））\n- 学生：半价（国内全日制统招大学本科及以下在校学生，凭身份证及学生证原件（成教生、自考生、进修生、网络教育和中国籍国外留学生等均不享受优惠））",
+            "similarity": 0.5992146612149923,
+            "source_id": "S4",
+            "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=148509879&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+            "collected_at": "2026-10-11T12:36:51+00:00",
+            "verify_status": "unverified"
+          },
+          {
+            "chunk_id": "poi-136595037-overview",
+            "poi_id": 136595037,
+            "name": "寻迹洛神赋",
+            "theme": "overview",
+            "theme_label": "景点概况",
+            "text": "【寻迹洛神赋 · 景点概况】\n“洛水汤汤，一川历史，一川文化。”\n\n黑弓BLACKBOW汲取“洛阳神韵”为精神符号\n\n以河洛文化为创作蓝本\n\n用科技艺术讲述洛阳故事\n\n构建中国首部数字行浸演艺\n\n《寻迹洛神赋》由北京冬季奥运会开幕式视效总监王志鸥担任总导演，开幕式视效总制作团队黑弓BLACKBOW担任总创制方。场馆运用数字影像、机械装置、现场演艺相结合的方式，展现古都洛阳城的轮回故事；集数字行浸演艺、沉浸式博物馆、多维度数字演艺于一体，全面全域的展示洛阳文化历史。\n\n专家团队",
+            "similarity": 0.5985337617634972,
+            "source_id": "S5",
+            "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=136595037&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+            "collected_at": "2026-10-11T12:36:57+00:00",
+            "verify_status": "unverified"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+人工评分：待评。

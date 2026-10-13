@@ -1,0 +1,13 @@
+{
+  "versions": {
+    "intent_classifier.py": "2063369a187d6a6940ae5666ab4c30b58ed90bfd7a7e5af52a81f09b96d8e584",
+    "store_contract.py": "db608614ac686a55cef913c1e78ba78aab748228fd37d9c029e070bbae692e1c",
+    "semantic_router.py": "97ada0d4fde879421d9c428539a0726f718895b652e82f1c8ea80b71efd723e4",
+    "ticket_service.py": "2c1052eb6ec0f4b07e71ba85cef8c0ea6de27dfc375bcbb34f8a26753837c0d2",
+    "routing_prototypes.json": "e151d49368981d30cc0aea1fb9ac917ab6ff57ffdb5732e3a8eecb39320e05e3"
+  },
+  "report": "routing_semantic_candidate_v2.json",
+  "historical_changes": 0,
+  "threshold": 0.6,
+  "margin": 0.06
+}

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>洛阳 · Travel Lab</title><link rel="stylesheet" href="style.css?v=8"></head>
+<body>
+<aside><div class="brand">洛阳 <span>Travel Lab</span></div><button id="newchat" class="newchat">＋ 新对话</button><p class="nav-label">对话与工具</p><nav id="nav"></nav><div class="aside-bottom"><span id="access-note"></span><br><a id="docs-link" href="/docs" target="_blank" rel="noopener">完整接口调试 ↗</a><details><summary>请求记录</summary><div id="history">暂无请求</div><button id="clear" class="small secondary">清空记录</button></details></div></aside>
+<main>
+<header><div><h1 id="title"></h1><p id="subtitle"></p></div><div class="header-actions"><button id="settings" class="secondary">测试参数</button><button id="health" class="secondary">检查连接</button><button id="export" class="secondary" disabled>导出 JSON</button></div></header>
+<div id="connection" class="connection">通过当前私有服务测试 · 请求由你手动触发</div>
+<section id="result" class="conversation" aria-live="polite"><div class="welcome"><div class="welcome-icon">洛</div><h2>从一句话开始</h2><p>正文先说结果，依据和工具详情收在回答末尾。</p></div></section>
+<footer class="composer-wrap"><div class="composer"><textarea id="prompt" aria-label="消息" rows="2" placeholder="发送消息，例如：老君山停车场多少钱？"></textarea><button id="send" aria-label="发送消息">↑</button></div><p id="composer-note">Enter 发送 · Shift + Enter 换行 · 参数可在「测试参数」中调整</p></footer>
+</main>
+<dialog id="parameters"><div class="panel-head"><h2>测试参数</h2><button id="close-settings" class="secondary">关闭</button></div><p class="tag" id="endpoint"></p><div id="form"></div></dialog>
+<script src="markdown.js?v=5"></script><script src="app.js?v=8"></script></body></html>

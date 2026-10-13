@@ -1,0 +1,672 @@
+{
+  "dataset_origin": "agent_generated_synthetic_not_real_user_blind",
+  "human_review": null,
+  "cases": [
+    {
+      "id": "comments",
+      "question": "龙门石窟的游客评论里，有哪些关于步行的反馈？",
+      "response": {
+        "workflow": "travel_agent_v1",
+        "run_id": "5662c82805ce41a9bb8d3f41f6359a67",
+        "status": "insufficient_evidence",
+        "answer": "本次未取得可引用的回答证据，无法确认。",
+        "citations": [],
+        "evidence": [
+          {
+            "source_id": "E1",
+            "text": "国庆长假人超级多",
+            "fetched_at": "2026-10-13T12:49:03+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 856098755,
+            "score": 5.0,
+            "published_at": "2026-10-13T11:42:26+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/856098755.html"
+          },
+          {
+            "source_id": "E2",
+            "text": "如果值得一去，我建议在日落时分前往。",
+            "fetched_at": "2026-10-13T12:49:03+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 856090334,
+            "score": 5.0,
+            "published_at": "2026-10-13T11:27:29+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/74/856090334.html"
+          },
+          {
+            "source_id": "E3",
+            "text": "感觉很不错",
+            "fetched_at": "2026-10-13T12:49:03+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 856087198,
+            "score": 5.0,
+            "published_at": "2026-10-13T11:21:46+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/856087198.html"
+          },
+          {
+            "source_id": "E4",
+            "text": "棒棒哒棒棒哒",
+            "fetched_at": "2026-10-13T12:49:03+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 856052562,
+            "score": 5.0,
+            "published_at": "2026-10-13T10:15:28+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/856052562.html"
+          },
+          {
+            "source_id": "E5",
+            "text": "方便又快捷",
+            "fetched_at": "2026-10-13T12:49:03+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 855921739,
+            "score": 5.0,
+            "published_at": "2026-10-13T05:18:15+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/855921739.html"
+          },
+          {
+            "source_id": "E6",
+            "text": "非常满意的一次旅行",
+            "fetched_at": "2026-10-13T12:49:03+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 855918463,
+            "score": 4.0,
+            "published_at": "2026-10-13T04:59:12+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/855918463.html"
+          },
+          {
+            "source_id": "E7",
+            "text": "非常满意的一次旅行",
+            "fetched_at": "2026-10-13T12:49:03+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 855918323,
+            "score": 4.0,
+            "published_at": "2026-10-13T04:58:15+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/855918323.html"
+          },
+          {
+            "source_id": "E8",
+            "text": "环境优美舒心",
+            "fetched_at": "2026-10-13T12:49:03+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 855814051,
+            "score": 5.0,
+            "published_at": "2026-10-12T23:06:32+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/855814051.html"
+          }
+        ],
+        "candidates": [],
+        "tool_trace": [
+          {
+            "tool": "poi_comments",
+            "arguments": {
+              "poi_id": 77498
+            },
+            "state": "queried_with_evidence",
+            "reason": null,
+            "elapsed_ms": 958,
+            "cached_in_request": false
+          }
+        ],
+        "model_steps": 2,
+        "failure": null,
+        "warnings": [
+          "在线获取时间不等于来源更新时间；来源内容仍需核实。",
+          "评论来自本次第一页最多8条样本，排序含义未验证；不代表全部游客、近期趋势或官方事实。"
+        ],
+        "limits": {
+          "model_turns": 5,
+          "tool_executions": 6,
+          "deadline_seconds": 100
+        },
+        "scope": "experimental_evidence_agent_not_itinerary_replanner"
+      }
+    },
+    {
+      "id": "ambiguous",
+      "question": "龙门的游客评论怎么样？",
+      "response": {
+        "workflow": "travel_agent_v1",
+        "run_id": "d54146930a5845a082e34df523c0dcb1",
+        "status": "needs_clarification",
+        "answer": "请确认具体景点：龙门石窟、龙门海洋馆、龙门西山石窟-莲花洞、龙门桥、龙门牡丹园、洛阳龙门博物馆、无上龙门沉浸体验馆、龙门南山牡丹文化园、龙门古街、龙门石窟旅游年票专用通道、风起洛阳VR全感剧场(龙门古街店)、龙门宫宴·沉浸式宫廷餐秀、龙门花香温泉度假区。确认后提交 confirmed_poi_id 和 confirmed_poi_name。",
+        "citations": [],
+        "evidence": [],
+        "candidates": [
+          {
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "district": "洛阳",
+            "source": "local_catalog"
+          },
+          {
+            "poi_id": 10559567,
+            "name": "龙门海洋馆",
+            "district": "洛阳",
+            "source": "local_catalog"
+          },
+          {
+            "poi_id": 13644461,
+            "name": "龙门西山石窟-莲花洞",
+            "district": "洛阳",
+            "source": "local_catalog"
+          },
+          {
+            "poi_id": 13659438,
+            "name": "龙门桥",
+            "district": "洛阳",
+            "source": "local_catalog"
+          },
+          {
+            "poi_id": 31077309,
+            "name": "龙门牡丹园",
+            "district": "洛阳",
+            "source": "local_catalog"
+          },
+          {
+            "poi_id": 56309164,
+            "name": "洛阳龙门博物馆",
+            "district": "洛阳",
+            "source": "local_catalog"
+          },
+          {
+            "poi_id": 119534023,
+            "name": "无上龙门沉浸体验馆",
+            "district": "洛阳",
+            "source": "local_catalog"
+          },
+          {
+            "poi_id": 133545855,
+            "name": "龙门南山牡丹文化园",
+            "district": "洛阳",
+            "source": "local_catalog"
+          },
+          {
+            "poi_id": 145686488,
+            "name": "龙门古街",
+            "district": "洛阳",
+            "source": "local_catalog"
+          },
+          {
+            "poi_id": 148589090,
+            "name": "龙门石窟旅游年票专用通道",
+            "district": "洛阳",
+            "source": "local_catalog"
+          },
+          {
+            "poi_id": 148805107,
+            "name": "风起洛阳VR全感剧场(龙门古街店)",
+            "district": "洛阳",
+            "source": "local_catalog"
+          },
+          {
+            "poi_id": 148860236,
+            "name": "龙门宫宴·沉浸式宫廷餐秀",
+            "district": "洛阳",
+            "source": "local_catalog"
+          },
+          {
+            "poi_id": 151718083,
+            "name": "龙门花香温泉度假区",
+            "district": "洛阳",
+            "source": "local_catalog"
+          }
+        ],
+        "tool_trace": [
+          {
+            "tool": "search_pois",
+            "arguments": {
+              "keyword": "龙门"
+            },
+            "state": "queried_with_evidence",
+            "reason": "needs_clarification",
+            "elapsed_ms": 0,
+            "cached_in_request": false
+          }
+        ],
+        "model_steps": 1,
+        "failure": null,
+        "warnings": [
+          "在线获取时间不等于来源更新时间；来源内容仍需核实。"
+        ],
+        "limits": {
+          "model_turns": 5,
+          "tool_executions": 6,
+          "deadline_seconds": 100
+        },
+        "scope": "experimental_evidence_agent_not_itinerary_replanner"
+      }
+    },
+    {
+      "id": "weather",
+      "question": "查询洛阳今天的天气预报",
+      "response": {
+        "workflow": "travel_agent_v1",
+        "run_id": "411da9d0b2084178a0d220aa9a92f6ac",
+        "status": "evidence_found",
+        "answer": "以下是本次取得的相关证据：\n[E1] 天气预报：\"city\": \"洛阳市\", \"region\": \"河南\", \"date\": \"2026-10-13\", \"fields\": {\"time\": \"2026-10-13\", \"temperature_2m_max\": 25.7, \"temperature_2m_min\": 14.0, \"precipitation_probability_max\": 0, \"weather_code\": 1}",
+        "citations": [
+          {
+            "source_id": "E1",
+            "text": "{\"state\": \"queried_with_evidence\", \"city\": \"洛阳市\", \"region\": \"河南\", \"date\": \"2026-10-13\", \"fields\": {\"time\": \"2026-10-13\", \"temperature_2m_max\": 25.7, \"temperature_2m_min\": 14.0, \"precipitation_probability_max\": 0, \"weather_code\": 1}, \"units\": {\"time\": \"iso8601\", \"temperature_2m_max\": \"°C\", \"temperature_2m_min\": \"°C\", \"precipitation_probability_max\": \"%\", \"weather_code\": \"wmo code\"}, \"source_url\": \"https://open-meteo.com/\", \"provider_updated_at\": null, \"scope\": \"city_forecast_not_attraction_live_conditions\"}",
+            "fetched_at": "2026-10-13T12:49:07+08:00",
+            "kind": "forecast",
+            "source_url": "https://open-meteo.com/",
+            "provider_updated_at": null,
+            "quote": "\"city\": \"洛阳市\", \"region\": \"河南\", \"date\": \"2026-10-13\", \"fields\": {\"time\": \"2026-10-13\", \"temperature_2m_max\": 25.7, \"temperature_2m_min\": 14.0, \"precipitation_probability_max\": 0, \"weather_code\": 1}"
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "E1",
+            "text": "{\"state\": \"queried_with_evidence\", \"city\": \"洛阳市\", \"region\": \"河南\", \"date\": \"2026-10-13\", \"fields\": {\"time\": \"2026-10-13\", \"temperature_2m_max\": 25.7, \"temperature_2m_min\": 14.0, \"precipitation_probability_max\": 0, \"weather_code\": 1}, \"units\": {\"time\": \"iso8601\", \"temperature_2m_max\": \"°C\", \"temperature_2m_min\": \"°C\", \"precipitation_probability_max\": \"%\", \"weather_code\": \"wmo code\"}, \"source_url\": \"https://open-meteo.com/\", \"provider_updated_at\": null, \"scope\": \"city_forecast_not_attraction_live_conditions\"}",
+            "fetched_at": "2026-10-13T12:49:07+08:00",
+            "kind": "forecast",
+            "source_url": "https://open-meteo.com/",
+            "provider_updated_at": null
+          }
+        ],
+        "candidates": [],
+        "tool_trace": [
+          {
+            "tool": "weather_forecast",
+            "arguments": {
+              "city": "洛阳",
+              "date": "2026-10-13"
+            },
+            "state": "queried_with_evidence",
+            "reason": null,
+            "elapsed_ms": 2039,
+            "cached_in_request": false
+          }
+        ],
+        "model_steps": 2,
+        "failure": null,
+        "warnings": [
+          "在线获取时间不等于来源更新时间；来源内容仍需核实。",
+          "Open-Meteo 城市级天气预报，不代表景点实况、开放状态或交通保证。"
+        ],
+        "limits": {
+          "model_turns": 5,
+          "tool_executions": 6,
+          "deadline_seconds": 100
+        },
+        "scope": "experimental_evidence_agent_not_itinerary_replanner"
+      }
+    },
+    {
+      "id": "unknown",
+      "question": "郑州西亚斯学院的游客评价怎么样？",
+      "response": {
+        "workflow": "travel_agent_v1",
+        "run_id": "fd15c0e87e1c42b686df5d8f495d672b",
+        "status": "needs_clarification",
+        "answer": "请确认具体景点：郑州西亚斯学院-莫斯科红场、郑州西亚斯学院-歌剧院、郑州西亚斯学院-西班牙广场。确认后提交 confirmed_poi_id 和 confirmed_poi_name。",
+        "citations": [],
+        "evidence": [],
+        "candidates": [
+          {
+            "poi_id": 145855438,
+            "name": "郑州西亚斯学院-莫斯科红场",
+            "district": "新郑",
+            "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/0/0.html?poiId=145855438",
+            "source": "ctrip_online_search"
+          },
+          {
+            "poi_id": 148661348,
+            "name": "郑州西亚斯学院-歌剧院",
+            "district": "新郑",
+            "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/0/0.html?poiId=148661348",
+            "source": "ctrip_online_search"
+          },
+          {
+            "poi_id": 145942055,
+            "name": "郑州西亚斯学院-西班牙广场",
+            "district": "新郑",
+            "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/0/0.html?poiId=145942055",
+            "source": "ctrip_online_search"
+          }
+        ],
+        "tool_trace": [
+          {
+            "tool": "search_pois",
+            "arguments": {
+              "keyword": "郑州西亚斯学院"
+            },
+            "state": "queried_with_evidence",
+            "reason": "needs_clarification",
+            "elapsed_ms": 282,
+            "cached_in_request": false
+          }
+        ],
+        "model_steps": 1,
+        "failure": null,
+        "warnings": [
+          "在线获取时间不等于来源更新时间；来源内容仍需核实。"
+        ],
+        "limits": {
+          "model_turns": 5,
+          "tool_executions": 6,
+          "deadline_seconds": 100
+        },
+        "scope": "experimental_evidence_agent_not_itinerary_replanner"
+      }
+    },
+    {
+      "id": "mixed",
+      "question": "查询龙门石窟的游客评论，以及洛阳今天的天气预报",
+      "response": {
+        "workflow": "travel_agent_v1",
+        "run_id": "ebbc8e33c1414561bd27e48724ae7556",
+        "status": "evidence_found",
+        "answer": "以下是本次取得的相关证据：\n[E1] 龙门石窟：国庆长假人超级多\n[E2] 龙门石窟：如果值得一去，我建议在日落时分前往。\n[E3] 龙门石窟：感觉很不错\n[E4] 龙门石窟：棒棒哒棒棒哒\n[E5] 龙门石窟：方便又快捷\n[E6] 龙门石窟：非常满意的一次旅行\n[E7] 龙门石窟：非常满意的一次旅行\n[E8] 龙门石窟：环境优美舒心\n[E9] 天气预报：\"city\": \"洛阳市\", \"region\": \"河南\", \"date\": \"2026-10-13\", \"fields\": {\"time\": \"2026-10-13\", \"temperature_2m_max\": 25.7, \"temperature_2m_min\": 14.0, \"precipitation_probability_max\": 0, \"weather_code\": 1}",
+        "citations": [
+          {
+            "source_id": "E1",
+            "text": "国庆长假人超级多",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 856098755,
+            "score": 5.0,
+            "published_at": "2026-10-13T11:42:26+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/856098755.html",
+            "quote": "国庆长假人超级多"
+          },
+          {
+            "source_id": "E2",
+            "text": "如果值得一去，我建议在日落时分前往。",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 856090334,
+            "score": 5.0,
+            "published_at": "2026-10-13T11:27:29+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/74/856090334.html",
+            "quote": "如果值得一去，我建议在日落时分前往。"
+          },
+          {
+            "source_id": "E3",
+            "text": "感觉很不错",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 856087198,
+            "score": 5.0,
+            "published_at": "2026-10-13T11:21:46+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/856087198.html",
+            "quote": "感觉很不错"
+          },
+          {
+            "source_id": "E4",
+            "text": "棒棒哒棒棒哒",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 856052562,
+            "score": 5.0,
+            "published_at": "2026-10-13T10:15:28+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/856052562.html",
+            "quote": "棒棒哒棒棒哒"
+          },
+          {
+            "source_id": "E5",
+            "text": "方便又快捷",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 855921739,
+            "score": 5.0,
+            "published_at": "2026-10-13T05:18:15+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/855921739.html",
+            "quote": "方便又快捷"
+          },
+          {
+            "source_id": "E6",
+            "text": "非常满意的一次旅行",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 855918463,
+            "score": 4.0,
+            "published_at": "2026-10-13T04:59:12+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/855918463.html",
+            "quote": "非常满意的一次旅行"
+          },
+          {
+            "source_id": "E7",
+            "text": "非常满意的一次旅行",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 855918323,
+            "score": 4.0,
+            "published_at": "2026-10-13T04:58:15+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/855918323.html",
+            "quote": "非常满意的一次旅行"
+          },
+          {
+            "source_id": "E8",
+            "text": "环境优美舒心",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 855814051,
+            "score": 5.0,
+            "published_at": "2026-10-12T23:06:32+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/855814051.html",
+            "quote": "环境优美舒心"
+          },
+          {
+            "source_id": "E9",
+            "text": "{\"state\": \"queried_with_evidence\", \"city\": \"洛阳市\", \"region\": \"河南\", \"date\": \"2026-10-13\", \"fields\": {\"time\": \"2026-10-13\", \"temperature_2m_max\": 25.7, \"temperature_2m_min\": 14.0, \"precipitation_probability_max\": 0, \"weather_code\": 1}, \"units\": {\"time\": \"iso8601\", \"temperature_2m_max\": \"°C\", \"temperature_2m_min\": \"°C\", \"precipitation_probability_max\": \"%\", \"weather_code\": \"wmo code\"}, \"source_url\": \"https://open-meteo.com/\", \"provider_updated_at\": null, \"scope\": \"city_forecast_not_attraction_live_conditions\"}",
+            "fetched_at": "2026-10-13T12:49:13+08:00",
+            "kind": "forecast",
+            "source_url": "https://open-meteo.com/",
+            "provider_updated_at": null,
+            "quote": "\"city\": \"洛阳市\", \"region\": \"河南\", \"date\": \"2026-10-13\", \"fields\": {\"time\": \"2026-10-13\", \"temperature_2m_max\": 25.7, \"temperature_2m_min\": 14.0, \"precipitation_probability_max\": 0, \"weather_code\": 1}"
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "E1",
+            "text": "国庆长假人超级多",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 856098755,
+            "score": 5.0,
+            "published_at": "2026-10-13T11:42:26+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/856098755.html"
+          },
+          {
+            "source_id": "E2",
+            "text": "如果值得一去，我建议在日落时分前往。",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 856090334,
+            "score": 5.0,
+            "published_at": "2026-10-13T11:27:29+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/74/856090334.html"
+          },
+          {
+            "source_id": "E3",
+            "text": "感觉很不错",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 856087198,
+            "score": 5.0,
+            "published_at": "2026-10-13T11:21:46+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/856087198.html"
+          },
+          {
+            "source_id": "E4",
+            "text": "棒棒哒棒棒哒",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 856052562,
+            "score": 5.0,
+            "published_at": "2026-10-13T10:15:28+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/856052562.html"
+          },
+          {
+            "source_id": "E5",
+            "text": "方便又快捷",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 855921739,
+            "score": 5.0,
+            "published_at": "2026-10-13T05:18:15+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/855921739.html"
+          },
+          {
+            "source_id": "E6",
+            "text": "非常满意的一次旅行",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 855918463,
+            "score": 4.0,
+            "published_at": "2026-10-13T04:59:12+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/855918463.html"
+          },
+          {
+            "source_id": "E7",
+            "text": "非常满意的一次旅行",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 855918323,
+            "score": 4.0,
+            "published_at": "2026-10-13T04:58:15+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/855918323.html"
+          },
+          {
+            "source_id": "E8",
+            "text": "环境优美舒心",
+            "fetched_at": "2026-10-13T12:49:11+08:00",
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "kind": "user_comment",
+            "comment_id": 855814051,
+            "score": 5.0,
+            "published_at": "2026-10-12T23:06:32+08:00",
+            "source_url": "https://m.ctrip.com/webapp/you/comment/detail/8865/11/855814051.html"
+          },
+          {
+            "source_id": "E9",
+            "text": "{\"state\": \"queried_with_evidence\", \"city\": \"洛阳市\", \"region\": \"河南\", \"date\": \"2026-10-13\", \"fields\": {\"time\": \"2026-10-13\", \"temperature_2m_max\": 25.7, \"temperature_2m_min\": 14.0, \"precipitation_probability_max\": 0, \"weather_code\": 1}, \"units\": {\"time\": \"iso8601\", \"temperature_2m_max\": \"°C\", \"temperature_2m_min\": \"°C\", \"precipitation_probability_max\": \"%\", \"weather_code\": \"wmo code\"}, \"source_url\": \"https://open-meteo.com/\", \"provider_updated_at\": null, \"scope\": \"city_forecast_not_attraction_live_conditions\"}",
+            "fetched_at": "2026-10-13T12:49:13+08:00",
+            "kind": "forecast",
+            "source_url": "https://open-meteo.com/",
+            "provider_updated_at": null
+          }
+        ],
+        "candidates": [],
+        "tool_trace": [
+          {
+            "tool": "poi_comments",
+            "arguments": {
+              "poi_id": 77498
+            },
+            "state": "queried_with_evidence",
+            "reason": null,
+            "elapsed_ms": 469,
+            "cached_in_request": false
+          },
+          {
+            "tool": "weather_forecast",
+            "arguments": {
+              "city": "洛阳",
+              "date": "2026-10-13"
+            },
+            "state": "queried_with_evidence",
+            "reason": null,
+            "elapsed_ms": 2073,
+            "cached_in_request": false
+          }
+        ],
+        "model_steps": 2,
+        "failure": null,
+        "warnings": [
+          "在线获取时间不等于来源更新时间；来源内容仍需核实。",
+          "评论来自本次第一页最多8条样本，排序含义未验证；不代表全部游客、近期趋势或官方事实。",
+          "Open-Meteo 城市级天气预报，不代表景点实况、开放状态或交通保证。"
+        ],
+        "limits": {
+          "model_turns": 5,
+          "tool_executions": 6,
+          "deadline_seconds": 100
+        },
+        "scope": "experimental_evidence_agent_not_itinerary_replanner"
+      }
+    }
+  ],
+  "unit_tests": 96,
+  "existing_handlers_ast_unchanged": true,
+  "automated_checks": {
+    "comments": {
+      "citations_match_evidence": true,
+      "bounded_execution": true,
+      "human_answer_review": "pending"
+    },
+    "ambiguous": {
+      "citations_match_evidence": true,
+      "bounded_execution": true,
+      "human_answer_review": "pending"
+    },
+    "weather": {
+      "citations_match_evidence": true,
+      "bounded_execution": true,
+      "human_answer_review": "pending"
+    },
+    "unknown": {
+      "citations_match_evidence": true,
+      "bounded_execution": true,
+      "human_answer_review": "pending"
+    },
+    "mixed": {
+      "citations_match_evidence": true,
+      "bounded_execution": true,
+      "human_answer_review": "pending"
+    }
+  },
+  "review_notes": {
+    "comments": "8 fetched comments contain no walking-specific evidence; empty answer citations is recorded, not automatically graded as a failure or quality pass.",
+    "weather": "city forecast only; no attraction coordinates used",
+    "unknown": "candidate clarification, not automatic first-result selection"
+  }
+}

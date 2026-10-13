@@ -1,0 +1,176 @@
+{
+  "report": "travel_agent_facility_routing_fix",
+  "generated_at": "2026-10-13T11:03:33.326779+00:00",
+  "endpoint": "https://agentfolio.duckdns.org/travel/agent/ask",
+  "defect": {
+    "symptom": "问设施价格（如“老君山景区停车场多少钱”）只调 ticket_snapshot/poi_details，不调 local_search，返回“本次未取得可引用的回答证据，无法确认。”",
+    "cause": "PROMPT 只写了“介绍历史优先 local_search”，未覆盖设施/停车；local_search 与 ticket_snapshot 的工具描述也没有设施边界。",
+    "data_note": "资料本身齐备：poi-77806-facilities_struct 含“参考价格：¥10/次”等设施条目，排名第一（sim 0.7506）。不是数据缺失。"
+  },
+  "fix": {
+    "file": "rag/service/travel_agent.py",
+    "changes": [
+      "PROMPT：设施（停车场、充电桩、行李寄存、WiFi、卫生间、吸烟区、园内交通及其参考价格）明确归 local_search；并说明 ticket_snapshot 只覆盖门票，问设施价格时必须再用 local_search。",
+      "local_search 工具描述：从“介绍、历史、路线片段”扩为含设施及其参考价格。",
+      "ticket_snapshot 工具描述：显式声明不含停车、寄存等设施价格。",
+      "poi_details 工具描述：写明是详情快照，不保证实时营业。"
+    ],
+    "not_changed": [
+      "工具集合、权限、调用预算、引用校验、检索与排序、任何其他端点"
+    ]
+  },
+  "facility_runs": [
+    {
+      "question": "老君山景区停车场多少钱",
+      "http_status": 200,
+      "status": "evidence_found",
+      "failure": null,
+      "tools": [
+        "local_search"
+      ],
+      "local_search_called": true,
+      "citations": [
+        {
+          "source_id": "E1",
+          "name": "老君山景区",
+          "kind": "local_chunk",
+          "quote": "停车场：名称：老君山停车场；参考价格：¥10/次；地址：老君山地址广场、老君山演艺广场、追梦谷、寨沟和中灵索道停车场；库位：1000；备注：蓝牌车：10元/次  ； 黄牌车：20元/次；新能源车：5元/次（绿牌）  具体以现场公示为准。"
+        }
+      ],
+      "answer": "以下是本次取得的相关证据：\n[E1] 老君山景区：停车场：名称：老君山停车场；参考价格：¥10/次；地址：老君山地址广场、老君山演艺广场、追梦谷、寨沟和中灵索道停车场；库位：1000；备注：蓝牌车：10元/次  ； 黄牌车：20元/次；新能源车：5元/次（绿牌）  具体以现场公示为准。"
+    },
+    {
+      "question": "老君山景区停车场多少钱",
+      "http_status": 200,
+      "status": "evidence_found",
+      "failure": null,
+      "tools": [
+        "local_search"
+      ],
+      "local_search_called": true,
+      "citations": [
+        {
+          "source_id": "E1",
+          "name": "老君山景区",
+          "kind": "local_chunk",
+          "quote": "停车场：名称：老君山停车场；参考价格：¥10/次；地址：老君山地址广场、老君山演艺广场、追梦谷、寨沟和中灵索道停车场；库位：1000；备注：蓝牌车：10元/次  ； 黄牌车：20元/次；新能源车：5元/次（绿牌）  具体以现场公示为准。"
+        }
+      ],
+      "answer": "以下是本次取得的相关证据：\n[E1] 老君山景区：停车场：名称：老君山停车场；参考价格：¥10/次；地址：老君山地址广场、老君山演艺广场、追梦谷、寨沟和中灵索道停车场；库位：1000；备注：蓝牌车：10元/次  ； 黄牌车：20元/次；新能源车：5元/次（绿牌）  具体以现场公示为准。"
+    },
+    {
+      "question": "老君山景区停车费怎么收",
+      "http_status": 200,
+      "status": "evidence_found",
+      "failure": null,
+      "tools": [
+        "local_search"
+      ],
+      "local_search_called": true,
+      "citations": [
+        {
+          "source_id": "E1",
+          "name": "老君山景区",
+          "kind": "local_chunk",
+          "quote": "停车场：名称：老君山停车场；参考价格：¥10/次；地址：老君山地址广场、老君山演艺广场、追梦谷、寨沟和中灵索道停车场；库位：1000；备注：蓝牌车：10元/次  ； 黄牌车：20元/次；新能源车：5元/次（绿牌）  具体以现场公示为准。"
+        }
+      ],
+      "answer": "以下是本次取得的相关证据：\n[E1] 老君山景区：停车场：名称：老君山停车场；参考价格：¥10/次；地址：老君山地址广场、老君山演艺广场、追梦谷、寨沟和中灵索道停车场；库位：1000；备注：蓝牌车：10元/次  ； 黄牌车：20元/次；新能源车：5元/次（绿牌）  具体以现场公示为准。"
+    },
+    {
+      "question": "老君山景区行李寄存多少钱",
+      "http_status": 200,
+      "status": "evidence_found",
+      "failure": null,
+      "tools": [
+        "local_search"
+      ],
+      "local_search_called": true,
+      "citations": [
+        {
+          "source_id": "E1",
+          "name": "老君山景区",
+          "kind": "local_chunk",
+          "quote": "行李寄存：参考价格：收费；地址：游客服务中心；备注：寄存收费规则：小柜20元/门，中柜25元/门，大柜30元/门（一次性收费，可无限次中途取物）。"
+        }
+      ],
+      "answer": "以下是本次取得的相关证据：\n[E1] 老君山景区：行李寄存：参考价格：收费；地址：游客服务中心；备注：寄存收费规则：小柜20元/门，中柜25元/门，大柜30元/门（一次性收费，可无限次中途取物）。"
+    }
+  ],
+  "facility_summary": {
+    "runs": 4,
+    "local_search_called": 4,
+    "evidence_found": 4
+  },
+  "accepted_case_regression": [
+    {
+      "id": "comments",
+      "question": "龙门石窟的游客评论里，有哪些关于步行的反馈？",
+      "baseline_status": "insufficient_evidence",
+      "now_status": "insufficient_evidence",
+      "same_status": true,
+      "now_tools": [
+        "poi_comments"
+      ],
+      "now_citations": 0
+    },
+    {
+      "id": "ambiguous",
+      "question": "龙门的游客评论怎么样？",
+      "baseline_status": "needs_clarification",
+      "now_status": "needs_clarification",
+      "same_status": true,
+      "now_tools": [
+        "search_pois"
+      ],
+      "now_citations": 0
+    },
+    {
+      "id": "weather",
+      "question": "查询洛阳今天的天气预报",
+      "baseline_status": "evidence_found",
+      "now_status": "evidence_found",
+      "same_status": true,
+      "now_tools": [
+        "weather_forecast"
+      ],
+      "now_citations": 1
+    },
+    {
+      "id": "unknown",
+      "question": "郑州西亚斯学院的游客评价怎么样？",
+      "baseline_status": "needs_clarification",
+      "now_status": "needs_clarification",
+      "same_status": true,
+      "now_tools": [
+        "search_pois"
+      ],
+      "now_citations": 0
+    },
+    {
+      "id": "mixed",
+      "question": "查询龙门石窟的游客评论，以及洛阳今天的天气预报",
+      "baseline_status": "evidence_found",
+      "now_status": "evidence_found",
+      "same_status": true,
+      "now_tools": [
+        "poi_comments",
+        "weather_forecast"
+      ],
+      "now_citations": 9
+    }
+  ],
+  "regression_summary": {
+    "cases": 5,
+    "same_status": 5
+  },
+  "freeze_impact": {
+    "frozen_manifest": "rag/eval/baselines/travel_agent_v1/manifest.json",
+    "frozen_sha256_travel_agent_py": "92c48a40b59e6e734c68b1669e27124a079f0b922a90ae4584a93d95d92e241e",
+    "current_sha256_travel_agent_py": "e4671d719f4e0b93c6441c356e9574349a4deea121446846ff3dbcd8c2cc4641",
+    "drift": true,
+    "statement": "PROMPT 与工具描述已改动，travel_agent_v1 冻结快照不再逐字节对应当前部署；冻结目录保留原样不修改。5 个已验收用例的状态与基线完全一致，但这不等于重新通过人工验收，新回答的 human_review 仍为空。"
+  },
+  "unit_tests": "rag/eval/tests/test_travel_agent.py 18 项通过（新增 facilities 路由契约 1 项）",
+  "human_review": null
+}

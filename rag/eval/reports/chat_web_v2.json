@@ -1,0 +1,28 @@
+{
+  "version": "chat_web_v2",
+  "status": "deployed_automated_checks_passed",
+  "server_tests_passed": 161,
+  "markdown_dom_checks": "passed",
+  "browser_checks": [
+    "chat layout",
+    "headings lists bold table inline code",
+    "sources closed by default",
+    "source quote URL timestamp on expansion",
+    "advanced map tools in dialog"
+  ],
+  "new_baidu_calls": 0,
+  "new_llm_calls": 0,
+  "data_source_for_browser": "mock_only",
+  "full_73_25_30_rerun": false,
+  "human_review": null,
+  "file_sha256": {
+    "rag/service/plan_chat.py": "0efa51f107dc5abf0825b420704ba365f41498f3dde4ed8757ef7f594419f9d7",
+    "rag/service/web/index.html": "2393f19de15baf1bbe2a7fda4ed8ca7af96afdc61608c2b03084f913c9c21d32",
+    "rag/service/web/style.css": "234f404e4fbba111da812f43530641fcdb41ecb88c5bee1157dcb53a8abb7956",
+    "rag/service/web/app.js": "8cf78db285fa5920d407f5df18c9e1030cfc84bc865bd029b9784f50ca8224c3",
+    "rag/service/web/markdown.js": "9a06699980420a889d5c9e8e48f3e330d2172572ac0dc240dcdd36495c01b52a",
+    "rag/eval/tests/test_plan_chat.py": "9ca1f9fef7843e02424da1a3a82768e671d0d0b61109b4fab9f224cebd996800",
+    "rag/eval/tests/test_web_ui.py": "33f9e45f6de71557ae9eb99051f5c67d8aad60a6178771b6a887d949b30662c0",
+    "rag/eval/tests/test_markdown_dom.cjs": "4caa52e55c57fc5a0d3b885bab0a3327885040731263e15856f93d5b64c5ae70"
+  }
+}

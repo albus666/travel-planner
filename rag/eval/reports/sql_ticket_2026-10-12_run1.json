@@ -1,0 +1,473 @@
+{
+  "versions": {
+    "rag/service/ticket_service.py": "091ae97bf441492b2db71ee4bc315c03b60593c55f5201d4d255568a4bf636d1",
+    "rag/service/retrieval_server.py": "136ba888f3cf2e2faa419c8e8fd46684f3da0715bdf28f9cb3c7464ef2debe00",
+    "rag/service/answer_service.py": "24947ab23e75cb5950372ed286bf961d9af75cd74f8ee4a83e820751c63e1fbd",
+    "rag/retrieval/search_chunks.py": "9eee35bb5001850bf2b9dd05bb2e1d4a153c173ee91f14a70b2ab8a3dd2083a0"
+  },
+  "transaction_read_only": "on",
+  "snapshot_before": "f0373356656b0da7ef4d09b55a62de0b4b011d893c594f5b42a82dedf8b16f4c",
+  "snapshot_after": "f0373356656b0da7ef4d09b55a62de0b4b011d893c594f5b42a82dedf8b16f4c",
+  "data_unchanged": true,
+  "cases": [
+    {
+      "id": "longmen_raw",
+      "question": "龙门石窟的门票资料记载是什么？",
+      "response": {
+        "question": "龙门石窟的门票资料记载是什么？",
+        "top_k": 5,
+        "status": "answered",
+        "answer": "龙门石窟的门票资料原文为：\n门票￥90起\n[SQL1：龙门石窟／门票原文]\n这是采集时的原始文案，未换算为统一数值；“起”不等于固定票价。\n采集时间：2026-10-11T20:36:44+08:00。",
+        "citations": [
+          {
+            "source_id": "SQL1",
+            "chunk_id": null,
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "theme": "ticket",
+            "theme_label": "门票原文",
+            "source_table": "v2.poi_details",
+            "field": "ticket_raw",
+            "record_ref": "v2.poi_details:77498:ticket_raw",
+            "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+            "collected_at": "2026-10-11T20:36:44+08:00",
+            "verify_status": "unverified",
+            "quotes": [
+              "门票￥90起"
+            ]
+          }
+        ],
+        "warnings": [
+          "门票文案为采集快照，不代表实时售价；请核对采集时间和官方购票渠道。",
+          "来源资料尚未经人工核验。"
+        ],
+        "retrieved_sources": [],
+        "elapsed_ms": 13.0,
+        "route": "sql_ticket",
+        "structured_data": {
+          "poi_id": 77498,
+          "name": "龙门石窟",
+          "ticket_raw": "门票￥90起",
+          "detail_exists": true,
+          "source_table": "v2.poi_details",
+          "field": "ticket_raw",
+          "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+          "source": "ctrip",
+          "collected_at": "2026-10-11T20:36:44+08:00",
+          "verify_status": "unverified"
+        }
+      },
+      "checks": {
+        "sql_route": true,
+        "expected_behavior": true,
+        "no_vector_chunks": true,
+        "correct_poi": true,
+        "raw_field_exact": true,
+        "has_source_and_time": true,
+        "snapshot_warning": true,
+        "raw_in_answer": true,
+        "quote_exact": true
+      },
+      "passed": true
+    },
+    {
+      "id": "laojun_raw",
+      "question": "老君山景区门票原文是什么？",
+      "response": {
+        "question": "老君山景区门票原文是什么？",
+        "top_k": 5,
+        "status": "answered",
+        "answer": "老君山景区的门票资料原文为：\n门票￥100起\n[SQL1：老君山景区／门票原文]\n这是采集时的原始文案，未换算为统一数值；“起”不等于固定票价。\n采集时间：2026-10-11T20:36:46+08:00。",
+        "citations": [
+          {
+            "source_id": "SQL1",
+            "chunk_id": null,
+            "poi_id": 77806,
+            "name": "老君山景区",
+            "theme": "ticket",
+            "theme_label": "门票原文",
+            "source_table": "v2.poi_details",
+            "field": "ticket_raw",
+            "record_ref": "v2.poi_details:77806:ticket_raw",
+            "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1930/0.html?poiId=77806&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+            "collected_at": "2026-10-11T20:36:46+08:00",
+            "verify_status": "unverified",
+            "quotes": [
+              "门票￥100起"
+            ]
+          }
+        ],
+        "warnings": [
+          "门票文案为采集快照，不代表实时售价；请核对采集时间和官方购票渠道。",
+          "来源资料尚未经人工核验。"
+        ],
+        "retrieved_sources": [],
+        "elapsed_ms": 8.9,
+        "route": "sql_ticket",
+        "structured_data": {
+          "poi_id": 77806,
+          "name": "老君山景区",
+          "ticket_raw": "门票￥100起",
+          "detail_exists": true,
+          "source_table": "v2.poi_details",
+          "field": "ticket_raw",
+          "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1930/0.html?poiId=77806&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+          "source": "ctrip",
+          "collected_at": "2026-10-11T20:36:46+08:00",
+          "verify_status": "unverified"
+        }
+      },
+      "checks": {
+        "sql_route": true,
+        "expected_behavior": true,
+        "no_vector_chunks": true,
+        "correct_poi": true,
+        "raw_field_exact": true,
+        "has_source_and_time": true,
+        "snapshot_warning": true,
+        "raw_in_answer": true,
+        "quote_exact": true
+      },
+      "passed": true
+    },
+    {
+      "id": "free_raw",
+      "question": "隋唐城遗址植物园的票价资料是什么？",
+      "response": {
+        "question": "隋唐城遗址植物园的票价资料是什么？",
+        "top_k": 5,
+        "status": "answered",
+        "answer": "隋唐城遗址植物园的门票资料原文为：\n免费开放\n[SQL1：隋唐城遗址植物园／门票原文]\n这是采集时的原始文案，未换算为统一数值；“起”不等于固定票价。\n采集时间：2026-10-11T20:36:59+08:00。",
+        "citations": [
+          {
+            "source_id": "SQL1",
+            "chunk_id": null,
+            "poi_id": 11078925,
+            "name": "隋唐城遗址植物园",
+            "theme": "ticket",
+            "theme_label": "门票原文",
+            "source_table": "v2.poi_details",
+            "field": "ticket_raw",
+            "record_ref": "v2.poi_details:11078925:ticket_raw",
+            "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=11078925&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+            "collected_at": "2026-10-11T20:36:59+08:00",
+            "verify_status": "unverified",
+            "quotes": [
+              "免费开放"
+            ]
+          }
+        ],
+        "warnings": [
+          "门票文案为采集快照，不代表实时售价；请核对采集时间和官方购票渠道。",
+          "来源资料尚未经人工核验。"
+        ],
+        "retrieved_sources": [],
+        "elapsed_ms": 8.7,
+        "route": "sql_ticket",
+        "structured_data": {
+          "poi_id": 11078925,
+          "name": "隋唐城遗址植物园",
+          "ticket_raw": "免费开放",
+          "detail_exists": true,
+          "source_table": "v2.poi_details",
+          "field": "ticket_raw",
+          "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=11078925&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+          "source": "ctrip",
+          "collected_at": "2026-10-11T20:36:59+08:00",
+          "verify_status": "unverified"
+        }
+      },
+      "checks": {
+        "sql_route": true,
+        "expected_behavior": true,
+        "no_vector_chunks": true,
+        "correct_poi": true,
+        "raw_field_exact": true,
+        "has_source_and_time": true,
+        "snapshot_warning": true,
+        "raw_in_answer": true,
+        "quote_exact": true
+      },
+      "passed": true
+    },
+    {
+      "id": "qualifier_raw",
+      "question": "陆浑旅游风景区门票资料原文是什么？",
+      "response": {
+        "question": "陆浑旅游风景区门票资料原文是什么？",
+        "top_k": 5,
+        "status": "answered",
+        "answer": "陆浑旅游风景区的门票资料原文为：\n免费开放，具体收费情况以现场公示为主\n[SQL1：陆浑旅游风景区／门票原文]\n这是采集时的原始文案，未换算为统一数值；“起”不等于固定票价。\n采集时间：2026-10-11T20:37:49+08:00。",
+        "citations": [
+          {
+            "source_id": "SQL1",
+            "chunk_id": null,
+            "poi_id": 13665171,
+            "name": "陆浑旅游风景区",
+            "theme": "ticket",
+            "theme_label": "门票原文",
+            "source_table": "v2.poi_details",
+            "field": "ticket_raw",
+            "record_ref": "v2.poi_details:13665171:ticket_raw",
+            "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1445115/0.html?poiId=13665171&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+            "collected_at": "2026-10-11T20:37:49+08:00",
+            "verify_status": "unverified",
+            "quotes": [
+              "免费开放，具体收费情况以现场公示为主"
+            ]
+          }
+        ],
+        "warnings": [
+          "门票文案为采集快照，不代表实时售价；请核对采集时间和官方购票渠道。",
+          "来源资料尚未经人工核验。"
+        ],
+        "retrieved_sources": [],
+        "elapsed_ms": 8.4,
+        "route": "sql_ticket",
+        "structured_data": {
+          "poi_id": 13665171,
+          "name": "陆浑旅游风景区",
+          "ticket_raw": "免费开放，具体收费情况以现场公示为主",
+          "detail_exists": true,
+          "source_table": "v2.poi_details",
+          "field": "ticket_raw",
+          "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/1445115/0.html?poiId=13665171&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+          "source": "ctrip",
+          "collected_at": "2026-10-11T20:37:49+08:00",
+          "verify_status": "unverified"
+        }
+      },
+      "checks": {
+        "sql_route": true,
+        "expected_behavior": true,
+        "no_vector_chunks": true,
+        "correct_poi": true,
+        "raw_field_exact": true,
+        "has_source_and_time": true,
+        "snapshot_warning": true,
+        "raw_in_answer": true,
+        "quote_exact": true
+      },
+      "passed": true
+    },
+    {
+      "id": "empty_ticket",
+      "question": "天子驾六博物馆门票资料是什么？",
+      "response": {
+        "question": "天子驾六博物馆门票资料是什么？",
+        "top_k": 5,
+        "status": "insufficient_evidence",
+        "answer": "无法确认：天子驾六博物馆的资料中门票原文字段为空，不能据此推断免费或当前售价。",
+        "citations": [],
+        "warnings": [
+          "门票文案为采集快照，不代表实时售价；请核对采集时间和官方购票渠道。",
+          "来源资料尚未经人工核验。"
+        ],
+        "retrieved_sources": [],
+        "elapsed_ms": 9.5,
+        "route": "sql_ticket",
+        "structured_data": {
+          "poi_id": 82477,
+          "name": "天子驾六博物馆",
+          "ticket_raw": "",
+          "detail_exists": true,
+          "source_table": "v2.poi_details",
+          "field": "ticket_raw",
+          "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=82477&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+          "source": "ctrip",
+          "collected_at": "2026-10-11T20:37:29+08:00",
+          "verify_status": "unverified"
+        }
+      },
+      "checks": {
+        "sql_route": true,
+        "expected_behavior": true,
+        "no_vector_chunks": true,
+        "correct_poi": true,
+        "raw_field_exact": true,
+        "has_source_and_time": true,
+        "snapshot_warning": true,
+        "no_free_inference": true
+      },
+      "passed": true
+    },
+    {
+      "id": "empty_museum",
+      "question": "洛阳龙门博物馆门票资料记载是什么？",
+      "response": {
+        "question": "洛阳龙门博物馆门票资料记载是什么？",
+        "top_k": 5,
+        "status": "insufficient_evidence",
+        "answer": "无法确认：洛阳龙门博物馆的资料中门票原文字段为空，不能据此推断免费或当前售价。",
+        "citations": [],
+        "warnings": [
+          "门票文案为采集快照，不代表实时售价；请核对采集时间和官方购票渠道。",
+          "来源资料尚未经人工核验。"
+        ],
+        "retrieved_sources": [],
+        "elapsed_ms": 9.4,
+        "route": "sql_ticket",
+        "structured_data": {
+          "poi_id": 56309164,
+          "name": "洛阳龙门博物馆",
+          "ticket_raw": "",
+          "detail_exists": true,
+          "source_table": "v2.poi_details",
+          "field": "ticket_raw",
+          "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=56309164&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+          "source": "ctrip",
+          "collected_at": "2026-10-11T20:38:01+08:00",
+          "verify_status": "unverified"
+        }
+      },
+      "checks": {
+        "sql_route": true,
+        "expected_behavior": true,
+        "no_vector_chunks": true,
+        "correct_poi": true,
+        "raw_field_exact": true,
+        "has_source_and_time": true,
+        "snapshot_warning": true,
+        "no_free_inference": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ambiguous",
+      "question": "龙门门票多少钱？",
+      "response": {
+        "question": "龙门门票多少钱？",
+        "top_k": 5,
+        "status": "insufficient_evidence",
+        "answer": "无法确认：未识别到唯一的完整景点名称。请提供一个完整景点名称后查询门票资料。",
+        "citations": [],
+        "warnings": [
+          "尚未定位景点，未推断门票价格。"
+        ],
+        "retrieved_sources": [],
+        "elapsed_ms": 8.3,
+        "route": "sql_ticket",
+        "structured_data": null
+      },
+      "checks": {
+        "sql_route": true,
+        "expected_behavior": true,
+        "no_vector_chunks": true,
+        "no_unresolved_price": true
+      },
+      "passed": true
+    },
+    {
+      "id": "unknown",
+      "question": "洛阳银河天梯公园门票价格资料是什么？",
+      "response": {
+        "question": "洛阳银河天梯公园门票价格资料是什么？",
+        "top_k": 5,
+        "status": "insufficient_evidence",
+        "answer": "无法确认：未识别到唯一的完整景点名称。请提供一个完整景点名称后查询门票资料。",
+        "citations": [],
+        "warnings": [
+          "尚未定位景点，未推断门票价格。"
+        ],
+        "retrieved_sources": [],
+        "elapsed_ms": 8.4,
+        "route": "sql_ticket",
+        "structured_data": null
+      },
+      "checks": {
+        "sql_route": true,
+        "expected_behavior": true,
+        "no_vector_chunks": true,
+        "no_unresolved_price": true
+      },
+      "passed": true
+    },
+    {
+      "id": "today",
+      "question": "龙门石窟今天成人门票准确多少钱？",
+      "response": {
+        "question": "龙门石窟今天成人门票准确多少钱？",
+        "top_k": 5,
+        "status": "insufficient_evidence",
+        "answer": "无法确认所问的实时或特定票种准确售价；以下仅为采集资料，不作当前价格或票种对应保证。\n龙门石窟的门票资料原文为：\n门票￥90起\n[SQL1：龙门石窟／门票原文]\n这是采集时的原始文案，未换算为统一数值；“起”不等于固定票价。\n采集时间：2026-10-11T20:36:44+08:00。",
+        "citations": [
+          {
+            "source_id": "SQL1",
+            "chunk_id": null,
+            "poi_id": 77498,
+            "name": "龙门石窟",
+            "theme": "ticket",
+            "theme_label": "门票原文",
+            "source_table": "v2.poi_details",
+            "field": "ticket_raw",
+            "record_ref": "v2.poi_details:77498:ticket_raw",
+            "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+            "collected_at": "2026-10-11T20:36:44+08:00",
+            "verify_status": "unverified",
+            "quotes": [
+              "门票￥90起"
+            ]
+          }
+        ],
+        "warnings": [
+          "门票文案为采集快照，不代表实时售价；请核对采集时间和官方购票渠道。",
+          "来源资料尚未经人工核验。"
+        ],
+        "retrieved_sources": [],
+        "elapsed_ms": 9.1,
+        "route": "sql_ticket",
+        "structured_data": {
+          "poi_id": 77498,
+          "name": "龙门石窟",
+          "ticket_raw": "门票￥90起",
+          "detail_exists": true,
+          "source_table": "v2.poi_details",
+          "field": "ticket_raw",
+          "source_url": "https://m.ctrip.com/webapp/you/gspoi/sight/198/0.html?poiId=77498&seo=0&isHideNavBar=YES&poiType=3&scene=online",
+          "source": "ctrip",
+          "collected_at": "2026-10-11T20:36:44+08:00",
+          "verify_status": "unverified"
+        }
+      },
+      "checks": {
+        "sql_route": true,
+        "expected_behavior": true,
+        "no_vector_chunks": true,
+        "correct_poi": true,
+        "raw_field_exact": true,
+        "has_source_and_time": true,
+        "snapshot_warning": true,
+        "raw_in_answer": true,
+        "quote_exact": true
+      },
+      "passed": true
+    },
+    {
+      "id": "multi",
+      "question": "龙门石窟和凤翔温泉门票资料分别是什么？",
+      "response": {
+        "question": "龙门石窟和凤翔温泉门票资料分别是什么？",
+        "top_k": 5,
+        "status": "insufficient_evidence",
+        "answer": "无法确认：未识别到唯一的完整景点名称。请提供一个完整景点名称后查询门票资料。",
+        "citations": [],
+        "warnings": [
+          "尚未定位景点，未推断门票价格。"
+        ],
+        "retrieved_sources": [],
+        "elapsed_ms": 8.2,
+        "route": "sql_ticket",
+        "structured_data": null
+      },
+      "checks": {
+        "sql_route": true,
+        "expected_behavior": true,
+        "no_vector_chunks": true,
+        "no_unresolved_price": true
+      },
+      "passed": true
+    }
+  ],
+  "passed": 10,
+  "total": 10
+}

@@ -1,0 +1,70 @@
+{
+  "version": "mixed-v1",
+  "acceptance": "user_review_passed_4_of_4",
+  "frozen_at": "2026-10-12T22:47:34.173734+08:00",
+  "file_sha256": {
+    "rag/service/__init__.py": "91d0c58b27d1574aae893b6823f84186e7324a0ccbd81440cc0a3725a6780c42",
+    "rag/service/intent_classifier.py": "2063369a187d6a6940ae5666ab4c30b58ed90bfd7a7e5af52a81f09b96d8e584",
+    "rag/service/store_contract.py": "db608614ac686a55cef913c1e78ba78aab748228fd37d9c029e070bbae692e1c",
+    "rag/service/semantic_router.py": "d2e0fc33f92ab229c4f2447ba00bfd789d3c85e80d7b5465b92c7316761f24c0",
+    "rag/service/routing_prototypes.json": "e151d49368981d30cc0aea1fb9ac917ab6ff57ffdb5732e3a8eecb39320e05e3",
+    "rag/service/ticket_service.py": "89a8837baab36efc60ef559539a4e3a194b85b934f5b0a0b5510305abc55e66d",
+    "rag/service/retrieval_server.py": "584325343b64ecaebddcfb82d8098187a645aed417119df610849fa7aa19df73",
+    "rag/service/mixed_service.py": "9398d7496c8cd39b10552f7610e9c01b4a9c4108716b6f0e1fa4e331055544f3",
+    "rag/service/answer_service.py": "24947ab23e75cb5950372ed286bf961d9af75cd74f8ee4a83e820751c63e1fbd",
+    "rag/retrieval/search_chunks.py": "8cb411477fe16e9c93d02c7da0584cf5d70e797497a8663a79da0ffe384981c3",
+    "rag/eval/cases/routing_challenge_v1.jsonl": "fac4b465d05b21554b53b6e9f50f14a539d4dad962607aa5770e41419be4e940",
+    "rag/eval/cases/routing_challenge_v1.manifest.json": "fcd7798b7f4fc8765c28b7a1162fdb85d210b3cf6ba39958cf879123e66ed4de",
+    "rag/eval/verify_mixed_live.py": "76aa6811dc254efb6b596c911f274e681705111bef96629d9269acbbf8a424cf",
+    "rag/eval/test_mixed_service.py": "997a76975c263688dd9b56097a05219e72fff7ebb1abb5d526132b1394a9f87b",
+    "rag/eval/reports/mixed_preflight_v1.json": "2488d6c1518b634553c09ac85ff4086880b0ad49182cb42f3748a012a0221365",
+    "rag/eval/reports/mixed_v1_live_run1.json": "7196d41640e0bbc6c3a0fa321fdb37a2a27a3e937ab701f9c26bd9563f5a11ee",
+    "rag/eval/reports/mixed_v1_live_run1.md": "bf1e4da0ff78d37200278280ed8914fdd34859773d6c37b71261ce043a8c3fc7",
+    "rag/eval/reports/mixed_v1_live_fault_scope_followup.json": "095854801017f1540c459a40c758caf6af23bc758e8535b4dbc1f3883210179d",
+    "rag/eval/reports/mixed_v1_live_fault_scope_followup.md": "cd1e4a288756b056e433c391636c33a5281afeb75ea422f44a0bf35522932fc2",
+    "rag/eval/reports/mixed_v1_live_fault_scope_followup_unreviewed.json": "c732c8415a8dff6d4e73cbc07350f03eb360fb7cba171a4c96035f9a93a1070a",
+    "rag/eval/reports/mixed_v1_live_fault_scope_followup_unreviewed.md": "cdac24bf93de752692c6c896c3daf4603647b5f622324512550b05f6a6d27e24",
+    "docs/MIXED_QUERY_MILESTONE_2026-10-12.md": "c9e55f5afcfcc9e9a5da1f6b4ba3d85ee13b61553f36d678f41a431fd9968442",
+    "docs/LANGGRAPH_TOOL_CONTRACT.md": "28b1e149fb5ad37bdd9862c65d21780de080d800bfadac5403b214c0780dc6b2",
+    "docs/ROUTING_STORE_CONTRACT.md": "b457b4cf7d4b9667f815feb1fb28b4d629260de2c736c2a9921af66ee913e440"
+  },
+  "runtime_config": {
+    "LLM_MODEL": "deepseek-chat",
+    "RAG_SEMANTIC_ROUTING_ENABLED": "1",
+    "RAG_MIXED_ENABLED": "1",
+    "RAG_SQL_TICKET_ENABLED": "1"
+  },
+  "routing_threshold": 0.6,
+  "routing_margin": 0.06,
+  "review_scope": "latest four synthetic mixed answers only; no scores transferred to first full regression",
+  "review_summary": {
+    "count": 4,
+    "all_applicable_pass": 4,
+    "pass_cells": 24,
+    "fail_cells": 0,
+    "na_cells": 0,
+    "source": "user supplied per-case re-review table",
+    "scope": "these four synthetic mixed cases only",
+    "original_unreviewed_report_sha256": "c732c8415a8dff6d4e73cbc07350f03eb360fb7cba171a4c96035f9a93a1070a",
+    "response_payload_sha256": "0d3e83a8baafa6bf24aa74fef69d5026493646fe8825075bb79bda132f772b39",
+    "acceptance_status": "mixed_v1_accepted"
+  },
+  "full_regression_summary": {
+    "mixed_tool_evidence_checks": 4,
+    "single_challenge_store_and_context_unchanged": 26,
+    "answer25_store_and_context_unchanged": 25,
+    "search73_top20_unchanged": 73,
+    "unit_tests_passed": 35,
+    "new_answer_human_review": "pending",
+    "rules_thresholds_search_ranking_unchanged": true
+  },
+  "latest_four_review_status": "completed",
+  "other_new_answers_review_status": "not_regraded",
+  "langgraph_integrated": false,
+  "no_secrets_archived": true,
+  "health": {
+    "ok": true,
+    "model_ready": true,
+    "loaded_at": 1791815416.7436116
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "days": [
+    {
+      "plan": {
+        "request": "给我安排洛阳一日游",
+        "trip_date": "2026-10-14",
+        "departure": "洛阳站",
+        "companions": "两位成人",
+        "preferences": [
+          "历史文化"
+        ],
+        "pace": "轻松",
+        "transport": "自驾",
+        "must_visit": [
+          "龙门石窟"
+        ],
+        "avoid": [
+          "天子驾六博物馆",
+          "洛阳博物馆",
+          "隋唐洛阳城应天门遗址",
+          "隋唐城遗址植物园",
+          "王城公园",
+          "从政坊游园"
+        ]
+      },
+      "departure_point": {
+        "lat": 34.692327,
+        "lng": 112.442317,
+        "coord_type": "bd09ll",
+        "name": "洛阳站",
+        "uid": "190b560ec24a6ba48bf15d99"
+      },
+      "end_point": {
+        "lat": 34.692327,
+        "lng": 112.442317,
+        "coord_type": "bd09ll",
+        "name": "洛阳站",
+        "uid": "190b560ec24a6ba48bf15d99"
+      },
+      "start_time": "09:00",
+      "end_time": "18:00",
+      "mode": "driving",
+      "visit_minutes": {
+        "龙门石窟": 120,
+        "洛阳博物馆": 90
+      },
+      "buffer_minutes_per_leg": 10,
+      "optimize_order": false
+    },
+    {
+      "plan": {
+        "request": "给我安排洛阳一日游",
+        "trip_date": "2026-10-15",
+        "departure": "洛阳站",
+        "companions": "两位成人",
+        "preferences": [
+          "历史文化"
+        ],
+        "pace": "轻松",
+        "transport": "自驾",
+        "must_visit": [
+          "洛阳博物馆"
+        ],
+        "avoid": [
+          "龙门石窟",
+          "天子驾六博物馆",
+          "隋唐洛阳城应天门遗址",
+          "隋唐城遗址植物园",
+          "王城公园",
+          "从政坊游园"
+        ]
+      },
+      "departure_point": {
+        "lat": 34.692327,
+        "lng": 112.442317,
+        "coord_type": "bd09ll",
+        "name": "洛阳站",
+        "uid": "190b560ec24a6ba48bf15d99"
+      },
+      "end_point": {
+        "lat": 34.692327,
+        "lng": 112.442317,
+        "coord_type": "bd09ll",
+        "name": "洛阳站",
+        "uid": "190b560ec24a6ba48bf15d99"
+      },
+      "start_time": "09:00",
+      "end_time": "18:00",
+      "mode": "driving",
+      "visit_minutes": {
+        "龙门石窟": 120,
+        "洛阳博物馆": 90
+      },
+      "buffer_minutes_per_leg": 10,
+      "optimize_order": false
+    }
+  ],
+  "max_replans_per_day": 3
+}

@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-13",
+  "status": "deployed_model_balance_blocked",
+  "feature_flag": "RAG_PLAN_CHAT_ENABLED=1",
+  "maps_enabled": true,
+  "server_tests": {
+    "ran": 150,
+    "errors": 0,
+    "passed": 150
+  },
+  "new_baidu_calls": 0,
+  "http_smoke": {
+    "request": "帮我安排洛阳三天，我还没确定出发地点",
+    "status": "needs_clarification",
+    "slots_extraction_succeeded": false,
+    "model_http_status": 402,
+    "model_error": "Insufficient Balance"
+  },
+  "health_model_ready": true,
+  "full_73_25_30_rerun": false,
+  "human_review": null
+}

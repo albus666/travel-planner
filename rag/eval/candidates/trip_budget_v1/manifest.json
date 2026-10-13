@@ -1,0 +1,35 @@
+{
+  "version": "trip_budget_v1",
+  "status": "deployed_automated_tests_passed_pending_human_review",
+  "dataset_origin": "synthetic_mock_not_real_user_blind",
+  "unit_tests_passed": 135,
+  "new_baidu_calls": 0,
+  "human_review": null,
+  "scope": [
+    "persistent local deployment cache and budgets",
+    "bounded optional-stop removal and recheck",
+    "1-7 consecutive Luoyang daily plans"
+  ],
+  "limitations": [
+    "seven POI pool",
+    "daily structured inputs required",
+    "no cross-day stop redistribution",
+    "no automatic hotel booking or opening validation",
+    "other machines/account apps not counted",
+    "no full 73/25/30 rerun"
+  ],
+  "file_sha256": {
+    "rag/service/map_budget.py": "6ce4862d5ba4776b6003e052c9d742ef6933dfc939136c9422068f7adf5936ed",
+    "rag/service/trip_service.py": "3ef43368721f29df06fa65c9e2a91622b4f9193886cf4aed26a389f8e7656412",
+    "rag/service/baidu_maps.py": "b57f721fea8cbbc41d5b9fa5a0617fb4626d3c4c2af899396eb40f08896658e8",
+    "rag/service/retrieval_server.py": "377dca0e4e626bb3c075fcbb1fe2ec28f37450e0ef24120670a301d1b56ea19a",
+    "rag/eval/tests/test_baidu_maps.py": "a857e86e3acbbd6ae9acd713be3ab2a9b385f84ec15e5af48b31327d401e34fb",
+    "rag/eval/tests/test_trip_budget.py": "9633f9991c494a1ca09e566ec21b91b45cf07c3ca2c394a67d8199d182af7832",
+    "rag/eval/runners/eval_trip_budget_mock.py": "23040076ccdd87b1941f1015e018762f150a17923b3278d951da4a08d00d9a5e",
+    "rag/client/examples/trip_two_days.json": "d7829b1cc8f442da3b182f064c30cfe38c8476104385fbe46a05517d3d6d807d",
+    "rag/client/run_on_server.ps1": "cf5b89b0cf7e6b80df4049cbded13b133ea4867f4c7d73e1f6b653296547b855",
+    "docs/TRIP_BUDGET_V1.md": "864f9d8d7c9a297869baf7d7335d5a9722116dc894f98a4b8610c04ca2d77623",
+    "rag/eval/reports/trip_budget_v1_mock.json": "b1c23e77808842cb13f66b48c7af1988da24058fe94539e0fff7777db8ea7cf0",
+    "rag/eval/reports/trip_budget_v1_mock.md": "3704ae289ff5f5e5f819171916faf20003040ac7d07fd3fd78a38e48c88c9794"
+  }
+}

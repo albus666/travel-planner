@@ -1,0 +1,114 @@
+{
+  "status": "promoted_to_accepted_baseline",
+  "dataset_origin": "agent_generated_synthetic_not_real_user_blind",
+  "unit_tests_passed": 96,
+  "live_cases": 5,
+  "human_review": {
+    "review_date": "2026-10-13",
+    "reviewer": "user",
+    "review_type": "user_provided_human_review",
+    "scope": "five synthetic online smoke cases only",
+    "dataset_origin": "agent_generated_synthetic_not_real_user_blind",
+    "source_report_sha256": "da51bfa90d5eba4a89cc45d5430eb3969b571f9f6e8685d478b157a7deef78ea",
+    "rubric": [
+      "工具选择",
+      "景点/地点隔离",
+      "引用支持",
+      "时效表达",
+      "缺证据处理",
+      "需求覆盖"
+    ],
+    "scores": {
+      "comments": {
+        "工具选择": "pass",
+        "景点/地点隔离": "pass",
+        "引用支持": "na",
+        "时效表达": "pass",
+        "缺证据处理": "pass",
+        "需求覆盖": "pass"
+      },
+      "ambiguous": {
+        "工具选择": "pass",
+        "景点/地点隔离": "pass",
+        "引用支持": "na",
+        "时效表达": "pass",
+        "缺证据处理": "pass",
+        "需求覆盖": "pass"
+      },
+      "weather": {
+        "工具选择": "pass",
+        "景点/地点隔离": "pass",
+        "引用支持": "pass",
+        "时效表达": "pass",
+        "缺证据处理": "na",
+        "需求覆盖": "pass"
+      },
+      "unknown": {
+        "工具选择": "pass",
+        "景点/地点隔离": "pass",
+        "引用支持": "na",
+        "时效表达": "pass",
+        "缺证据处理": "pass",
+        "需求覆盖": "pass"
+      },
+      "mixed": {
+        "工具选择": "pass",
+        "景点/地点隔离": "pass",
+        "引用支持": "pass",
+        "时效表达": "pass",
+        "缺证据处理": "na",
+        "需求覆盖": "pass"
+      }
+    },
+    "summary": {
+      "pass": 25,
+      "fail": 0,
+      "na": 5
+    },
+    "decision": "accepted_frozen",
+    "not_claimed": [
+      "production accuracy",
+      "real-user acceptance",
+      "general travel planning capability"
+    ],
+    "known_issues": [
+      {
+        "id": "AGENT-V1-01",
+        "severity": "low",
+        "blocking": false,
+        "description": "weather_code is numeric; map to ordinary Chinese weather description for readability",
+        "decision": "record_only_not_fixed"
+      }
+    ]
+  },
+  "RAG_TRAVEL_AGENT_ENABLED": 1,
+  "existing_handlers_ast_unchanged": [
+    "ask_api",
+    "search_api",
+    "plan_api"
+  ],
+  "limits": {
+    "model_turns": 5,
+    "tool_calls": 6,
+    "scheduling_budget_seconds": 100
+  },
+  "known_limitations": [
+    "city forecast only, no POI coordinate conversion",
+    "first-page max8 reviews; ordering semantics unverified",
+    "extractive citations, not free-form synthesis",
+    "no route optimization or dynamic replanning",
+    "no persistent conversation or cross-request cache",
+    "full search73 not rerun; existing handlers and retrieval code unchanged"
+  ],
+  "file_sha256": {
+    "rag/service/travel_agent.py": "92c48a40b59e6e734c68b1669e27124a079f0b922a90ae4584a93d95d92e241e",
+    "rag/service/travel_online.py": "cf7ba779110f58a1c051d86dfaec12cd02f9a8f3d004c28c9c94fea5b04e0b54",
+    "rag/service/retrieval_server.py": "370f42eb4dcf95c91345a9a112fee9f8697c352759cf456b49bc7aa8374ee572",
+    "rag/eval/tests/test_travel_agent.py": "ae921befc161e0548c5979f43fe7856ee8ac0a9c7a21d9fa167014a44ed202a8",
+    "rag/eval/reports/travel_agent_v1_live.json": "da51bfa90d5eba4a89cc45d5430eb3969b571f9f6e8685d478b157a7deef78ea",
+    "rag/eval/reports/travel_agent_v1_live.md": "30ff50c76a70a7d4137074900c976d723593a975824d6d1937394eab32fdad76",
+    "rag/agent_runtime/VENDORED.json": "ff0311bff77574a6b426a1472b45ff21729f0759045a4c6ec1056305a7018fa4",
+    "docs/TRAVEL_AGENT_V1.md": "57de0add4037bfc168c574519853381ef4eeb825f682c1718e484086115b7b50"
+  },
+  "accepted_baseline": "rag/eval/baselines/travel_agent_v1"
+}

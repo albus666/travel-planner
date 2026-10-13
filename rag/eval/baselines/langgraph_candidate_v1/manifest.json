@@ -1,0 +1,48 @@
+{
+  "status": "candidate_not_human_accepted",
+  "files": {
+    "rag/service/mixed_service.py": "9398d7496c8cd39b10552f7610e9c01b4a9c4108716b6f0e1fa4e331055544f3",
+    "rag/service/ticket_service.py": "89a8837baab36efc60ef559539a4e3a194b85b934f5b0a0b5510305abc55e66d",
+    "rag/service/intent_classifier.py": "2063369a187d6a6940ae5666ab4c30b58ed90bfd7a7e5af52a81f09b96d8e584",
+    "rag/service/store_contract.py": "db608614ac686a55cef913c1e78ba78aab748228fd37d9c029e070bbae692e1c",
+    "rag/service/semantic_router.py": "d2e0fc33f92ab229c4f2447ba00bfd789d3c85e80d7b5465b92c7316761f24c0",
+    "rag/service/routing_prototypes.json": "e151d49368981d30cc0aea1fb9ac917ab6ff57ffdb5732e3a8eecb39320e05e3",
+    "rag/service/answer_service.py": "24947ab23e75cb5950372ed286bf961d9af75cd74f8ee4a83e820751c63e1fbd",
+    "rag/retrieval/search_chunks.py": "8cb411477fe16e9c93d02c7da0584cf5d70e797497a8663a79da0ffe384981c3",
+    "rag/service/ask_graph.py": "078352264fecc5d01c9b57f2bbdf0fbfb23cd1d4870d0c7d6e8a71c468b2befc",
+    "rag/service/graph_tools.py": "9b48715fb35491f5e44e33c014df399649515bbbe708fcfb1752cf6264d6f174",
+    "rag/service/retrieval_server.py": "04b6006ce4750fe5a2988afa70892f92b13345badd7dd1bb3e792bbe6f2d9727",
+    "rag/requirements-langgraph.txt": "368c5fef96ab04b57914f24c65a058a91fe6deffde1558570dd3b24845d6d49b",
+    "rag/eval/test_ask_graph.py": "024f0221e7b306eee31139a297d88422e7b457b6bacb1c7aecc4dde6ab828f86",
+    "rag/eval/verify_graph_live.py": "1c20af89fdb0a5946d97ce3ad13b87a15722c5bdcdc66bd9f0c8d49559847a8e",
+    "docs/LANGGRAPH_MILESTONE_2026-10-12.md": "1896bbb0c7cb4890f69201ef1484066ed8e242ab7d463630897cc5002b5128cc",
+    "rag/eval/cases/routing_challenge_v1.jsonl": "fac4b465d05b21554b53b6e9f50f14a539d4dad962607aa5770e41419be4e940",
+    "rag/eval/reports/langgraph_v1_live_run1.json": "4433e77a75de4e45c1a8ef5189608492e2772ceb7187dd0caab20de96dc9cfc4",
+    "rag/eval/reports/langgraph_v1_live_run1.md": "cc2ae3715e283604662f4ec5d356f5f63ae005c96a646d5e0b209ec00b335ba8",
+    "rag/eval/reports/langgraph_v1_schema_followup.json": "a6323c75807fba380d1f7759aad1b3c2c75f90058eb3bd31a1b595e340a7a3fc",
+    "rag/eval/reports/langgraph_v1_schema_followup.md": "b89fbdfaf6abd3b0b5e6e6737cb7ea837f199964e81b3eee5b62c5144b21e4f0"
+  },
+  "dependencies": {
+    "langgraph": "1.2.14",
+    "langchain-core": "1.6.9",
+    "langgraph-checkpoint": "4.2.0",
+    "langgraph-prebuilt": "1.1.0",
+    "langgraph-sdk": "0.4.6"
+  },
+  "unit_tests_passed": 51,
+  "full_regression_report": "rag/eval/reports/langgraph_v1_live_run1.json",
+  "latest_schema_and_four_smoke_report": "rag/eval/reports/langgraph_v1_schema_followup.json",
+  "protected_mixed_v1_source_unchanged": true,
+  "original_search_handler_unchanged": true,
+  "old_ask_body_retained_behind_switch": true,
+  "human_review": "pending_for_all_new_answers",
+  "no_secrets_archived": true,
+  "RAG_LANGGRAPH_ENABLED": 1,
+  "graph_nodes": [
+    "plan",
+    "ticket_sql",
+    "retrieve_chunks",
+    "answer_validate",
+    "merge"
+  ]
+}

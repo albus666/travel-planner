@@ -1,0 +1,15 @@
+import json,base64,hashlib
+from pathlib import Path
+p=Path('rag/client/run_on_server.ps1');s=p.read_text(encoding='utf-8');needle='(Join-Path $RagRoot "service\\trip_service.py") `';s=s.replace(needle,needle+'\n      (Join-Path $RagRoot "service\\plan_chat.py") `');p.write_text(s,encoding='utf-8')
+report={'date':'2026-10-13','status':'deployed_model_balance_blocked','feature_flag':'RAG_PLAN_CHAT_ENABLED=1','maps_enabled':True,'server_tests':{'ran':150,'errors':0,'passed':150},'new_baidu_calls':0,'http_smoke':{'request':'帮我安排洛阳三天，我还没确定出发地点','status':'needs_clarification','slots_extraction_succeeded':False,'model_http_status':402,'model_error':'Insufficient Balance'},'health_model_ready':True,'full_73_25_30_rerun':False,'human_review':None}
+p=Path('rag/eval/reports/plan_chat_deployment.json');p.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+p=Path('rag/eval/candidates/plan_chat_v1/manifest.json');m=json.loads(p.read_text(encoding='utf-8'));m['deployment']=report;m['file_sha256']={n:hashlib.sha256(Path(n).read_bytes()).hexdigest() for n in m.get('file_sha256',{})};p.write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+p=Path('docs/PLAN_CHAT_NL_INTAKE.md');s=p.read_text(encoding='utf-8');s+='\n\n## 2026-10-13 服务器部署记录\n\n本地入口、客户端和15项测试已同步至服务器，RAG_PLAN_CHAT_ENABLED=1 已启用并重启，/health model_ready=true。服务器全量150项测试全部通过（Linux）；上面的本机Windows测试记录保留。HTTP入口已响应，但真实抽取模型返回HTTP402 Insufficient Balance，未成功抽取槽位，故不能记为真实对话端到端通过。部署验证没有新增百度调用。待现有模型账户恢复余额后再少量验证；未重跑73/25/30，人工评分仍为空。报告：rag/eval/reports/plan_chat_deployment.json。\n';p.write_text(s,encoding='utf-8')
+# Refresh changed-document hash if it is part of this candidate manifest.
+p=Path('rag/eval/candidates/plan_chat_v1/manifest.json');m=json.loads(p.read_text(encoding='utf-8'))
+for n in m.get('file_sha256',{}):m['file_sha256'][n]=hashlib.sha256(Path(n).read_bytes()).hexdigest()
+p.write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+names=['rag/client/run_on_server.ps1','docs/PLAN_CHAT_NL_INTAKE.md','rag/eval/reports/plan_chat_deployment.json','rag/eval/candidates/plan_chat_v1/manifest.json']
+data={n:base64.b64encode(Path(n).read_bytes()).decode() for n in names}
+s="set -euo pipefail\ncd /home/ubuntu/apps/travel-planner\n.venv/bin/python - <<'PY'\nfrom pathlib import Path\nimport base64,json,hashlib\ndata=json.loads("+repr(json.dumps(data))+")\nfor n,b in data.items():\n p=Path(n);p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(base64.b64decode(b))\n assert hashlib.sha256(p.read_bytes()).digest()==hashlib.sha256(base64.b64decode(b)).digest()\nprint('Deployment report and docs synchronized')\nPY\n.venv/bin/python - <<'PY'\nimport requests\nbase='http://127.0.0.1:8100'\nassert requests.get(base+'/health',timeout=10).json()['model_ready']\nassert '/plan/chat' in requests.get(base+'/openapi.json',timeout=10).json()['paths']\nprint('Healthy private server; chat endpoint registered')\nPY\n"
+Path('tmp/finalize_plan_chat_deploy.sh').write_text(s,encoding='utf-8')

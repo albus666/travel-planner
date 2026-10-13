@@ -1,0 +1,115 @@
+{
+  "version": "routing-v2-frozen-before-challenge",
+  "files": {
+    "rag/service/intent_classifier.py": "2063369a187d6a6940ae5666ab4c30b58ed90bfd7a7e5af52a81f09b96d8e584",
+    "rag/service/store_contract.py": "db608614ac686a55cef913c1e78ba78aab748228fd37d9c029e070bbae692e1c",
+    "rag/service/semantic_router.py": "d2e0fc33f92ab229c4f2447ba00bfd789d3c85e80d7b5465b92c7316761f24c0",
+    "rag/service/routing_prototypes.json": "e151d49368981d30cc0aea1fb9ac917ab6ff57ffdb5732e3a8eecb39320e05e3",
+    "rag/service/ticket_service.py": "72b2551d5bdc6853f31e23e57cded54c08ee58073b4477006e4ea41dfa8a4b53",
+    "rag/service/retrieval_server.py": "84b034f61b6220599086e96f1b0c13fb731389a3370fa92b5765ae3080125a83",
+    "rag/service/answer_service.py": "24947ab23e75cb5950372ed286bf961d9af75cd74f8ee4a83e820751c63e1fbd",
+    "rag/retrieval/search_chunks.py": "8cb411477fe16e9c93d02c7da0584cf5d70e797497a8663a79da0ffe384981c3",
+    "rag/eval/cases/routing_store_v1.jsonl": "b7ebe6548562691bdd6de94d26a043dca3c0817a65a966671d85d0f1e705357b",
+    "rag/eval/reports/routing_semantic_candidate_v2.json": "5a3db006fa44439fe3ef64d0d615f62e7365b47f6ebd115f4684606b1ef5069c",
+    "rag/eval/reports/routing_v2_live_regression.json": "e7ad3dcccf295311871b0af33adb722b6532ed2ca899324641e480b1063b0f90"
+  },
+  "routing_enabled": true,
+  "dataset_sha256": "fac4b465d05b21554b53b6e9f50f14a539d4dad962607aa5770e41419be4e940",
+  "no_secrets_archived": true,
+  "config": {
+    "version": "prototype-v1",
+    "threshold": 0.6,
+    "margin": 0.06,
+    "examples": [
+      {
+        "store": "v2.poi_details.ticket_raw",
+        "text": "景区的门票原始价格文案是什么？"
+      },
+      {
+        "store": "v2.poi_details.ticket_raw",
+        "text": "入园买票的参考费用是多少钱？"
+      },
+      {
+        "store": "v2.poi_details.ticket_raw",
+        "text": "龙门石窟入场需要支付多少元？"
+      },
+      {
+        "store": "v2.poi_details.ticket_raw",
+        "text": "老君山景区单张入场券价格有记载吗？"
+      },
+      {
+        "store": "v2.poi_details.ticket_raw",
+        "text": "凤翔温泉入园票收费金额的资料是什么？"
+      },
+      {
+        "store": "v2.poi_details.ticket_raw",
+        "text": "博物馆进门需要支付的票钱是多少？"
+      },
+      {
+        "store": "v2.poi_details.ticket_raw",
+        "text": "参观植物园要收门票费吗？"
+      },
+      {
+        "store": "v2.poi_details.ticket_raw",
+        "text": "动物园购买入场票一人需要多少费用？"
+      },
+      {
+        "store": "v2.poi_details.ticket_raw",
+        "text": "这个景点今天的成人票售价能确认吗？"
+      },
+      {
+        "store": "v2.poi_details.ticket_raw",
+        "text": "景点门票起价的原始记录怎么写？"
+      },
+      {
+        "store": "v2.rag_chunks",
+        "text": "景区老年游客享受免票需要哪些条件？"
+      },
+      {
+        "store": "v2.rag_chunks",
+        "text": "儿童身高年龄的优待政策是什么？"
+      },
+      {
+        "store": "v2.rag_chunks",
+        "text": "游客买票预约和退票的公告有什么说明？"
+      },
+      {
+        "store": "v2.rag_chunks",
+        "text": "景点游览的顺序与参观路线是什么？"
+      },
+      {
+        "store": "v2.rag_chunks",
+        "text": "景区的历史文化背景有什么特色？"
+      },
+      {
+        "store": "v2.rag_chunks",
+        "text": "景区里可以寄存行李吗？"
+      },
+      {
+        "store": "v2.rag_chunks",
+        "text": "景点有WiFi和洗手间等服务吗？"
+      },
+      {
+        "store": "v2.rag_chunks",
+        "text": "停车场和园内交通的收费是多少？"
+      },
+      {
+        "store": "v2.rag_chunks",
+        "text": "是否能带宠物进入景区？"
+      },
+      {
+        "store": "v2.rag_chunks",
+        "text": "今天景区开放吗？有没有临时关闭？"
+      },
+      {
+        "store": "v2.rag_chunks",
+        "text": "景点有哪些好玩的景观和体验？"
+      },
+      {
+        "store": "v2.rag_chunks",
+        "text": "温泉现在是否有空房可以预订？"
+      }
+    ]
+  },
+  "dataset_origin": "agent_generated_synthetic_not_real_user_blind"
+}

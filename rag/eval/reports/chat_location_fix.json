@@ -1,0 +1,10 @@
+{
+  "tests_passed": 159,
+  "real_extractor_on_existing_session": "passed",
+  "planner": "mock_only_no_real_route_calls",
+  "new_baidu_calls": 0,
+  "session_not_mutated": true,
+  "selected_origin": "洛阳站",
+  "excluded": "天子驾六博物馆",
+  "human_review": null
+}

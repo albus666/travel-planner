@@ -1,0 +1,37 @@
+{
+  "status": "extraction_smoke_passed",
+  "request": "帮我安排洛阳三天，我还没确定出发地点",
+  "response": {
+    "session_id": "6112ef91264244d583acb1677392db60",
+    "status": "needs_clarification",
+    "answer": "每天从哪里出发并返回？请给一个具体地点全名（例如“洛阳站”）；目前各晚需同一地点，不支持跨夜换酒店。",
+    "slots": {
+      "city": "洛阳",
+      "days": 3,
+      "start_date": "2026-10-14",
+      "base_location": null,
+      "companions": "未说明",
+      "transport": "公共交通",
+      "pace": "轻松",
+      "preferences": [
+        "不限"
+      ],
+      "must_visit": [],
+      "avoid": [],
+      "start_time": "09:00",
+      "end_time": "18:00",
+      "visit_minutes": 90,
+      "unsupported": []
+    },
+    "assumptions": [
+      "未说明开始日期：按明天（2026-10-14）处理。",
+      "未说明同行人：未核实老人、儿童或无障碍适用性。",
+      "未说明交通方式：按公共交通处理，车程为查询时估算。",
+      "沿用默认安排参数：轻松节奏、偏好不限、每天09:00–18:00、每站90分钟；这些是待确认的安排参数，不是景区建议或开放时间。"
+    ],
+    "summary": "洛阳 3天，2026-10-14开始；每天从None出发并返回；未说明，公共交通，轻松；偏好：不限；每天09:00–18:00，每站暂按90分钟、每段缓冲10分钟。必去：无；排除：无。时长是待确认的安排参数，不是景区建议或开放时间。"
+  },
+  "new_baidu_calls": 0,
+  "human_review": null,
+  "full_itinerary_end_to_end": false
+}

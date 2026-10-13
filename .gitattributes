@@ -1,0 +1,14 @@
+# 统一换行符。Git 在 Windows 默认 core.autocrlf=true，会在检出时把文本文件
+# 转成 CRLF；而带 CRLF 的 shebang 在 Linux 上会报 bad interpreter，
+# 部署脚本（deploy/、rag/service/*.sh）必须保持 LF。
+* text=auto eol=lf
+
+# PowerShell 脚本按 Windows 惯例保留 CRLF
+*.ps1 text eol=crlf
+
+# 二进制文件不做换行转换
+*.pem    -text
+*.png    binary
+*.zip    binary
+*.sqlite binary
+*.sqlite3 binary

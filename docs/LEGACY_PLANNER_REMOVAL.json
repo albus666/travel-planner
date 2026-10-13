@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-12",
+  "action": "user-authorized deletion; no code archive",
+  "deleted_project_paths": [
+    "src",
+    "tests",
+    "evals/intent_cases.jsonl",
+    "scripts/migrate_from_sqlite.py",
+    "sql/001_schema.sql",
+    "deploy/nginx-travel.conf",
+    "deploy/travel-planner.service",
+    "ARCHITECTURE.md",
+    "pyproject.toml"
+  ],
+  "removed_service": "/etc/systemd/system/travel-planner.service",
+  "removed_autodeploy_hook": "/home/ubuntu/repos/travel-planner.git/hooks/post-receive",
+  "old_web_status": 410,
+  "protected_file_hashes_unchanged": true,
+  "database_unchanged": true,
+  "database_counts": {
+    "attractions": 259,
+    "poi_details": 259,
+    "rag_chunks": 347,
+    "images": 307
+  },
+  "rag_health": {
+    "ok": true,
+    "model_ready": true,
+    "loaded_at": 1791797877.8318942
+  },
+  "shared_dependencies_preserved": true,
+  "post_deletion_unit_tests_passed": 16,
+  "fresh_process_legacy_import_unavailable": true,
+  "ask_sql_smoke_passed": true,
+  "search_smoke_passed": true
+}

@@ -1,0 +1,64 @@
+{
+  "version": "plan_chat_v1",
+  "status": "deployed_pending_human_review_not_frozen",
+  "dataset_origin": "agent_generated_synthetic_not_real_user_blind",
+  "human_review": null,
+  "feature_flag": "RAG_PLAN_CHAT_ENABLED=1 (default 0), requires RAG_MAPS_ENABLED=1",
+  "scope": [
+    "natural-language intake for 1-7 consecutive Luoyang days",
+    "auto-filled slots reported as assumptions",
+    "only the geocodable departure/return point and genuine blockers are asked",
+    "reuses plan_trip_days (multi_day_v1); no new planner"
+  ],
+  "new_tests_passed": 15,
+  "full_suite": {
+    "ran": 150,
+    "errors": 6,
+    "errors_cause": "pre-existing Windows-only teardown cleanup: MapBudget never closes its sqlite connection",
+    "errors_related_to_this_version": false
+  },
+  "scope_not_rerun": "73/25/30 question-retrieval regression",
+  "known_limitations": [
+    "seven POI pool; days beyond capacity return unplanned_days",
+    "base location must be one confirmed point reused every night",
+    "duplicate place names require client selection",
+    "query-time travel estimates, not future traffic forecasts",
+    "opening, reservations, budget, stamina and hotel inventory not validated",
+    "extraction prompt changed, so prior plan_chat behaviour is not reproducible",
+    "mandatory pre-map confirmation round removed; assumptions are returned instead",
+    "no full 73/25/30 rerun"
+  ],
+  "file_sha256": {
+    "rag/service/plan_chat.py": "b61cf52b66b9d69ffa9ff9a3782d6d646d68f201ca6d40f1b013dbe9b6f5f19d",
+    "rag/service/retrieval_server.py": "ecc89f8479765fdb54568bbd6c511920d641df453ae261753cbbfd2f1e028abd",
+    "rag/eval/tests/test_plan_chat.py": "118a8baa01111fa761ace0b8d1d174b014c436903ca5289ef69d71c45ab16cbd",
+    "rag/client/plan_chat_query.py": "21b72cdb9bcdd47f5e10b85a71422ee918215bc4e55ea2dcb07ad59ec96041db",
+    "docs/PLAN_CHAT_NL_INTAKE.md": "459da22a59a9ed83aed21a04b5b3c8b5495e579fda36920e1635ce95cd770052"
+  },
+  "supersedes_hash_in": {
+    "rag/service/retrieval_server.py": "trip_budget_v1",
+    "rag/service/plan_chat.py": "unwired_prior_revision"
+  },
+  "deployment": {
+    "date": "2026-10-13",
+    "status": "deployed_model_balance_blocked",
+    "feature_flag": "RAG_PLAN_CHAT_ENABLED=1",
+    "maps_enabled": true,
+    "server_tests": {
+      "ran": 150,
+      "errors": 0,
+      "passed": 150
+    },
+    "new_baidu_calls": 0,
+    "http_smoke": {
+      "request": "帮我安排洛阳三天，我还没确定出发地点",
+      "status": "needs_clarification",
+      "slots_extraction_succeeded": false,
+      "model_http_status": 402,
+      "model_error": "Insufficient Balance"
+    },
+    "health_model_ready": true,
+    "full_73_25_30_rerun": false,
+    "human_review": null
+  }
+}

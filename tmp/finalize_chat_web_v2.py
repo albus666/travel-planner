@@ -1,0 +1,11 @@
+import json,hashlib,base64
+from pathlib import Path
+files=['rag/service/plan_chat.py','rag/service/web/index.html','rag/service/web/style.css','rag/service/web/app.js','rag/service/web/markdown.js','rag/eval/tests/test_plan_chat.py','rag/eval/tests/test_web_ui.py','rag/eval/tests/test_markdown_dom.cjs']
+report={'version':'chat_web_v2','status':'deployed_automated_checks_passed','server_tests_passed':161,'markdown_dom_checks':'passed','browser_checks':['chat layout','headings lists bold table inline code','sources closed by default','source quote URL timestamp on expansion','advanced map tools in dialog'],'new_baidu_calls':0,'new_llm_calls':0,'data_source_for_browser':'mock_only','full_73_25_30_rerun':False,'human_review':None,'file_sha256':{n:hashlib.sha256(Path(n).read_bytes()).hexdigest() for n in files}}
+p=Path('rag/eval/reports/chat_web_v2.json');p.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');files.append(p.as_posix())
+n='docs/WEB_TEST_MVP.md'
+with Path(n).open('a',encoding='utf-8') as f:f.write('\n\n## 对话布局 v2（2026-10-13）\n\n已改为侧栏功能选择、中央消息流与底部输入框。自然语言规划/RAG/检索/Agent可直接发送；结构化规划和地图通过“测试参数”弹窗提交。消息按功能分别保留在页面内存；Enter发送，Shift+Enter换行。参数弹窗可填写已有会话编号续接服务端会话，旧消息不自动回填。\n\n正文支持常用Markdown标题、列表、强调、引用、表格、代码块与HTTP(S)链接；HTML按文本显示，不加载Markdown图片。依据与来源统一放在每条回复末尾，默认折叠；原始请求响应和工具轨迹仍可展开。新规划回答为Markdown，时间仅显示HH:MM，原始精确时间和来源保留在结构化result里。渲染器不承诺完整CommonMark语法；此轮未验证复杂嵌套列表/数学公式/图表。\n\n161项服务器单测与Node Markdown DOM测试通过；浏览器模拟验证布局、表格、折叠来源与高级工具弹窗。未调用百度或LLM，不记为行程质量重新验收。刷新 http://localhost:18100/ui/ 查看新版本；浏览器旧消息只在内存，刷新会清除，需续接时先记下会话编号。报告 rag/eval/reports/chat_web_v2.json。\n')
+files.append(n)
+data={n:base64.b64encode(Path(n).read_bytes()).decode() for n in files}
+s="set -euo pipefail\ncd /home/ubuntu/apps/travel-planner\n.venv/bin/python - <<'PY'\nimport json,base64,hashlib\nfrom pathlib import Path\ndata=json.loads("+repr(json.dumps(data))+")\nfor n,b in data.items():\n p=Path(n);p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(base64.b64decode(b))\nr=json.loads(Path('rag/eval/reports/chat_web_v2.json').read_text())\nfor n,h in r['file_sha256'].items():assert hashlib.sha256(Path(n).read_bytes()).hexdigest()==h,n\nprint('Chat layout v2 code, report and document hashes synchronized')\nPY\n"
+Path('tmp/finalize_chat_web_v2.sh').write_text(s,encoding='utf-8')

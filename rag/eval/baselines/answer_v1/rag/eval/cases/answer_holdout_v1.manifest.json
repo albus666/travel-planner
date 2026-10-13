@@ -1,0 +1,11 @@
+{
+  "dataset": "answer_holdout_v1.jsonl",
+  "cases": 25,
+  "created_at": "2026-10-12",
+  "dataset_sha256": "53616a545484f2aaa0dc11649c6d93dc438485fb218d0a1b97bf30b9462cd33d",
+  "source_snapshot_sha256": "5a6ca65245618ef75c001164da36f5e7b566b7ddf23af851fbd44094628b5605",
+  "origin": "agent-authored from source snapshot; no /ask output used for case design",
+  "independence_limits": "New untuned questions, not independently collected real-user blind evaluation. Shared source topics may overlap earlier retrieval evaluation.",
+  "label_status": "pending_human_review",
+  "purpose": "first held-out answer-quality measurement; no prompt/retrieval tuning in this run"
+}

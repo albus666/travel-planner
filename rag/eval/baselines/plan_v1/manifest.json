@@ -1,0 +1,189 @@
+{
+  "status": "accepted_frozen",
+  "dataset_origin": "agent_generated_synthetic_not_real_user_blind",
+  "case_count": 9,
+  "human_review": null,
+  "candidate_pool": [
+    "龙门石窟",
+    "天子驾六博物馆",
+    "洛阳博物馆",
+    "隋唐洛阳城应天门遗址",
+    "隋唐城遗址植物园",
+    "王城公园",
+    "从政坊游园"
+  ],
+  "maps": false,
+  "weather": false,
+  "null_fields": [
+    "arrival_time",
+    "visit_duration_minutes",
+    "travel_minutes"
+  ],
+  "RAG_PLANNING_ENABLED": 1,
+  "rubric": [
+    "输入完整性",
+    "证据引用",
+    "景点隔离",
+    "约束遵守",
+    "未承诺项",
+    "覆盖"
+  ],
+  "file_sha256": {
+    "rag/eval/reports/luoyang_one_day_v1_final.json": "1fd1d9320468a5999367539cbcf5ac290c1ae9194e2693fa40c1cb7ca92598e0",
+    "rag/eval/reports/luoyang_one_day_v1_final.md": "1fe2aa91dc468ace730b7bacd32b49db4a295a70f7f32f2ac43c417668b3a216",
+    "rag/eval/reports/planning_v1_qa_regression.json": "01751355b781a2cc82d6bf993bd7873e06db06a59816283452a23db85890be07",
+    "rag/service/plan_service.py": "504489bed2bfd644f234dd6d4b61e9e24aba2ea913b8422f2087cd6b3f5b5238",
+    "rag/eval/test_plan_service.py": "6608c09611a619b40cd61dcc2e66e54a41d21d23ad841c310bfd05c327007a30",
+    "rag/eval/verify_plan_live.py": "cacec7db6125c2e0399b868e7f0e993b0e9cdd2bd4019a881e2b87eb0f04e630",
+    "rag/eval/reports/plan_v1_acceptance.json": "9175a45bcad24083025c23fe0efa03a957849e821972d06f2f36af7f89584ccf",
+    "rag/eval/reports/plan_v1_acceptance.md": "d0b601e1d08868316626fabfb6831ae2ef69fc112dac6e27c8ae5e40eb8206c9"
+  },
+  "freeze_rule": "Frozen on supplied agent-level review and user request; independent human review is not claimed.",
+  "accepted_date": "2026-10-13",
+  "review": {
+    "source": "user_supplied_agent_level_review",
+    "independent_human_review": false,
+    "date": "2026-10-13",
+    "decision": "accepted_for_scoped_baseline",
+    "pass": 38,
+    "fail": 0,
+    "na": 16,
+    "scores": {
+      "01_missing": {
+        "输入完整性": "pass",
+        "证据引用": "na",
+        "景点隔离": "na",
+        "约束遵守": "na",
+        "未承诺项": "na",
+        "覆盖": "pass"
+      },
+      "02_history": {
+        "输入完整性": "pass",
+        "证据引用": "pass",
+        "景点隔离": "pass",
+        "约束遵守": "pass",
+        "未承诺项": "pass",
+        "覆盖": "pass"
+      },
+      "03_natural": {
+        "输入完整性": "pass",
+        "证据引用": "pass",
+        "景点隔离": "pass",
+        "约束遵守": "pass",
+        "未承诺项": "pass",
+        "覆盖": "pass"
+      },
+      "04_required_avoid": {
+        "输入完整性": "pass",
+        "证据引用": "pass",
+        "景点隔离": "pass",
+        "约束遵守": "pass",
+        "未承诺项": "pass",
+        "覆盖": "pass"
+      },
+      "05_walking": {
+        "输入完整性": "pass",
+        "证据引用": "pass",
+        "景点隔离": "pass",
+        "约束遵守": "pass",
+        "未承诺项": "pass",
+        "覆盖": "pass"
+      },
+      "06_unknown": {
+        "输入完整性": "pass",
+        "证据引用": "na",
+        "景点隔离": "na",
+        "约束遵守": "pass",
+        "未承诺项": "na",
+        "覆盖": "pass"
+      },
+      "07_conflict": {
+        "输入完整性": "pass",
+        "证据引用": "na",
+        "景点隔离": "na",
+        "约束遵守": "pass",
+        "未承诺项": "na",
+        "覆盖": "pass"
+      },
+      "08_scope": {
+        "输入完整性": "pass",
+        "证据引用": "na",
+        "景点隔离": "na",
+        "约束遵守": "pass",
+        "未承诺项": "na",
+        "覆盖": "pass"
+      },
+      "09_avoid_alias": {
+        "输入完整性": "pass",
+        "证据引用": "na",
+        "景点隔离": "na",
+        "约束遵守": "pass",
+        "未承诺项": "na",
+        "覆盖": "pass"
+      }
+    },
+    "scope": "9 synthetic cases under locked six dimensions; not real-user blind evaluation"
+  },
+  "next_fix": "P05-01",
+  "known_limitations": [
+    {
+      "id": "P05-01",
+      "case": "05",
+      "dimension": "覆盖",
+      "severity": "medium",
+      "evidence": "出发地与唯一站点均为洛阳博物馆，草案退化为同地出发与游览。",
+      "suggestion": "下一批评估出发地同名排序或排除策略",
+      "decision": "record_only_not_fixed"
+    },
+    {
+      "id": "P05-02",
+      "case": "05",
+      "dimension": "证据引用",
+      "severity": "low",
+      "evidence": "未找到证据的措辞未限定博物馆偏好，易被理解为完全无资料。",
+      "suggestion": "限定为未找到支持所选偏好的证据",
+      "decision": "record_only_not_fixed"
+    },
+    {
+      "id": "P02-01",
+      "case": "02",
+      "dimension": "证据引用",
+      "severity": "low",
+      "evidence": "历史文化偏好使用 visit_tips 中的隋唐关键词，主题相关性偏弱。",
+      "suggestion": "后续考虑同主题片段优先",
+      "decision": "record_only_not_fixed"
+    },
+    {
+      "id": "P06-01",
+      "case": "06",
+      "dimension": "覆盖",
+      "severity": "low",
+      "evidence": "完整名称追问缺候选名称示例。",
+      "suggestion": "补候选池示例",
+      "decision": "record_only_not_fixed"
+    },
+    {
+      "id": "P01-01",
+      "case": "01",
+      "dimension": "输入完整性",
+      "severity": "low",
+      "evidence": "一次追问六字段，首轮交互偏重。",
+      "suggestion": "后续评估可选项与默认值",
+      "decision": "record_only_not_fixed"
+    },
+    {
+      "id": "P01-02",
+      "case": "01",
+      "dimension": "覆盖",
+      "severity": "low",
+      "evidence": "缺输入响应没有 constraints 字段。",
+      "suggestion": "后续统一澄清态字段或说明省略行为",
+      "decision": "record_only_not_fixed"
+    }
+  ],
+  "scope_notes": [
+    "候选池仅七个全名，不代表全市覆盖",
+    "三个时间字段恒为 null 是设计决定",
+    "无地图或天气，顺序非地理优化，不承诺一天可行"
+  ]
+}

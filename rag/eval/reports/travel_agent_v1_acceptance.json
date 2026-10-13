@@ -1,0 +1,78 @@
+{
+  "review_date": "2026-10-13",
+  "reviewer": "user",
+  "review_type": "user_provided_human_review",
+  "scope": "five synthetic online smoke cases only",
+  "dataset_origin": "agent_generated_synthetic_not_real_user_blind",
+  "source_report_sha256": "da51bfa90d5eba4a89cc45d5430eb3969b571f9f6e8685d478b157a7deef78ea",
+  "rubric": [
+    "工具选择",
+    "景点/地点隔离",
+    "引用支持",
+    "时效表达",
+    "缺证据处理",
+    "需求覆盖"
+  ],
+  "scores": {
+    "comments": {
+      "工具选择": "pass",
+      "景点/地点隔离": "pass",
+      "引用支持": "na",
+      "时效表达": "pass",
+      "缺证据处理": "pass",
+      "需求覆盖": "pass"
+    },
+    "ambiguous": {
+      "工具选择": "pass",
+      "景点/地点隔离": "pass",
+      "引用支持": "na",
+      "时效表达": "pass",
+      "缺证据处理": "pass",
+      "需求覆盖": "pass"
+    },
+    "weather": {
+      "工具选择": "pass",
+      "景点/地点隔离": "pass",
+      "引用支持": "pass",
+      "时效表达": "pass",
+      "缺证据处理": "na",
+      "需求覆盖": "pass"
+    },
+    "unknown": {
+      "工具选择": "pass",
+      "景点/地点隔离": "pass",
+      "引用支持": "na",
+      "时效表达": "pass",
+      "缺证据处理": "pass",
+      "需求覆盖": "pass"
+    },
+    "mixed": {
+      "工具选择": "pass",
+      "景点/地点隔离": "pass",
+      "引用支持": "pass",
+      "时效表达": "pass",
+      "缺证据处理": "na",
+      "需求覆盖": "pass"
+    }
+  },
+  "summary": {
+    "pass": 25,
+    "fail": 0,
+    "na": 5
+  },
+  "decision": "accepted_frozen",
+  "not_claimed": [
+    "production accuracy",
+    "real-user acceptance",
+    "general travel planning capability"
+  ],
+  "known_issues": [
+    {
+      "id": "AGENT-V1-01",
+      "severity": "low",
+      "blocking": false,
+      "description": "weather_code is numeric; map to ordinary Chinese weather description for readability",
+      "decision": "record_only_not_fixed"
+    }
+  ]
+}

@@ -1,0 +1,742 @@
+[
+  {
+    "action": "search",
+    "arguments": {
+      "query": "洛阳博物馆"
+    },
+    "result": {
+      "provider": "baidu",
+      "fetched_at": "2026-10-13T14:32:01+08:00",
+      "source_url": "https://lbsyun.baidu.com/",
+      "action": "search",
+      "state": "queried_with_evidence",
+      "candidates": [
+        {
+          "name": "洛阳博物馆",
+          "uid": "55fa2c0b865b5e501ce99902",
+          "city": "洛阳市",
+          "area": "洛龙区",
+          "address": "河南省洛阳市洛龙区聂泰路与文博路交叉口西北角",
+          "point": {
+            "lat": 34.649647,
+            "lng": 112.458391,
+            "coord_type": "bd09ll",
+            "name": "洛阳博物馆",
+            "uid": "55fa2c0b865b5e501ce99902"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "洛阳博物馆-票务中心",
+          "uid": "2a134ab222e4fd414e776ef2",
+          "city": "洛阳市",
+          "area": "洛龙区",
+          "address": "隋唐园北路洛阳博物馆",
+          "point": {
+            "lat": 34.648542,
+            "lng": 112.459677,
+            "coord_type": "bd09ll",
+            "name": "洛阳博物馆-票务中心",
+            "uid": "2a134ab222e4fd414e776ef2"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "洛阳古墓博物馆",
+          "uid": "fa01e937b5a5ef4a774ff14d",
+          "city": "洛阳市",
+          "area": "老城区",
+          "address": "河南省洛阳市老城区机场路6号",
+          "point": {
+            "lat": 34.739144,
+            "lng": 112.420995,
+            "coord_type": "bd09ll",
+            "name": "洛阳古墓博物馆",
+            "uid": "fa01e937b5a5ef4a774ff14d"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "洛阳博物馆",
+          "uid": "eea7e4993b57606f5cd4fe92",
+          "city": "洛阳市",
+          "area": "洛龙区",
+          "address": "1路;1路早间区间;77路;神都游10号线",
+          "point": {
+            "lat": 34.648051,
+            "lng": 112.456705,
+            "coord_type": "bd09ll",
+            "name": "洛阳博物馆",
+            "uid": "eea7e4993b57606f5cd4fe92"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "洛阳博物馆-地上停车场",
+          "uid": "01f1e69d3bf6651d21022050",
+          "city": "洛阳市",
+          "area": "洛龙区",
+          "address": "洛阳市洛龙区隋唐园北路洛阳博物馆",
+          "point": {
+            "lat": 34.648917,
+            "lng": 112.456921,
+            "coord_type": "bd09ll",
+            "name": "洛阳博物馆-地上停车场",
+            "uid": "01f1e69d3bf6651d21022050"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "洛阳周王城天子驾六博物馆",
+          "uid": "0a15c7ecd637ebe5ec74f89c",
+          "city": "洛阳市",
+          "area": "西工区",
+          "address": "中州中路226号",
+          "point": {
+            "lat": 34.680039,
+            "lng": 112.449581,
+            "coord_type": "bd09ll",
+            "name": "洛阳周王城天子驾六博物馆",
+            "uid": "0a15c7ecd637ebe5ec74f89c"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "隋唐洛阳城应天门遗址博物馆",
+          "uid": "7101dae67606653fdb1318eb",
+          "city": "洛阳市",
+          "area": "老城区",
+          "address": "洛阳市老城区定鼎南路23号",
+          "point": {
+            "lat": 34.682189,
+            "lng": 112.467284,
+            "coord_type": "bd09ll",
+            "name": "隋唐洛阳城应天门遗址博物馆",
+            "uid": "7101dae67606653fdb1318eb"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "洛阳匾额博物馆",
+          "uid": "05cc3e0df116e7372dfaa74f",
+          "city": "洛阳市",
+          "area": "老城区",
+          "address": "新街433号",
+          "point": {
+            "lat": 34.68555,
+            "lng": 112.49555,
+            "coord_type": "bd09ll",
+            "name": "洛阳匾额博物馆",
+            "uid": "05cc3e0df116e7372dfaa74f"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "隋唐大运河文化博物馆",
+          "uid": "4c6a031735db042588db73ac",
+          "city": "洛阳市",
+          "area": "老城区",
+          "address": "河南省洛阳市老城区滨河北路与新伊大街交叉口东北侧约290米",
+          "point": {
+            "lat": 34.679365,
+            "lng": 112.50079,
+            "coord_type": "bd09ll",
+            "name": "隋唐大运河文化博物馆",
+            "uid": "4c6a031735db042588db73ac"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "洛阳体育博物馆",
+          "uid": "16dc5bbbfffd9969d3ff23e6",
+          "city": "洛阳市",
+          "area": "洛龙区",
+          "address": "洛阳市洛龙区滨河南路绿道文博体育公园",
+          "point": {
+            "lat": 34.649499,
+            "lng": 112.450675,
+            "coord_type": "bd09ll",
+            "name": "洛阳体育博物馆",
+            "uid": "16dc5bbbfffd9969d3ff23e6"
+          },
+          "query_region": "洛阳"
+        }
+      ],
+      "identity_note": "Baidu UID is not a Ctrip poi_id; result is a candidate, not automatic confirmation"
+    }
+  },
+  {
+    "action": "suggest",
+    "arguments": {
+      "query": "洛阳博物馆"
+    },
+    "result": {
+      "provider": "baidu",
+      "fetched_at": "2026-10-13T14:32:01+08:00",
+      "source_url": "https://lbsyun.baidu.com/",
+      "action": "suggest",
+      "state": "queried_with_evidence",
+      "candidates": [
+        {
+          "name": "洛阳博物馆",
+          "uid": "55fa2c0b865b5e501ce99902",
+          "city": "洛阳市",
+          "area": "洛龙区",
+          "address": "洛阳市-洛龙区-聂泰路与文博路交叉口西北角",
+          "point": {
+            "lat": 34.649647,
+            "lng": 112.458391,
+            "coord_type": "bd09ll",
+            "name": "洛阳博物馆",
+            "uid": "55fa2c0b865b5e501ce99902"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "洛阳考古博物馆",
+          "uid": "b0295745894b9be158f6beec",
+          "city": "洛阳市",
+          "area": "洛龙区",
+          "address": "洛阳市-洛龙区-隋唐洛阳城遗址南城墙西段",
+          "point": {
+            "lat": 34.63659,
+            "lng": 112.449968,
+            "coord_type": "bd09ll",
+            "name": "洛阳考古博物馆",
+            "uid": "b0295745894b9be158f6beec"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "洛阳古墓博物馆",
+          "uid": "fa01e937b5a5ef4a774ff14d",
+          "city": "洛阳市",
+          "area": "老城区",
+          "address": "洛阳市-老城区-机场路6号",
+          "point": {
+            "lat": 34.739144,
+            "lng": 112.420995,
+            "coord_type": "bd09ll",
+            "name": "洛阳古墓博物馆",
+            "uid": "fa01e937b5a5ef4a774ff14d"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "洛阳博物馆-公交车站",
+          "uid": "eea7e4993b57606f5cd4fe92",
+          "city": "洛阳市",
+          "area": "洛龙区",
+          "address": "",
+          "point": {
+            "lat": 34.648051,
+            "lng": 112.456705,
+            "coord_type": "bd09ll",
+            "name": "洛阳博物馆-公交车站",
+            "uid": "eea7e4993b57606f5cd4fe92"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "洛阳博物馆-地上停车场",
+          "uid": "01f1e69d3bf6651d21022050",
+          "city": "洛阳市",
+          "area": "洛龙区",
+          "address": "洛阳市-洛龙区-洛阳博物馆",
+          "point": {
+            "lat": 34.648917,
+            "lng": 112.456921,
+            "coord_type": "bd09ll",
+            "name": "洛阳博物馆-地上停车场",
+            "uid": "01f1e69d3bf6651d21022050"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "洛阳博物馆-南门",
+          "uid": "4923ffdb09a3c179b0077dbb",
+          "city": "洛阳市",
+          "area": "洛龙区",
+          "address": "洛阳市-洛龙区-洛阳博物馆内",
+          "point": {
+            "lat": 34.64908,
+            "lng": 112.45833,
+            "coord_type": "bd09ll",
+            "name": "洛阳博物馆-南门",
+            "uid": "4923ffdb09a3c179b0077dbb"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "洛阳博物馆-游客中心",
+          "uid": "ae9e1d512e8234e1704b874e",
+          "city": "洛阳市",
+          "area": "洛龙区",
+          "address": "洛阳市-洛龙区-洛阳博物馆内F1",
+          "point": {
+            "lat": 34.649219,
+            "lng": 112.458493,
+            "coord_type": "bd09ll",
+            "name": "洛阳博物馆-游客中心",
+            "uid": "ae9e1d512e8234e1704b874e"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "洛阳博物馆-票务中心",
+          "uid": "2a134ab222e4fd414e776ef2",
+          "city": "洛阳市",
+          "area": "洛龙区",
+          "address": "洛阳市-洛龙区-洛阳博物馆",
+          "point": {
+            "lat": 34.648542,
+            "lng": 112.459677,
+            "coord_type": "bd09ll",
+            "name": "洛阳博物馆-票务中心",
+            "uid": "2a134ab222e4fd414e776ef2"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "洛阳博物馆-西门",
+          "uid": "87e6b49214d68f6a9d95de42",
+          "city": "洛阳市",
+          "area": "洛龙区",
+          "address": "洛阳市-洛龙区-洛阳博物馆F1层",
+          "point": {
+            "lat": 34.649033,
+            "lng": 112.457791,
+            "coord_type": "bd09ll",
+            "name": "洛阳博物馆-西门",
+            "uid": "87e6b49214d68f6a9d95de42"
+          },
+          "query_region": "洛阳"
+        },
+        {
+          "name": "隋唐大运河文化博物馆",
+          "uid": "4c6a031735db042588db73ac",
+          "city": "洛阳市",
+          "area": "老城区",
+          "address": "洛阳市-老城区-滨河北路与新伊大街交叉口东北侧约290米",
+          "point": {
+            "lat": 34.679365,
+            "lng": 112.50079,
+            "coord_type": "bd09ll",
+            "name": "隋唐大运河文化博物馆",
+            "uid": "4c6a031735db042588db73ac"
+          },
+          "query_region": "洛阳"
+        }
+      ],
+      "identity_note": "Baidu UID is not a Ctrip poi_id; result is a candidate, not automatic confirmation"
+    }
+  },
+  {
+    "action": "geocode",
+    "arguments": {
+      "address": "洛阳市洛龙区聂泰路洛阳博物馆"
+    },
+    "result": {
+      "provider": "baidu",
+      "fetched_at": "2026-10-13T14:32:02+08:00",
+      "source_url": "https://lbsyun.baidu.com/",
+      "action": "geocode",
+      "state": "queried_with_evidence",
+      "point": {
+        "lat": 34.64964661746112,
+        "lng": 112.4583910317221,
+        "coord_type": "bd09ll",
+        "name": "洛阳市洛龙区聂泰路洛阳博物馆",
+        "uid": null
+      },
+      "precise": 0,
+      "confidence": 50,
+      "comprehension": 100,
+      "requires_confirmation": true
+    }
+  },
+  {
+    "action": "reverse",
+    "arguments": {
+      "point": {
+        "lat": 34.63,
+        "lng": 112.45,
+        "coord_type": "bd09ll"
+      }
+    },
+    "result": {
+      "provider": "baidu",
+      "fetched_at": "2026-10-13T14:32:02+08:00",
+      "source_url": "https://lbsyun.baidu.com/",
+      "action": "reverse",
+      "state": "queried_with_evidence",
+      "address": "河南省洛阳市洛龙区开元路街道太康路30号",
+      "address_components": {
+        "country": "中国",
+        "country_code": 0,
+        "region_code_iso": "CHN",
+        "country_code_iso": "CHN",
+        "country_code_iso2": "CN",
+        "province": "河南省",
+        "city": "洛阳市",
+        "city_level": 2,
+        "district": "洛龙区",
+        "town": "开元路街道",
+        "town_code": "410311002",
+        "distance": "75",
+        "direction": "东",
+        "adcode": "410311",
+        "street": "太康路",
+        "street_number": "30号"
+      },
+      "point": {
+        "lat": 34.63,
+        "lng": 112.45,
+        "coord_type": "bd09ll",
+        "name": "",
+        "uid": null
+      }
+    }
+  },
+  {
+    "action": "route",
+    "arguments": {
+      "origin": {
+        "lat": 34.63,
+        "lng": 112.45,
+        "coord_type": "bd09ll"
+      },
+      "destination": {
+        "lat": 34.555862,
+        "lng": 112.485337,
+        "coord_type": "bd09ll"
+      },
+      "mode": "driving"
+    },
+    "result": {
+      "provider": "baidu",
+      "fetched_at": "2026-10-13T14:32:02+08:00",
+      "source_url": "https://lbsyun.baidu.com/",
+      "action": "route",
+      "state": "queried_with_evidence",
+      "origin": {
+        "lat": 34.63,
+        "lng": 112.45,
+        "coord_type": "bd09ll",
+        "name": "",
+        "uid": null
+      },
+      "destination": {
+        "lat": 34.555862,
+        "lng": 112.485337,
+        "coord_type": "bd09ll",
+        "name": "",
+        "uid": null
+      },
+      "mode": "driving",
+      "routes": [
+        {
+          "distance_m": 12336,
+          "duration_seconds": 1792,
+          "toll_yuan": 0,
+          "traffic_condition": 1
+        }
+      ],
+      "selected_route_index": 0,
+      "duration_scope": "estimate_at_query_time_not_future_departure_prediction",
+      "warnings": [
+        "预计交通耗时，不含游览、排队、停车、打车等候；不保证未来出行时耗时相同。",
+        "景点中心坐标不一定是入口；需确认出入口或停车场。"
+      ]
+    }
+  },
+  {
+    "action": "route",
+    "arguments": {
+      "origin": {
+        "lat": 34.63,
+        "lng": 112.45,
+        "coord_type": "bd09ll"
+      },
+      "destination": {
+        "lat": 34.555862,
+        "lng": 112.485337,
+        "coord_type": "bd09ll"
+      },
+      "mode": "walking"
+    },
+    "result": {
+      "provider": "baidu",
+      "fetched_at": "2026-10-13T14:32:02+08:00",
+      "source_url": "https://lbsyun.baidu.com/",
+      "action": "route",
+      "state": "queried_with_evidence",
+      "origin": {
+        "lat": 34.63,
+        "lng": 112.45,
+        "coord_type": "bd09ll",
+        "name": "",
+        "uid": null
+      },
+      "destination": {
+        "lat": 34.555862,
+        "lng": 112.485337,
+        "coord_type": "bd09ll",
+        "name": "",
+        "uid": null
+      },
+      "mode": "walking",
+      "routes": [
+        {
+          "distance_m": 11287,
+          "duration_seconds": 10134,
+          "toll_yuan": null,
+          "traffic_condition": null
+        }
+      ],
+      "selected_route_index": 0,
+      "duration_scope": "estimate_at_query_time_not_future_departure_prediction",
+      "warnings": [
+        "预计交通耗时，不含游览、排队、停车、打车等候；不保证未来出行时耗时相同。",
+        "景点中心坐标不一定是入口；需确认出入口或停车场。"
+      ]
+    }
+  },
+  {
+    "action": "route",
+    "arguments": {
+      "origin": {
+        "lat": 34.63,
+        "lng": 112.45,
+        "coord_type": "bd09ll"
+      },
+      "destination": {
+        "lat": 34.555862,
+        "lng": 112.485337,
+        "coord_type": "bd09ll"
+      },
+      "mode": "riding"
+    },
+    "result": {
+      "provider": "baidu",
+      "fetched_at": "2026-10-13T14:32:02+08:00",
+      "source_url": "https://lbsyun.baidu.com/",
+      "action": "route",
+      "state": "queried_with_evidence",
+      "origin": {
+        "lat": 34.63,
+        "lng": 112.45,
+        "coord_type": "bd09ll",
+        "name": "",
+        "uid": null
+      },
+      "destination": {
+        "lat": 34.555862,
+        "lng": 112.485337,
+        "coord_type": "bd09ll",
+        "name": "",
+        "uid": null
+      },
+      "mode": "riding",
+      "routes": [
+        {
+          "distance_m": 17898,
+          "duration_seconds": 6236,
+          "toll_yuan": null,
+          "traffic_condition": null
+        }
+      ],
+      "selected_route_index": 0,
+      "duration_scope": "estimate_at_query_time_not_future_departure_prediction",
+      "warnings": [
+        "预计交通耗时，不含游览、排队、停车、打车等候；不保证未来出行时耗时相同。",
+        "景点中心坐标不一定是入口；需确认出入口或停车场。"
+      ]
+    }
+  },
+  {
+    "action": "route",
+    "arguments": {
+      "origin": {
+        "lat": 34.63,
+        "lng": 112.45,
+        "coord_type": "bd09ll"
+      },
+      "destination": {
+        "lat": 34.555862,
+        "lng": 112.485337,
+        "coord_type": "bd09ll"
+      },
+      "mode": "transit"
+    },
+    "result": {
+      "provider": "baidu",
+      "fetched_at": "2026-10-13T14:32:03+08:00",
+      "source_url": "https://lbsyun.baidu.com/",
+      "action": "route",
+      "state": "queried_with_evidence",
+      "origin": {
+        "lat": 34.63,
+        "lng": 112.45,
+        "coord_type": "bd09ll",
+        "name": "",
+        "uid": null
+      },
+      "destination": {
+        "lat": 34.555862,
+        "lng": 112.485337,
+        "coord_type": "bd09ll",
+        "name": "",
+        "uid": null
+      },
+      "mode": "transit",
+      "routes": [
+        {
+          "distance_m": 10077,
+          "duration_seconds": 3036,
+          "toll_yuan": null,
+          "traffic_condition": 1
+        },
+        {
+          "distance_m": 11385,
+          "duration_seconds": 3603,
+          "toll_yuan": null,
+          "traffic_condition": 1
+        },
+        {
+          "distance_m": 11819,
+          "duration_seconds": 3279,
+          "toll_yuan": null,
+          "traffic_condition": 1
+        }
+      ],
+      "selected_route_index": 0,
+      "duration_scope": "estimate_at_query_time_not_future_departure_prediction",
+      "warnings": [
+        "预计交通耗时，不含游览、排队、停车、打车等候；不保证未来出行时耗时相同。",
+        "景点中心坐标不一定是入口；需确认出入口或停车场。"
+      ]
+    }
+  },
+  {
+    "action": "route",
+    "arguments": {
+      "origin": {
+        "lat": 34.63,
+        "lng": 112.45,
+        "coord_type": "bd09ll"
+      },
+      "destination": {
+        "lat": 34.555862,
+        "lng": 112.485337,
+        "coord_type": "bd09ll"
+      },
+      "advanced": true
+    },
+    "result": {
+      "provider": "baidu",
+      "fetched_at": "2026-10-13T14:32:03+08:00",
+      "source_url": "https://lbsyun.baidu.com/",
+      "action": "route",
+      "state": "queried_with_evidence",
+      "origin": {
+        "lat": 34.63,
+        "lng": 112.45,
+        "coord_type": "bd09ll",
+        "name": "",
+        "uid": null
+      },
+      "destination": {
+        "lat": 34.555862,
+        "lng": 112.485337,
+        "coord_type": "bd09ll",
+        "name": "",
+        "uid": null
+      },
+      "mode": "driving",
+      "routes": [
+        {
+          "distance_m": 15894,
+          "duration_seconds": 1411,
+          "toll_yuan": 0,
+          "traffic_condition": null
+        }
+      ],
+      "selected_route_index": 0,
+      "duration_scope": "estimate_at_query_time_not_future_departure_prediction",
+      "warnings": [
+        "预计交通耗时，不含游览、排队、停车、打车等候；不保证未来出行时耗时相同。",
+        "景点中心坐标不一定是入口；需确认出入口或停车场。"
+      ]
+    }
+  },
+  {
+    "action": "matrix",
+    "arguments": {
+      "origins": [
+        {
+          "lat": 34.63,
+          "lng": 112.45,
+          "coord_type": "bd09ll"
+        }
+      ],
+      "destinations": [
+        {
+          "lat": 34.555862,
+          "lng": 112.485337,
+          "coord_type": "bd09ll"
+        }
+      ]
+    },
+    "result": {
+      "provider": "baidu",
+      "fetched_at": "2026-10-13T14:32:03+08:00",
+      "source_url": "https://lbsyun.baidu.com/",
+      "action": "matrix",
+      "state": "queried_with_evidence",
+      "pairs": [
+        {
+          "origin_index": 0,
+          "destination_index": 0,
+          "state": "queried_with_evidence",
+          "duration_seconds": 1612,
+          "distance_m": 11890
+        }
+      ],
+      "mode": "driving",
+      "billable_route_pairs": 1,
+      "note": "Directional matrix; A to B is not assumed equal to B to A."
+    }
+  },
+  {
+    "action": "convert",
+    "arguments": {
+      "points": [
+        {
+          "lat": 34.63,
+          "lng": 112.45,
+          "coord_type": "bd09ll"
+        }
+      ],
+      "target": "gcj02"
+    },
+    "result": {
+      "provider": "baidu",
+      "fetched_at": "2026-10-13T14:32:04+08:00",
+      "source_url": "https://lbsyun.baidu.com/",
+      "action": "convert",
+      "state": "queried_with_evidence",
+      "points": [
+        {
+          "lat": 34.6236695416736,
+          "lng": 112.44360610626481,
+          "coord_type": "gcj02",
+          "name": "",
+          "uid": null
+        }
+      ],
+      "conversion": "bd09ll_to_gcj02",
+      "note": "No conversion to WGS84 is provided."
+    }
+  }
+]

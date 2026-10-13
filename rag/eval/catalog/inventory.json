@@ -1,0 +1,559 @@
+{
+  "organization": "physical_script_categories_with_immutable_snapshots",
+  "excludes": [
+    "__pycache__",
+    "nested immutable snapshot contents"
+  ],
+  "entries": [
+    {
+      "path": "rag/eval/runners/audit_retrieval.py",
+      "category": "retrieval",
+      "kind": "评测运行器"
+    },
+    {
+      "path": "rag/eval/builders/build_answer_holdout.py",
+      "category": "answer",
+      "kind": "数据构建/评分录入"
+    },
+    {
+      "path": "rag/eval/builders/build_routing_cases.py",
+      "category": "routing",
+      "kind": "数据构建/评分录入"
+    },
+    {
+      "path": "rag/eval/runners/eval_semantic_routing.py",
+      "category": "routing",
+      "kind": "评测运行器"
+    },
+    {
+      "path": "rag/eval/reviews/record_answer_v1_review.py",
+      "category": "answer",
+      "kind": "数据构建/评分录入"
+    },
+    {
+      "path": "rag/eval/runners/run_answer_holdout.py",
+      "category": "answer",
+      "kind": "评测运行器"
+    },
+    {
+      "path": "rag/eval/runners/run_answer_review.py",
+      "category": "answer",
+      "kind": "评测运行器"
+    },
+    {
+      "path": "rag/eval/runners/run_eval.py",
+      "category": "retrieval",
+      "kind": "评测运行器"
+    },
+    {
+      "path": "rag/eval/runners/run_routing_challenge.py",
+      "category": "routing",
+      "kind": "评测运行器"
+    },
+    {
+      "path": "rag/eval/runners/run_routing_eval.py",
+      "category": "routing",
+      "kind": "评测运行器"
+    },
+    {
+      "path": "rag/eval/runners/run_ticket_eval.py",
+      "category": "ticket_sql",
+      "kind": "评测运行器"
+    },
+    {
+      "path": "rag/eval/tests/test_answer_evidence_guards.py",
+      "category": "answer",
+      "kind": "单元测试"
+    },
+    {
+      "path": "rag/eval/tests/test_answer_service.py",
+      "category": "answer",
+      "kind": "单元测试"
+    },
+    {
+      "path": "rag/eval/tests/test_ask_graph.py",
+      "category": "langgraph",
+      "kind": "单元测试"
+    },
+    {
+      "path": "rag/eval/tests/test_intent_classifier.py",
+      "category": "routing",
+      "kind": "单元测试"
+    },
+    {
+      "path": "rag/eval/tests/test_mixed_service.py",
+      "category": "mixed",
+      "kind": "单元测试"
+    },
+    {
+      "path": "rag/eval/tests/test_plan_service.py",
+      "category": "planning",
+      "kind": "单元测试"
+    },
+    {
+      "path": "rag/eval/tests/test_routing_challenge.py",
+      "category": "routing",
+      "kind": "单元测试"
+    },
+    {
+      "path": "rag/eval/tests/test_semantic_router.py",
+      "category": "routing",
+      "kind": "单元测试"
+    },
+    {
+      "path": "rag/eval/tests/test_ticket_service.py",
+      "category": "ticket_sql",
+      "kind": "单元测试"
+    },
+    {
+      "path": "rag/eval/integration/verify_graph_live.py",
+      "category": "langgraph",
+      "kind": "在线验证"
+    },
+    {
+      "path": "rag/eval/integration/verify_mixed_live.py",
+      "category": "mixed",
+      "kind": "在线验证"
+    },
+    {
+      "path": "rag/eval/integration/verify_plan_live.py",
+      "category": "planning",
+      "kind": "在线验证"
+    },
+    {
+      "path": "rag/eval/integration/verify_routing_live.py",
+      "category": "routing",
+      "kind": "在线验证"
+    },
+    {
+      "path": "rag/eval/cases/answer_holdout_v1.jsonl",
+      "category": "answer",
+      "kind": "评测题集及元数据"
+    },
+    {
+      "path": "rag/eval/cases/answer_holdout_v1.manifest.json",
+      "category": "answer",
+      "kind": "评测题集及元数据"
+    },
+    {
+      "path": "rag/eval/cases/eval_questions.jsonl",
+      "category": "retrieval",
+      "kind": "评测题集及元数据"
+    },
+    {
+      "path": "rag/eval/cases/routing_challenge_v1.jsonl",
+      "category": "routing",
+      "kind": "评测题集及元数据"
+    },
+    {
+      "path": "rag/eval/cases/routing_challenge_v1.manifest.json",
+      "category": "routing",
+      "kind": "评测题集及元数据"
+    },
+    {
+      "path": "rag/eval/cases/routing_store_v1.jsonl",
+      "category": "routing",
+      "kind": "评测题集及元数据"
+    },
+    {
+      "path": "rag/eval/cases/routing_store_v1.manifest.json",
+      "category": "routing",
+      "kind": "评测题集及元数据"
+    },
+    {
+      "path": "rag/eval/reports/answer_holdout_v1_2026-10-12_run1.json",
+      "category": "answer",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/answer_holdout_v1_2026-10-12_run1.md",
+      "category": "answer",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/answer_holdout_v1_2026-10-12_run2_sql.json",
+      "category": "answer",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/answer_holdout_v1_2026-10-12_run2_sql.md",
+      "category": "answer",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/answer_holdout_v1_2026-10-12_run3_sql.json",
+      "category": "answer",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/answer_holdout_v1_2026-10-12_run3_sql.md",
+      "category": "answer",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/answer_review_2026-10-12.json",
+      "category": "answer",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/answer_v1_vs_sql_comparison.json",
+      "category": "ticket_sql",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/langgraph_answer_v2_live_run1.json",
+      "category": "answer",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/langgraph_answer_v2_live_run1.md",
+      "category": "answer",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/langgraph_answer_v2_scope_followup.json",
+      "category": "answer",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/langgraph_answer_v2_scope_followup.md",
+      "category": "answer",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/langgraph_answer_v2_scope_followup_unreviewed.json",
+      "category": "answer",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/langgraph_answer_v2_scope_followup_unreviewed.md",
+      "category": "answer",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/langgraph_v1_live_run1.json",
+      "category": "langgraph",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/langgraph_v1_live_run1.md",
+      "category": "langgraph",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/langgraph_v1_schema_followup.json",
+      "category": "langgraph",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/langgraph_v1_schema_followup.md",
+      "category": "langgraph",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/langgraph_v1_schema_followup_unreviewed.json",
+      "category": "langgraph",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/langgraph_v1_schema_followup_unreviewed.md",
+      "category": "langgraph",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/luoyang_one_day_v1_final.json",
+      "category": "planning",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/luoyang_one_day_v1_final.md",
+      "category": "planning",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/luoyang_one_day_v1_followup.json",
+      "category": "planning",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/luoyang_one_day_v1_followup.md",
+      "category": "planning",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/luoyang_one_day_v1_run1.json",
+      "category": "planning",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/luoyang_one_day_v1_run1.md",
+      "category": "planning",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/mixed_preflight_v1.json",
+      "category": "mixed",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/mixed_v1_live_fault_scope_followup.json",
+      "category": "mixed",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/mixed_v1_live_fault_scope_followup.md",
+      "category": "mixed",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/mixed_v1_live_fault_scope_followup_unreviewed.json",
+      "category": "mixed",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/mixed_v1_live_fault_scope_followup_unreviewed.md",
+      "category": "mixed",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/mixed_v1_live_run1.json",
+      "category": "mixed",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/mixed_v1_live_run1.md",
+      "category": "mixed",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/plan_v1_acceptance.json",
+      "category": "planning",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/plan_v1_acceptance.md",
+      "category": "planning",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/planning_v1_qa_regression.json",
+      "category": "planning",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/planning_v1_qa_regression.md",
+      "category": "planning",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/retrieval_audit_2026-10-12.json",
+      "category": "retrieval",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/routing_boundary_rule_v2.json",
+      "category": "routing",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/routing_challenge_v1_run1.json",
+      "category": "routing",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/routing_challenge_v1_run1.md",
+      "category": "routing",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/routing_challenge_v1_run1_unreviewed.json",
+      "category": "routing",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/routing_challenge_v1_run1_unreviewed.md",
+      "category": "routing",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/routing_legacy_rule_v1.json",
+      "category": "routing",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/routing_semantic_candidate_v1.json",
+      "category": "routing",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/routing_semantic_candidate_v2.json",
+      "category": "routing",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/routing_v2_live_regression.json",
+      "category": "routing",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/sql_ticket_2026-10-12_run1.json",
+      "category": "ticket_sql",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/sql_ticket_2026-10-12_run2.json",
+      "category": "ticket_sql",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/sql_ticket_regression_2026-10-12.json",
+      "category": "ticket_sql",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/baselines/answer_evidence_v2",
+      "category": "answer",
+      "kind": "版本快照",
+      "status": "human_accepted_frozen",
+      "location": "baselines"
+    },
+    {
+      "path": "rag/eval/baselines/answer_v1",
+      "category": "answer",
+      "kind": "版本快照",
+      "status": "未提供统一 status；请查原始记录，不按目录名推断验收",
+      "location": "baselines"
+    },
+    {
+      "path": "rag/eval/baselines/langgraph_candidate_v1",
+      "category": "langgraph",
+      "kind": "版本快照",
+      "status": "candidate_not_human_accepted",
+      "location": "baselines"
+    },
+    {
+      "path": "rag/eval/baselines/mixed_v1",
+      "category": "mixed",
+      "kind": "版本快照",
+      "status": "未提供统一 status；请查原始记录，不按目录名推断验收",
+      "location": "baselines"
+    },
+    {
+      "path": "rag/eval/baselines/plan_v1",
+      "category": "planning",
+      "kind": "版本快照",
+      "status": "accepted_frozen",
+      "location": "baselines"
+    },
+    {
+      "path": "rag/eval/baselines/routing_candidate_v2_sources",
+      "category": "routing",
+      "kind": "版本快照",
+      "status": "未提供统一 status；请查原始记录，不按目录名推断验收",
+      "location": "baselines"
+    },
+    {
+      "path": "rag/eval/baselines/routing_rule_v1",
+      "category": "routing",
+      "kind": "版本快照",
+      "status": "未提供统一 status；请查原始记录，不按目录名推断验收",
+      "location": "baselines"
+    },
+    {
+      "path": "rag/eval/baselines/routing_v2_frozen",
+      "category": "routing",
+      "kind": "版本快照",
+      "status": "未提供统一 status；请查原始记录，不按目录名推断验收",
+      "location": "baselines"
+    },
+    {
+      "path": "rag/eval/candidates/answer_evidence_v2",
+      "category": "answer",
+      "kind": "版本快照",
+      "status": "promoted_to_accepted_baseline",
+      "location": "candidates"
+    },
+    {
+      "path": "rag/eval/candidates/plan_v1",
+      "category": "planning",
+      "kind": "版本快照",
+      "status": "promoted_to_accepted_baseline",
+      "location": "candidates"
+    },
+    {
+      "path": "rag/eval/runners/audit_entity_uniqueness.py",
+      "category": "routing",
+      "kind": "评测运行器"
+    },
+    {
+      "path": "rag/eval/reports/entity_core_uniqueness.json",
+      "category": "routing",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/entity_core_uniqueness.md",
+      "category": "routing",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/tests/test_travel_agent.py",
+      "category": "travel_agent",
+      "kind": "单元测试"
+    },
+    {
+      "path": "rag/eval/reports/travel_agent_v1_live.json",
+      "category": "travel_agent",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/travel_agent_v1_live.md",
+      "category": "travel_agent",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/candidates/travel_agent_v1",
+      "category": "travel_agent",
+      "kind": "版本快照"
+    },
+    {
+      "path": "rag/eval/baselines/travel_agent_v1",
+      "category": "travel_agent",
+      "kind": "版本快照"
+    },
+    {
+      "path": "rag/eval/reports/travel_agent_v1_acceptance.json",
+      "category": "travel_agent",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/reports/travel_agent_v1_acceptance.md",
+      "category": "travel_agent",
+      "kind": "运行报告/评分记录"
+    },
+    {
+      "path": "rag/eval/tests/test_baidu_maps.py",
+      "category": "trip_budget",
+      "kind": "代码/评测/文档"
+    },
+    {
+      "path": "rag/eval/tests/test_trip_budget.py",
+      "category": "trip_budget",
+      "kind": "代码/评测/文档"
+    },
+    {
+      "path": "rag/eval/runners/eval_trip_budget_mock.py",
+      "category": "trip_budget",
+      "kind": "代码/评测/文档"
+    },
+    {
+      "path": "rag/eval/candidates/trip_budget_v1/manifest.json",
+      "category": "trip_budget",
+      "kind": "代码/评测/文档"
+    },
+    {
+      "path": "rag/eval/README.md",
+      "category": "trip_budget",
+      "kind": "代码/评测/文档"
+    }
+  ]
+}
