@@ -1,3 +1,0 @@
-from pathlib import Path
-p=Path('rag/service/web/app.js');s=p.read_text(encoding='utf-8');s=s.replace("if(key==='chat'){f.append(node('p',session?'当前会话：'+session:'新会话。直接在底部输入旅行需求。','muted'));return;}","if(key==='chat'){f.append(node('p',session?'当前会话：'+session:'新会话。直接在底部输入旅行需求。','muted'),input('续接已有会话编号（可选）','resume-session',session||''),button('续接会话',()=>{const id=$('resume-session').value.trim();if(!/^[0-9a-f]{32}$/.test(id)){showError(new Error('请填写有效的32位会话编号'));return}session=id;threads.chat=[];renderFeed();$('parameters').close();$('connection').textContent='已续接会话，可直接补充需求。旧消息不会自动回填。'}));return;}")
-p.write_text(s,encoding='utf-8')

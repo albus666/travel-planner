@@ -1,8 +1,0 @@
-import json,base64
-from pathlib import Path
-m=json.loads(Path('rag/eval/candidates/baidu_maps_v1/manifest.json').read_text(encoding='utf-8'))
-names=list(m['file_sha256'])+['rag/eval/candidates/baidu_maps_v1/manifest.json','docs/PROJECT_MEMORY.md','docs/PROJECT_STATUS_AND_ARCHITECTURE.md','rag/eval/README.md']
-payload={n:base64.b64encode(Path(n).read_bytes()).decode() for n in names}
-script="set -euo pipefail\ncd /home/ubuntu/apps/travel-planner\n.venv/bin/python - <<'PY'\nimport json,base64,hashlib\nfrom pathlib import Path\npayload=json.loads("+repr(json.dumps(payload))+ ")\nfor n,b in payload.items():\n p=Path(n);p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(base64.b64decode(b))\nm=json.loads(Path('rag/eval/candidates/baidu_maps_v1/manifest.json').read_text())\nfor n,h in m['file_sha256'].items():assert hashlib.sha256(Path(n).read_bytes()).hexdigest()==h,n\nprint('Candidate local/server hashes match:',len(m['file_sha256']))\nPY\n"
-script+="cp rag/eval/reports/baidu_maps_v1_live.md /home/ubuntu/portfolio/downloads/rag/baidu-maps-evaluation-5-2026-10-13.md\nchmod 644 /home/ubuntu/portfolio/downloads/rag/baidu-maps-evaluation-5-2026-10-13.md\n.venv/bin/python - <<'PY'\nimport requests,hashlib\nfrom pathlib import Path\nr=requests.get('http://52.199.126.245/downloads/rag/baidu-maps-evaluation-5-2026-10-13.md',timeout=20);r.raise_for_status()\nassert hashlib.sha256(r.content).digest()==hashlib.sha256(Path('rag/eval/reports/baidu_maps_v1_live.md').read_bytes()).digest()\nprint('Published report HTTP hash verified')\nPY\n"
-Path('tmp/publish_baidu_maps.sh').write_text(script,encoding='utf-8')
